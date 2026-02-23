@@ -201,22 +201,22 @@ footer {
     transform: scale(1.05);
 }
 
-/* --- Mobile Responsive --- */
+/* Mobile: make 3D and 2D buttons same width & height */
 @media (max-width: 600px) {
-    .hero h1 {
-        font-size: 40px;
+    .category-row {
+        flex-direction: column;   /* stack buttons vertically */
+        gap: 20px;                /* space between stacked buttons */
+        align-items: center;
     }
-    .hero h2 {
-        font-size: 24px;
-    }
+
     .category-container {
-        max-width: 100%; /* buttons full width on mobile */
+        max-width: 300px;         /* same width for both buttons */
+        width: 100%;              /* fill container */
     }
-    .head-grid {
-        flex-direction: column; /* stack heads on small screens */
-        gap: 20px;
-    }
-    .head-grid img {
-        width: 80%;  /* scale heads for mobile */
+
+    .category-card img {
+        height: 150px;            /* same height as desktop */
+        width: 100%;              /* fill container */
+        object-fit: cover;        /* maintain proportions */
     }
 }
