@@ -81,6 +81,21 @@ body {
     margin: 0 auto;    /* center on page */
 }
 
+/* Wrap the image so it fills a fixed container */
+.category-img-wrapper {
+    width: 100%;
+    height: 150px;           /* fixed height for both buttons */
+    overflow: hidden;
+}
+
+.category-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* crop tall images to fit container */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
 /* Category Cards */
 .category-card {
     position: relative;
@@ -93,17 +108,7 @@ body {
     transition: transform 0.4s ease;
 }
 
-/* 3D and 2D images: exact same size */
-.category-card.3d img,
-.category-card.2d img {
-    width: 100%;
-    height: 150px;       /* exact same height for uniformity */
-    object-fit: cover;   /* maintain proportions, crop if needed */
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.category-card:hover img {
+.category-card:hover .category-img-wrapper img {
     transform: scale(1.05);
 }
 
@@ -214,9 +219,7 @@ footer {
         width: 100%;              /* fill container */
     }
 
-    .category-card img {
+    .category-img-wrapper {
         height: 150px;            /* same height as desktop */
-        width: 100%;              /* fill container */
-        object-fit: cover;        /* maintain proportions */
     }
 }
