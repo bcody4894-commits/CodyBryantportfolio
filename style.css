@@ -21,7 +21,7 @@ body {
 
 .navbar .logo {
     font-weight: 800;
-    font-size: 28px;         /* slightly bigger for desktop */
+    font-size: 28px;
     color: white;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -70,6 +70,7 @@ body {
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
+    padding: 40px;
 }
 
 /* Container for each button */
@@ -91,10 +92,13 @@ body {
     transition: transform 0.4s ease;
 }
 
+/* Image wrapper inside each card */
 .category-img-wrapper {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: center;    /* default: center for all buttons */
 }
 
 .category-img-wrapper img {
@@ -107,6 +111,11 @@ body {
 
 .category-card:hover .category-img-wrapper img {
     transform: scale(1.05);
+}
+
+/* Lower the 2D button image */
+.category-card.2d .category-img-wrapper {
+    align-items: flex-end;  /* pushes 2D image toward bottom */
 }
 
 /* Overlay text */
@@ -206,12 +215,12 @@ footer {
 /* --- Mobile adjustments --- */
 @media (max-width: 600px) {
     .navbar {
-        min-height: 60px;    /* reduce navbar height on mobile */
+        min-height: 60px;
         padding: 10px 20px;
     }
 
     .navbar .logo {
-        font-size: 24px;     /* smaller logo on mobile */
+        font-size: 24px;
     }
 
     .category-section {
@@ -226,6 +235,11 @@ footer {
     }
 
     .category-card {
-        height: 150px;  /* smaller height for phone */
+        height: 150px;
+    }
+
+    /* Make 2D button image centered on mobile instead of bottom */
+    .category-card.2d .category-img-wrapper {
+        align-items: center;
     }
 }
