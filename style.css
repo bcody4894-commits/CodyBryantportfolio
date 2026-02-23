@@ -19,22 +19,44 @@ body {
 .navbar .logo {
     font-weight: 800;
     font-size: 24px;
-}
-
-.navbar a {
     color: white;
+}
+
+/* Navigation links on the right, white and bold */
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;        /* white text */
+    font-weight: 700;    /* bold */
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+.navbar .nav-links a:hover {
+    color: #ffcc00;      /* optional hover color */
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 0;
+    font-weight: 800;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin: 10px 0 0 0;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #ccc; /* slightly lighter than white for contrast */
 }
 
 .category-section {
