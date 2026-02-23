@@ -66,6 +66,14 @@ body {
     padding: 40px;
 }
 
+/* New: horizontal layout for category buttons */
+.category-row {
+    display: flex;
+    justify-content: center;   /* center the row */
+    gap: 40px;                 /* space between buttons */
+    flex-wrap: wrap;           /* wrap on small screens */
+}
+
 /* Category Cards */
 .category-card {
     position: relative;
@@ -74,7 +82,7 @@ body {
     color: white;
     overflow: hidden;
     border-radius: 12px;
-    width: 100%;  /* fill container width */
+    width: 100%;               /* fill container width */
     transition: transform 0.4s ease;
 }
 
@@ -176,14 +184,14 @@ footer {
 /* Flex container for front and side head images */
 .head-grid {
     display: flex;
-    justify-content: center;   
-    gap: 20px;                 
+    justify-content: center;
+    gap: 10px;        /* closer distance between front and side head */
     margin-top: 20px;
-    flex-wrap: wrap;           
+    flex-wrap: wrap;
 }
 
 .head-grid img {
-    width: 150px;              
+    width: 150px;
     max-width: 100%;
     border-radius: 10px;
     transition: transform 0.4s ease;
