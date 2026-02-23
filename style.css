@@ -174,7 +174,7 @@ footer {
 }
 
 .head-grid img {
-    width: 200px;              /* consistent size */
+    width: 150px;              /* smaller than creature */
     max-width: 100%;
     border-radius: 10px;
     transition: transform 0.4s ease;
