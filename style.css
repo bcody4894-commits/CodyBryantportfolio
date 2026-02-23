@@ -83,15 +83,14 @@ body {
 }
 
 /* Specific size for 3D and 2D previews */
-.category-card.3d img,
-.category-card.2d img {   /* Make both same size */
-    height: 150px;
+.category-card.3d img {
+    height: 150px;   /* 3D preview height */
 }
 
-.category-card:hover img {
-    transform: scale(1.05);
+.category-card.2d img {
+    height: 120px;   /* smaller 2D preview */
+    object-fit: cover; /* ensures image fits without stretching */
 }
-
 .overlay {
     position: absolute;
     top: 0;
