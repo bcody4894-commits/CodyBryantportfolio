@@ -63,22 +63,14 @@ body {
 /* --- Category Section (Homepage) --- */
 .category-section {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 40px;
-}
-
-/* Horizontal layout for 3D and 2D buttons */
-.category-row {
-    display: flex;
-    justify-content: center;  /* center buttons */
-    gap: 40px;                /* space between 3D and 2D buttons */
+    justify-content: center;  /* center row */
+    gap: 40px;                /* space between 3D and 2D */
     flex-wrap: wrap;          /* wrap on smaller screens */
 }
 
-/* FIXED container width for desktop buttons */
+/* Container for each button */
 .category-container {
-    width: 300px;             /* exact same width for both 3D and 2D buttons */
+    flex: 0 0 300px;          /* fixed width on desktop, same for both buttons */
 }
 
 /* --- Category Cards Fixed Height --- */
@@ -90,21 +82,20 @@ body {
     overflow: hidden;
     border-radius: 12px;
     width: 100%;
-    height: 150px;         /* FIX: make the card itself the fixed height */
+    height: 150px;            /* fixed height matches image wrapper */
     transition: transform 0.4s ease;
 }
 
-/* Wrap the image so it fills the fixed container */
 .category-img-wrapper {
     width: 100%;
-    height: 100%;          /* fill the card exactly */
+    height: 100%;             /* fill the card exactly */
     overflow: hidden;
 }
 
 .category-img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;       /* crop tall images to fit container */
+    object-fit: cover;        /* crop tall images to fit container */
     display: block;
     transition: transform 0.4s ease;
 }
@@ -113,7 +104,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Overlay text on buttons */
+/* Overlay text */
 .overlay {
     position: absolute;
     top: 0;
@@ -207,17 +198,17 @@ footer {
     transform: scale(1.05);
 }
 
-/* --- Mobile: make 3D and 2D buttons same width & height --- */
+/* --- Mobile adjustments --- */
 @media (max-width: 600px) {
-    .category-row {
+    .category-section {
         flex-direction: column;   /* stack buttons vertically */
-        gap: 20px;                /* space between stacked buttons */
+        gap: 20px;
         align-items: center;
     }
 
     .category-container {
-        width: 100%;              /* fill container on mobile */
-        max-width: 300px;         /* limit max width */
+        width: 100%;
+        max-width: 300px;
     }
 
     .category-img-wrapper {
