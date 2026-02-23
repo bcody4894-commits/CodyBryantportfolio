@@ -146,3 +146,20 @@ footer {
     padding: 30px;
     margin-top: 40px;
 }
+
+/* --- Added for 3D Art Page --- */
+
+.work-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+
+.section-divider {
+    border: none;
+    height: 3px;             /* thick but not too thick */
+    background-color: #000;   /* black line */
+    margin: 40px 0;           /* spacing above and below */
+}
