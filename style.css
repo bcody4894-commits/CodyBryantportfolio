@@ -194,7 +194,7 @@ footer {
     transform: scale(1.05);
 }
 
-/* Mobile: make 3D and 2D buttons same width & height */
+/* --- Mobile: make 3D and 2D buttons same width & height --- */
 @media (max-width: 600px) {
     .category-row {
         flex-direction: column;   /* stack buttons vertically */
@@ -203,13 +203,11 @@ footer {
     }
 
     .category-container {
-        max-width: 300px;         /* same width for both buttons */
-        width: 100%;              /* fill container */
+        width: 100%;              /* fill container on mobile */
+        max-width: 300px;         /* limit max width */
     }
 
-    .category-card img {
+    .category-img-wrapper {
         height: 150px;            /* same height as desktop */
-        width: 100%;              /* fill container */
-        object-fit: cover;        /* maintain proportions */
     }
 }
