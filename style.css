@@ -29,14 +29,14 @@ body {
 }
 
 .navbar .nav-links a {
-    color: white;        /* white text */
-    font-weight: 700;    /* bold */
+    color: white;
+    font-weight: 700;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .navbar .nav-links a:hover {
-    color: #ffcc00;      /* optional hover color */
+    color: #ffcc00;
 }
 
 /* Hero Section */
@@ -56,7 +56,7 @@ body {
     margin: 10px 0 0 0;
     font-weight: 600;
     letter-spacing: 2px;
-    color: #ccc; /* slightly lighter than white for contrast */
+    color: #ccc;
 }
 
 .category-section {
@@ -91,6 +91,11 @@ body {
     height: 120px;   /* smaller 2D preview */
     object-fit: cover; /* ensures image fits without stretching */
 }
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -144,7 +149,6 @@ footer {
 }
 
 /* --- Added for 3D Art Page --- */
-
 .work-title {
     font-size: 28px;
     margin-bottom: 20px;
@@ -156,22 +160,22 @@ footer {
 /* Section divider (white for 3D page) */
 .section-divider {
     border: none;
-    height: 3px;             /* thick but not too thick */
-    background-color: #fff;   /* changed from black to white */
-    margin: 40px 0;           /* spacing above and below */
+    height: 3px;
+    background-color: #fff;
+    margin: 40px 0;
 }
 
 /* Flex container for front and side head images */
 .head-grid {
     display: flex;
-    justify-content: center;   /* center images as a group */
-    gap: 20px;                 /* small gap between front and side head */
+    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
-    flex-wrap: wrap;           /* wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 .head-grid img {
-    width: 150px;              /* smaller than creature */
+    width: 150px;
     max-width: 100%;
     border-radius: 10px;
     transition: transform 0.4s ease;
