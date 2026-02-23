@@ -83,12 +83,9 @@ body {
 }
 
 /* Specific size for 3D and 2D previews */
-.category-card.3d img {
+.category-card.3d img,
+.category-card.2d img {   /* Make both same size */
     height: 150px;
-}
-
-.category-card.2d img {
-    height: 120px; /* smaller 2D preview */
 }
 
 .category-card:hover img {
@@ -157,9 +154,30 @@ footer {
     color: #fff;
 }
 
+/* Section divider (white for 3D page) */
 .section-divider {
     border: none;
     height: 3px;             /* thick but not too thick */
-    background-color: #000;   /* black line */
+    background-color: #fff;   /* changed from black to white */
     margin: 40px 0;           /* spacing above and below */
+}
+
+/* Flex container for front and side head images */
+.head-grid {
+    display: flex;
+    justify-content: center;   /* center images as a group */
+    gap: 20px;                 /* small gap between front and side head */
+    margin-top: 20px;
+    flex-wrap: wrap;           /* wrap on smaller screens */
+}
+
+.head-grid img {
+    width: 150px;              /* smaller than creature */
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.head-grid img:hover {
+    transform: scale(1.05);
 }
