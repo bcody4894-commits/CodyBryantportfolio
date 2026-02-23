@@ -6,7 +6,30 @@ body {
 }
 
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 40px;
+    background: #222;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
 }
 
 .hero {
@@ -32,10 +55,18 @@ body {
 
 .category-card img {
     width: 100%;
-    height: 150px; /* smaller than before */
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
+}
+
+/* Specific size for 3D and 2D previews */
+.category-card.3d img {
+    height: 150px;
+}
+
+.category-card.2d img {
+    height: 120px; /* smaller 2D preview */
 }
 
 .category-card:hover img {
@@ -72,9 +103,9 @@ body {
 }
 
 .work-grid img {
-    width: 80%; /* smaller than full width */
-    max-width: 200px; /* caps size */
-    margin: 0 auto; /* center in grid cell */
+    width: 80%;
+    max-width: 200px;
+    margin: 0 auto;
     border-radius: 10px;
     transition: transform 0.4s ease;
 }
