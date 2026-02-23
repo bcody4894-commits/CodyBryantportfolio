@@ -1,3 +1,4 @@
+/* --- Global Styles --- */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -59,6 +60,7 @@ body {
     color: #ccc;
 }
 
+/* --- Category Section (Homepage) --- */
 .category-section {
     display: flex;
     flex-direction: column;
@@ -66,12 +68,17 @@ body {
     padding: 40px;
 }
 
-/* New: horizontal layout for category buttons */
+/* Horizontal layout for 3D and 2D buttons */
 .category-row {
     display: flex;
-    justify-content: center;   /* center the row */
-    gap: 40px;                 /* space between buttons */
-    flex-wrap: wrap;           /* wrap on small screens */
+    justify-content: center;  /* center buttons */
+    gap: 40px;                /* space between 3D and 2D buttons */
+    flex-wrap: wrap;          /* wrap on smaller screens */
+}
+
+.category-container {
+    max-width: 400px;  /* button width */
+    margin: 0 auto;    /* center on page */
 }
 
 /* Category Cards */
@@ -82,13 +89,16 @@ body {
     color: white;
     overflow: hidden;
     border-radius: 12px;
-    width: 100%;               /* fill container width */
+    width: 100%;
     transition: transform 0.4s ease;
 }
 
-.category-card img {
+/* 3D and 2D images: exact same size */
+.category-card.3d img,
+.category-card.2d img {
     width: 100%;
-    object-fit: cover;
+    height: 150px;       /* exact same height for uniformity */
+    object-fit: cover;   /* maintain proportions, crop if needed */
     display: block;
     transition: transform 0.4s ease;
 }
@@ -97,20 +107,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Limit the width of category buttons on desktop */
-.category-container {
-    max-width: 400px;  /* controls width of both 3D and 2D buttons */
-    margin: 0 auto;    /* center them horizontally */
-}
-
-/* 3D and 2D card images */
-.category-card.3d img,
-.category-card.2d img {
-    max-height: 150px;   /* prevents images from getting too tall */
-    width: 100%;
-    object-fit: cover;   /* keeps image proportions without stretching */
-}
-
+/* Overlay text on buttons */
 .overlay {
     position: absolute;
     top: 0;
@@ -128,9 +125,18 @@ body {
     letter-spacing: 3px;
 }
 
+/* --- Work Section (3D page) --- */
 .work-section {
     padding: 40px;
     text-align: center;
+}
+
+.work-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
 }
 
 .work-grid {
@@ -152,47 +158,41 @@ body {
     transform: scale(1.05);
 }
 
+/* Back link */
 .back {
     color: white;
     text-decoration: none;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 30px;
     margin-top: 40px;
 }
 
-/* --- 3D Art Page --- */
-
-.work-title {
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-align: center;
-    color: #fff;
-}
-
-/* Section divider (white for 3D page) */
+/* Divider for 3D page */
 .section-divider {
     border: none;
-    height: 3px;             
-    background-color: #fff;   
-    margin: 40px 0;           
+    height: 3px;
+    background-color: #fff;
+    margin: 40px 0;
 }
 
-/* Flex container for front and side head images */
+/* --- Head images in 3D page --- */
 .head-grid {
     display: flex;
-    justify-content: center;
-    gap: 10px;        /* closer distance between front and side head */
+    justify-content: space-between;  /* front on left, side on right */
+    align-items: center;
+    gap: 20px;           /* space between front and side head */
     margin-top: 20px;
-    flex-wrap: wrap;
+    max-width: 400px;    /* row width */
+    margin-left: auto;
+    margin-right: auto;  /* center row on page */
 }
 
 .head-grid img {
-    width: 150px;
-    max-width: 100%;
+    width: 48%;           /* each takes ~half the row */
     border-radius: 10px;
     transition: transform 0.4s ease;
 }
@@ -201,7 +201,7 @@ footer {
     transform: scale(1.05);
 }
 
-/* Optional: make hero text responsive */
+/* --- Mobile Responsive --- */
 @media (max-width: 600px) {
     .hero h1 {
         font-size: 40px;
@@ -210,6 +210,13 @@ footer {
         font-size: 24px;
     }
     .category-container {
-        max-width: 100%; /* full width on mobile */
+        max-width: 100%; /* buttons full width on mobile */
+    }
+    .head-grid {
+        flex-direction: column; /* stack heads on small screens */
+        gap: 20px;
+    }
+    .head-grid img {
+        width: 80%;  /* scale heads for mobile */
     }
 }
