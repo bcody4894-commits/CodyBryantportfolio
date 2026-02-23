@@ -148,7 +148,6 @@ footer {
 }
 
 /* --- Added for 3D Art Page --- */
-
 .work-title {
     font-size: 28px;
     margin-bottom: 20px;
@@ -157,9 +156,30 @@ footer {
     color: #fff;
 }
 
+/* Black separator line */
 .section-divider {
     border: none;
-    height: 3px;             /* thick but not too thick */
-    background-color: #000;   /* black line */
-    margin: 40px 0;           /* spacing above and below */
+    height: 3px;
+    background-color: #000;
+    margin: 60px 0;  /* larger distance above and below */
+}
+
+/* Flex container for front and side head images */
+.head-grid {
+    display: flex;
+    justify-content: center;   /* center images as a group */
+    gap: 20px;                 /* small gap between front and side head */
+    margin-top: 20px;
+    flex-wrap: wrap;           /* wrap on smaller screens */
+}
+
+.head-grid img {
+    width: 200px;              /* consistent size */
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.head-grid img:hover {
+    transform: scale(1.05);
 }
