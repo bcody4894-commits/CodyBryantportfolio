@@ -21,7 +21,7 @@ body {
 
 /* HERO BACKGROUND */
 .hero-bg {
-    position: absolute; /* allow transform parallax */
+    position: absolute; /* allows transform parallax */
     top: 0;
     left: 0;
     width: 100%;
@@ -77,6 +77,9 @@ body {
     margin-top: -20px; /* scroll over hero */
     background: #fff;
     padding: 60px 20px;
+
+    /* NEW: make tall enough to scroll */
+    min-height: 150vh;  /* adjust for longer scroll */
 }
 
 .work-grid {
@@ -128,7 +131,7 @@ body {
 /* CONTACT */
 .contact-section {
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px; /* taller padding so scroll continues */
 }
 
 /* MOBILE STYLES */
