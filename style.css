@@ -107,11 +107,7 @@ a, a:visited {
     font-size: 1.3rem;
     font-weight: bold;
     text-align: center;
-}
-
-.work-button::after {
-    content: attr(data-label);
-    position: relative; /* ensure label inside flex box */
+    text-decoration: none;
 }
 
 /* CONTACT */
