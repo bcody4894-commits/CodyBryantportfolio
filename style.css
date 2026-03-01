@@ -177,12 +177,23 @@ body {
     }
 }
 
-/* MOBILE STYLING (UNCHANGED) */
+/* MOBILE STYLING */
 @media (max-width: 480px) {
+    /* SHRINK HERO IMAGE HEIGHT */
+    .hero-bg-wrapper {
+        height: 60vh; /* smaller hero section on phone */
+    }
+
+    .hero-bg {
+        height: 60vh; /* matches wrapper */
+    }
+
+    /* Hero name unchanged */
     .hero-name {
         font-size: 3.5rem;
     }
 
+    /* Mobile nav unchanged */
     .nav-bar {
         gap: 8px;
         flex-wrap: wrap;
@@ -196,6 +207,7 @@ body {
         font-size: 0.8rem;
     }
 
+    /* Work buttons smaller on mobile */
     .work-button,
     .black-button {
         height: 160px;
