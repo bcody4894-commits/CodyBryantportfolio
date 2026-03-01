@@ -112,7 +112,7 @@ body {
 .black-button img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* ensures all preview images match size */
+    object-fit: cover;
 }
 
 .work-button span,
@@ -163,11 +163,11 @@ body {
 /* MOBILE STYLING */
 @media (max-width: 480px) {
     .hero-bg {
-        position: absolute; /* allow transform */
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
+        position: absolute; /* allow transform for parallax */
+        width: 120%;          /* reduce zoomed-in effect */
+        height: 120%;
+        top: -10%;            /* center image vertically */
+        left: -10%;           /* center image horizontally */
         background-size: cover;
         background-position: center;
         z-index: 0;
@@ -175,7 +175,7 @@ body {
     }
 
     .hero-section {
-        height: 30vh; /* shrink content area for small phones */
+        height: 30vh;
         padding: 20px;
         overflow: hidden;
     }
