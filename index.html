@@ -63,17 +63,5 @@
     <p>Social: <a href="#">Instagram</a> • <a href="#">LinkedIn</a> • <a href="#">Twitter</a></p>
 </section>
 
-<!-- JS for fade effect -->
-<script>
-window.addEventListener('scroll', function() {
-    const heroBg = document.querySelector('.hero-bg');
-    const scrollTop = window.scrollY;
-    const maxScroll = window.innerHeight; // fade over first screen
-    let opacity = 1 - scrollTop / maxScroll;
-    if(opacity < 0) opacity = 0;
-    heroBg.style.opacity = opacity;
-});
-</script>
-
 </body>
 </html>
