@@ -95,7 +95,7 @@ a, a:visited {
 
 .work-button {
     position: relative;
-    background: #000; /* black button */
+    background: #000;
     border: 3px solid #000;
     border-radius: 6px;
     overflow: hidden;
@@ -103,11 +103,17 @@ a, a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: bold;
     text-align: center;
     text-decoration: none;
+}
+
+/* LABEL INSIDE BUTTON */
+.button-label {
+    color: #fff;          /* white text */
+    font-size: 1.3rem;
+    font-weight: bold;
+    z-index: 10;           /* ensures label sits above background */
+    pointer-events: none;
 }
 
 /* CONTACT */
@@ -118,7 +124,6 @@ a, a:visited {
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
-
     .hero-bg-wrapper,
     .hero-section {
         height: 45vh;
@@ -130,6 +135,9 @@ a, a:visited {
 
     .work-button {
         height: 130px;
+    }
+
+    .button-label {
         font-size: 1rem;
     }
 }
