@@ -47,7 +47,6 @@ body {
     text-align: center;
 }
 
-/* HERO NAME */
 .hero-name {
     font-size: 3.5rem;
     font-weight: bold;
@@ -90,7 +89,7 @@ body {
     background: #fff;
     position: relative;
     z-index: 1;
-    padding: 60px 20px; /* restore original height */
+    padding: 60px 20px;
 }
 
 .work-grid {
@@ -101,42 +100,12 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-/* WORK BUTTONS */
-.work-button {
-    position: relative;
-    background: #fff;
+/* WORK BUTTONS and BLACK BUTTONS hidden labels kept */
+.work-button, .black-button {
     border: 3px solid #000;
     border-radius: 6px;
-    overflow: hidden;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.2s ease;
 }
 
-.work-button:hover {
-    transform: scale(1.03);
-}
-
-.work-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* BLACK BUTTONS */
-.black-button {
-    background: #000;
-    border: 3px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0;
-}
-
-/* HIDE LABELS */
 .work-button span,
 .black-button span {
     display: none;
@@ -149,13 +118,12 @@ body {
     background: #fff;
 }
 
-/* DESKTOP-ONLY CHANGES */
+/* DESKTOP STYLING */
 @media (min-width: 768px) {
     .hero-name {
         font-size: 6rem;
         text-shadow: 3px 3px 15px rgba(255,255,255,0.6);
     }
-
     .nav-bar {
         position: fixed;
         top: 20px;
@@ -167,52 +135,29 @@ body {
         border-radius: 6px;
         z-index: 999;
     }
-
     .work-button,
     .black-button {
         height: 240px;
-    }
-
-    .work-grid {
-        max-width: 900px;
-        padding-top: 60px;
-        padding-bottom: 60px;
     }
 }
 
 /* MOBILE STYLING */
 @media (max-width: 480px) {
     .hero-bg-wrapper {
-        height: 30vh; /* keep hero smaller on phones */
+        height: 30vh;
     }
-
     .hero-bg {
         height: 30vh;
     }
-
     .hero-name {
         font-size: 3rem;
     }
-
-    .nav-bar {
-        gap: 8px;
-        flex-wrap: wrap;
-        justify-content: center;
-        position: static;
-        transform: none;
-    }
-
     .nav-bar a {
         padding: 5px 10px;
         font-size: 0.8rem;
     }
-
     .work-button,
     .black-button {
         height: 160px;
-    }
-
-    .work-button img {
-        transform: scale(1); /* remove zoom-out on mobile */
     }
 }
