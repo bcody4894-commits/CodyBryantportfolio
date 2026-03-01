@@ -22,7 +22,7 @@ body {
 }
 
 .hero-bg {
-    position: fixed; /* parallax effect */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -47,7 +47,7 @@ body {
     text-align: center;
 }
 
-/* NAME */
+/* HERO NAME */
 .hero-name {
     font-size: 3.5rem;
     font-weight: bold;
@@ -87,10 +87,11 @@ body {
 
 /* WORK SECTION */
 .work-section {
-    padding: 60px 20px;
     background: #fff;
     position: relative;
     z-index: 1;
+    min-height: 100vh; /* white bar reaches bottom of page */
+    padding: 60px 20px 100px 20px;
 }
 
 .work-grid {
@@ -123,7 +124,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease; /* for mobile zoom effect */
 }
 
 /* BLACK BUTTONS */
@@ -179,16 +179,21 @@ body {
         padding-top: 60px;
         padding-bottom: 60px;
     }
+
+    /* Ensure white bar fills page vertically */
+    .work-section {
+        min-height: 100vh;
+    }
 }
 
 /* MOBILE STYLING */
 @media (max-width: 480px) {
     .hero-bg-wrapper {
-        height: 40vh;
+        height: 30vh; /* smaller hero image */
     }
 
     .hero-bg {
-        height: 40vh;
+        height: 30vh;
     }
 
     .hero-name {
@@ -208,13 +213,14 @@ body {
         font-size: 0.8rem;
     }
 
-    /* WORK BUTTONS SMALLER & IMAGE ZOOMED OUT ON MOBILE */
+    /* Work buttons unchanged */
     .work-button,
     .black-button {
-        height: 140px;
+        height: 160px;
     }
 
+    /* Zoom out hero image content only */
     .work-button img {
-        transform: scale(0.9); /* zoom out effect on mobile */
+        transform: scale(0.85); /* zoom out images on mobile */
     }
 }
