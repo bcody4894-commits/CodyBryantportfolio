@@ -45,8 +45,8 @@
 const heroBg = document.querySelector('.hero-bg');
 
 window.addEventListener('scroll', () => {
-    // Mobile = faster, Desktop = slower for subtle effect
-    let speed = window.innerWidth <= 480 ? 0.4 : 0.15;
+    // Parallax speed: Mobile = fast, Desktop = subtle but noticeable
+    let speed = window.innerWidth <= 480 ? 0.4 : 0.3;
     let offset = window.scrollY * speed;
     heroBg.style.transform = `translateY(${offset}px)`;
 });
