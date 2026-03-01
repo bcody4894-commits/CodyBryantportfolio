@@ -43,7 +43,7 @@ body {
     align-items: center;
     padding: 40px;
     text-align: center;
-    z-index: 1;
+    z-index: 1; /* above background */
 }
 
 .hero-name {
@@ -127,7 +127,7 @@ body {
     padding: 40px 20px;
 }
 
-/* MOBILE STYLES (unchanged) */
+/* MOBILE STYLES (untouched) */
 @media (max-width: 480px) {
 
     .hero-bg {
@@ -153,22 +153,22 @@ body {
     }
 }
 
-/* DESKTOP HERO - behaves like mobile */
+/* DESKTOP HERO - works like mobile with scroll + parallax */
 @media (min-width: 768px) {
 
     .hero-bg-wrapper {
-        position: relative;   /* scrolls naturally */
-        height: 70vh;
-        overflow: hidden;
+        position: relative;   /* scrollable */
+        height: auto;         /* content determines height */
+        overflow: visible;
         z-index: 0;
     }
 
     .hero-bg {
-        position: fixed;      /* stays behind content for parallax */
+        position: fixed;      /* stays behind content */
         top: 0;
         left: 0;
         width: 100%;
-        height: 70vh;
+        height: 70vh;         /* visible hero area */
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -177,7 +177,7 @@ body {
 
     .hero-section {
         position: relative;
-        z-index: 1;          /* content above background */
+        z-index: 1;           /* content above background */
         height: 70vh;
         display: flex;
         flex-direction: column;
