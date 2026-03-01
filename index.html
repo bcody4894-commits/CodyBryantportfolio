@@ -35,23 +35,23 @@
         <!-- 3D ART -->
         <a href="3d.html" class="work-button">
             <img src="images/IMG_2686.jpeg" alt="3D Art Preview">
-            <span>3D Art</span>
+            <span></span>
         </a>
 
         <!-- GRAPHIC DESIGN / LAYOUT -->
         <a href="2d.html" class="work-button">
             <img src="images/IMG_2569.png" alt="Graphic Design Preview">
-            <span>Graphic Design / Layout</span>
+            <span></span>
         </a>
 
         <!-- GAMES -->
         <a href="games.html" class="work-button black-button">
-            <span>Games</span>
+            <span></span>
         </a>
 
         <!-- CONCEPT ART -->
         <a href="concept.html" class="work-button black-button">
-            <span>Concept Art</span>
+            <span></span>
         </a>
 
     </div>
@@ -62,6 +62,18 @@
     <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
     <p>Social: <a href="#">Instagram</a> • <a href="#">LinkedIn</a> • <a href="#">Twitter</a></p>
 </section>
+
+<!-- JS for fade effect -->
+<script>
+window.addEventListener('scroll', function() {
+    const heroBg = document.querySelector('.hero-bg');
+    const scrollTop = window.scrollY;
+    const maxScroll = window.innerHeight; // fade over first screen
+    let opacity = 1 - scrollTop / maxScroll;
+    if(opacity < 0) opacity = 0;
+    heroBg.style.opacity = opacity;
+});
+</script>
 
 </body>
 </html>
