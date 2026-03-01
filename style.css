@@ -92,10 +92,14 @@ body {
 }
 
 /* MOBILE FIX */
+/* 3D PAGE MOBILE IMAGE FIX */
 @media (max-width: 768px) {
-    .work-button {
-        height: 260px;
+    .work-grid img {
+        max-width: 85%;
+        margin: 20px auto;
+        display: block;
     }
+}
 /* BACK BUTTON FIX */
 .back {
     color: white;
