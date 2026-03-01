@@ -90,8 +90,7 @@ body {
     background: #fff;
     position: relative;
     z-index: 1;
-    min-height: 100vh; /* white bar reaches bottom of page */
-    padding: 60px 20px 100px 20px;
+    padding: 60px 20px; /* restore original height */
 }
 
 .work-grid {
@@ -179,17 +178,12 @@ body {
         padding-top: 60px;
         padding-bottom: 60px;
     }
-
-    /* Ensure white bar fills page vertically */
-    .work-section {
-        min-height: 100vh;
-    }
 }
 
 /* MOBILE STYLING */
 @media (max-width: 480px) {
     .hero-bg-wrapper {
-        height: 30vh; /* smaller hero image */
+        height: 30vh; /* keep hero smaller on phones */
     }
 
     .hero-bg {
@@ -213,14 +207,12 @@ body {
         font-size: 0.8rem;
     }
 
-    /* Work buttons unchanged */
     .work-button,
     .black-button {
         height: 160px;
     }
 
-    /* Zoom out hero image content only */
     .work-button img {
-        transform: scale(0.85); /* zoom out images on mobile */
+        transform: scale(1); /* remove zoom-out on mobile */
     }
 }
