@@ -19,7 +19,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: url('images/IMG_2672.jpeg');
+    background-image: url('images/IMG_2672.jpeg'); /* full-size for desktop */
     background-size: cover;
     background-position: center;
     z-index: 0;
@@ -39,7 +39,7 @@ body {
 
 .hero-top {
     display: flex;
-    justify-content: flex-start; /* Name on left */
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
 }
@@ -54,7 +54,7 @@ body {
 .nav-bar {
     margin: 20px auto 0 auto;
     display: flex;
-    justify-content: center; /* centered under name */
+    justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
 }
@@ -83,7 +83,7 @@ body {
 /* WORK SECTION */
 .work-section {
     padding: 60px 20px;
-    background: #fff; /* main page covers hero */
+    background: #fff;
     position: relative;
     z-index: 1;
 }
@@ -170,13 +170,20 @@ body {
 /* MOBILE-FRIENDLY NAV TABS */
 @media (max-width: 480px) {
     .nav-bar {
-        gap: 8px; /* smaller space between tabs */
-        flex-wrap: wrap; /* allow wrapping if needed */
+        gap: 8px;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     .nav-bar a {
-        padding: 5px 10px; /* smaller buttons */
-        font-size: 0.8rem; /* smaller text */
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    /* HERO IMAGE: use smaller file on mobile */
+    .hero-bg {
+        background-image: url('images/IMG_2672-small.jpeg'); /* create smaller version for mobile */
+        background-size: cover;
+        background-position: center;
     }
 }
