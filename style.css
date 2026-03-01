@@ -105,6 +105,14 @@ body {
 .black-button {
     border: 3px solid #000;
     border-radius: 6px;
+    overflow: hidden;
+}
+
+.work-button img,
+.black-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures all preview images match size */
 }
 
 .work-button span,
@@ -142,6 +150,14 @@ body {
     .black-button {
         height: 240px;
     }
+
+    /* Desktop-only fix: all images same size */
+    .work-button img,
+    .black-button img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 /* MOBILE STYLING */
@@ -173,8 +189,9 @@ body {
         height: 140px;
     }
 
-    /* Keep parallax, no zooming */
-    .work-button img {
+    /* Keep parallax intact */
+    .work-button img,
+    .black-button img {
         transform: none;
     }
 }
