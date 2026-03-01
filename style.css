@@ -16,7 +16,7 @@ a, a:visited {
     text-decoration: none;
 }
 
-/* HERO / BACKGROUND */
+/* HERO / PARALLAX BACKGROUND */
 .hero-bg-wrapper {
     position: relative;
     height: 70vh;
@@ -32,7 +32,7 @@ a, a:visited {
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
-    transform: translateZ(-1px) scale(2); /* keep original parallax */
+    transform: translateZ(-1px) scale(2); /* original parallax effect */
     z-index: 1;
     filter: brightness(0.6) saturate(1.2);
 }
@@ -45,7 +45,6 @@ a, a:visited {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
     text-align: center;
 }
 
