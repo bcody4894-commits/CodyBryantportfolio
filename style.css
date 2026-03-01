@@ -9,12 +9,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
     color: #000;
 }
 
-/* Remove purple visited links */
+/* REMOVE PURPLE LINKS */
 a,
 a:visited {
     color: #000;
@@ -22,112 +22,216 @@ a:visited {
 }
 
 /* =========================
-   HERO SECTION (HOME PAGE)
+   HERO BACKGROUND (HOME)
 ========================= */
 
-.hero {
+.hero-bg-wrapper {
     position: relative;
-    height: 65vh;
-    background: url("images/your-background.jpg") center center / cover no-repeat;
+    width: 100%;
+    height: 100vh; /* full screen */
     overflow: hidden;
+    z-index: 0;
 }
 
-/* Blur + dark overlay */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(8px);
-    background: rgba(0,0,0,0.35);
-}
-
-/* Hero title */
-.hero h1 {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3rem;
+.hero-bg {
+    position: fixed; /* parallax */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/IMG_2672.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
 }
 
 /* =========================
-   NAVIGATION
+   HOME HERO CONTENT
+========================= */
+
+.hero-section {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.hero-name {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+    text-align: center;
+}
+
+/* =========================
+   NAV BAR
 ========================= */
 
 .nav-bar {
-    background: #ffffff;
-    text-align: center;
-    padding: 18px 0;
-}
-
-.nav-bar a {
-    margin: 0 25px;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.nav-bar a:hover {
-    color: #555;
-}
-
-/* =========================
-   BUTTON PREVIEW SECTION
-========================= */
-
-.content {
     display: flex;
     justify-content: center;
-    gap: 35px;
-    padding: 60px 20px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
-.button-preview {
-    width: 240px;
+.nav-bar a {
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 2px solid #000;
+    background: #ccc;
+    border-radius: 6px;
+    color: #000;
 }
 
-.button-preview img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.button-preview img:hover {
-    transform: scale(1.05);
+.nav-bar a:hover {
+    background: #bbb;
 }
 
 /* =========================
-   WHITE FOOTER BAR
+   HOME PORTFOLIO LABEL
 ========================= */
 
-.white-bar {
-    height: 100px;
-    background: #ffffff;
+.hero-portfolio {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #666;
 }
 
 /* =========================
-   3D ART PAGE
+   WORK GRID (HOME)
+========================= */
+
+.work-section {
+    padding: 60px 20px;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.work-grid {
+    display: grid;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.work-button,
+.black-button {
+    border: 3px solid #000;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.work-button img,
+.black-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-button span,
+.black-button span {
+    display: none;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+}
+
+/* =========================
+   DESKTOP HOME STYLES
+========================= */
+
+@media (min-width: 768px) {
+    .hero-name {
+        font-size: 6rem;
+        text-shadow: 3px 3px 15px rgba(255,255,255,0.6);
+    }
+
+    .nav-bar {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ccc;
+        padding: 8px 15px;
+        border: 2px solid #000;
+        border-radius: 6px;
+        z-index: 999;
+    }
+
+    .work-button,
+    .black-button {
+        height: 240px;
+    }
+}
+
+/* =========================
+   MOBILE HOME STYLES
+========================= */
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 40vh; /* shrink hero on phone */
+        padding: 20px;
+    }
+
+    .hero-name {
+        font-size: 3rem;
+    }
+
+    .nav-bar {
+        gap: 8px;
+        justify-content: center;
+        position: static;
+        transform: none;
+    }
+
+    .nav-bar a {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .work-button,
+    .black-button {
+        height: 160px;
+    }
+}
+
+/* =========================
+   3D / ART / OTHER PAGE STYLES
 ========================= */
 
 .art-page {
-    background: #ffffff;
+    background: #fff;
     padding: 60px 20px 100px;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-/* Back Button */
+/* White Back Button */
 .back-button {
     display: inline-block;
     padding: 8px 22px;
-    background: #ffffff;
-    border: 2px solid #000000;
+    background: #fff;
+    border: 2px solid #000;
     border-radius: 6px;
     font-weight: bold;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     transition: 0.2s ease;
 }
 
@@ -135,54 +239,36 @@ a:visited {
     background: #f0f0f0;
 }
 
-/* Page Title */
-.page-title {
-    font-size: 2.7rem;
-    margin-bottom: 55px;
+.back-button:visited {
+    color: #000;
 }
 
-/* Gallery Layout */
+/* Page Title for inner pages */
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 45px;
+}
+
+/* Gallery layout */
 .gallery {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 45px;
+    gap: 35px;
 }
 
-/* Smaller Desktop Images */
+/* Smaller 3D images */
 .gallery img {
     width: 220px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
     object-fit: cover;
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
-
+/* MOBILE 3D PAGE */
 @media (max-width: 768px) {
-
-    .hero {
-        height: 50vh;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .button-preview {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .button-preview img {
-        height: 150px;
-    }
-
     .gallery img {
         width: 80%;
-        max-width: 280px;
+        max-width: 300px;
     }
-
 }
