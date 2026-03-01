@@ -195,7 +195,7 @@ body {
 
     /* HERO IMAGE: use smaller file on mobile */
     .hero-bg {
-        background-image: url('images/IMG_2672-small.jpeg');
+        background-image: url('images/IMG_2672-small.jpeg'); /* smaller optimized version */
         background-size: cover;
         background-position: center;
     }
