@@ -178,25 +178,43 @@ body {
 
 /* MOBILE STYLING */
 @media (max-width: 480px) {
-    .hero-name {
-        font-size: 3.5rem; /* unchanged for mobile */
+
+    /* Hero section background smaller so white bar doesn't overlap */
+    .hero-bg-wrapper {
+        height: 25vh; /* smaller hero on phones */
     }
 
+    .hero-bg {
+        height: 25vh;
+    }
+
+    /* Hero name smaller */
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    /* Tabs smaller */
     .nav-bar {
-        gap: 8px;
+        gap: 6px;
         flex-wrap: wrap;
         justify-content: center;
-        position: static; /* mobile nav normal */
+        position: static;
         transform: none;
     }
 
     .nav-bar a {
-        padding: 5px 10px;
-        font-size: 0.8rem;
+        padding: 4px 8px;
+        font-size: 0.7rem;
     }
 
+    /* Work buttons smaller so they fit the screen */
     .work-button,
     .black-button {
-        height: 160px;
+        height: 140px;
+    }
+
+    /* Zoom out work images slightly */
+    .work-button img {
+        transform: scale(0.8); /* zoom out images on mobile */
     }
 }
