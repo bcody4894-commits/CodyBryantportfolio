@@ -7,18 +7,18 @@
 
 body {
     background-color: #000;
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 60px 20px 40px 20px;
+    padding: 60px 20px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
@@ -31,15 +31,11 @@ body {
     padding: 20px;
 }
 
-/* BACK BUTTON FIX */
-.back {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
-
+/* BACK BUTTON */
+.back,
 .back:visited {
     color: white;
+    text-decoration: none;
 }
 
 .back:hover {
@@ -48,41 +44,33 @@ body {
 
 /* WORK SECTION */
 .work-section {
-    padding: 40px 20px 80px 20px;
+    padding: 40px 20px;
 }
 
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
+    gap: 25px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-/* PORTFOLIO BUTTON */
+/* BUTTON STYLE */
 .work-button {
-    position: relative;
     display: block;
+    position: relative;
     background: #111;
     border: 1px solid #333;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     text-decoration: none;
-    height: 320px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 260px;
 }
 
-.work-button:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-}
-
-/* PREVIEW IMAGE */
+/* PREVIEW IMAGES */
 .work-button img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 65%; /* lowers preview */
     display: block;
 }
 
@@ -91,13 +79,14 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 15px;
+    padding: 12px;
     background: rgba(0,0,0,0.7);
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    color: white;
 }
 
-/* BLACK BUTTONS (Games + Concept) */
+/* BLACK BUTTONS */
 .black-button {
     display: flex;
     justify-content: center;
@@ -108,30 +97,29 @@ body {
 .black-button span {
     position: static;
     background: none;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
-/* 3D PAGE LAYOUT */
+/* 3D PAGE IMAGES */
 .threeD-grid {
     display: grid;
-    gap: 40px;
+    gap: 30px;
     justify-items: center;
 }
 
 .threeD-item img {
-    width: 100%;
-    max-width: 500px; /* good desktop size */
+    width: 90%;
+    max-width: 400px;
     height: auto;
 }
 
-/* MOBILE FIX */
-@media (max-width: 768px) {
-
-    .work-button {
-        height: 260px;
+/* DESKTOP */
+@media (min-width: 768px) {
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .threeD-item img {
-        max-width: 80%;
+    .work-button {
+        height: 300px;
     }
 }
