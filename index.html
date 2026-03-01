@@ -40,15 +40,16 @@
     <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
 </section>
 
-<!-- MOBILE PARALLAX -->
+<!-- PARALLAX SCRIPT -->
 <script>
-if (window.innerWidth <= 480) {
-    const heroBg = document.querySelector('.hero-bg');
-    window.addEventListener('scroll', () => {
-        let offset = window.scrollY * 0.4;
-        heroBg.style.transform = `translateY(${offset}px)`;
-    });
-}
+const heroBg = document.querySelector('.hero-bg');
+
+window.addEventListener('scroll', () => {
+    // Adjust speed if you want slower on desktop
+    let speed = window.innerWidth <= 480 ? 0.4 : 0.2; 
+    let offset = window.scrollY * speed;
+    heroBg.style.transform = `translateY(${offset}px)`;
+});
 </script>
 
 </body>
