@@ -12,7 +12,7 @@ body {
     color: #000;
 }
 
-/* FIXED BACKGROUND IMAGE */
+/* FIXED HERO BACKGROUND */
 .hero-bg {
     position: fixed;
     top: 0;
@@ -22,10 +22,10 @@ body {
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
-    z-index: 0; /* behind everything */
+    z-index: 0; /* behind content */
 }
 
-/* HERO SECTION TEXT */
+/* HERO CONTENT */
 .hero-section {
     position: relative;
     z-index: 1;
@@ -64,6 +64,10 @@ body {
     text-decoration: none;
 }
 
+.nav-bar a:hover {
+    background: #eee;
+}
+
 .hero-portfolio {
     margin-top: 20px;
     font-size: 1.5rem;
@@ -74,7 +78,7 @@ body {
 /* WORK SECTION */
 .work-section {
     padding: 60px 20px;
-    background: #fff;
+    background: #fff; /* main page covers hero */
     position: relative;
     z-index: 1;
 }
@@ -131,9 +135,29 @@ body {
     padding: 10px;
 }
 
-/* CONTACT */
+/* CONTACT SECTION */
 .contact-section {
     text-align: center;
     padding: 40px 20px;
     background: #fff;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .hero-name {
+        font-size: 3.5rem;
+    }
+
+    .nav-bar a {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
+
+    .hero-portfolio {
+        font-size: 1.8rem;
+    }
+
+    .work-button, .black-button {
+        height: 240px;
+    }
 }
