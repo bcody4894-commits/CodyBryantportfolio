@@ -96,4 +96,19 @@ body {
     .work-button {
         height: 260px;
     }
+/* BACK BUTTON FIX */
+.back {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back:visited {
+    color: white;
+}
+
+.back:hover {
+    opacity: 0.7;
+}
+    
 }
