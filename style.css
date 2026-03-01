@@ -12,7 +12,7 @@ body {
     color: #000;
 }
 
-/* FIXED HERO BACKGROUND WITH FADE */
+/* FIXED HERO BACKGROUND */
 .hero-bg {
     position: fixed;
     top: 0;
@@ -23,7 +23,6 @@ body {
     background-size: cover;
     background-position: center;
     z-index: 0;
-    transition: opacity 0.5s ease-out;
 }
 
 /* HERO CONTENT */
