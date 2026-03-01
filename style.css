@@ -22,7 +22,7 @@ body {
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
-    z-index: 0; /* behind content */
+    z-index: 0;
 }
 
 /* HERO CONTENT */
@@ -34,11 +34,12 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 40px;
+    text-align: center;
 }
 
 .hero-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Name on left */
     align-items: center;
     width: 100%;
 }
@@ -49,15 +50,19 @@ body {
     color: #000;
 }
 
+/* NAVIGATION TABS */
 .nav-bar {
+    margin: 20px auto 0 auto;
     display: flex;
-    gap: 10px;
+    justify-content: center; /* centered under name */
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .nav-bar a {
     font-weight: bold;
     color: #000;
-    background: #fff;
+    background: #ccc;
     padding: 8px 15px;
     border: 2px solid #000;
     border-radius: 6px;
@@ -65,14 +70,14 @@ body {
 }
 
 .nav-bar a:hover {
-    background: #eee;
+    background: #bbb;
 }
 
+/* PORTFOLIO LABEL */
 .hero-portfolio {
     margin-top: 20px;
     font-size: 1.5rem;
     color: #666;
-    text-align: center;
 }
 
 /* WORK SECTION */
@@ -120,17 +125,17 @@ body {
     width: 100%;
 }
 
-/* BLACK BUTTONS */
+/* BLACK BUTTONS for Games & Concept Art */
 .black-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: #000;
     border: 3px solid #000;
 }
 
 .black-button span {
-    color: #000;
+    color: #fff;
     font-weight: bold;
     padding: 10px;
 }
