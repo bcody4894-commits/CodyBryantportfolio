@@ -22,7 +22,7 @@ body {
 }
 
 .hero-bg {
-    position: absolute;
+    position: fixed; /* parallax effect */
     top: 0;
     left: 0;
     width: 100%;
@@ -30,6 +30,7 @@ body {
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* critical for scroll effect */
     z-index: 0;
 }
 
@@ -48,7 +49,7 @@ body {
 
 /* NAME */
 .hero-name {
-    font-size: 3.5rem; /* mobile default size remains */
+    font-size: 3.5rem; /* mobile default */
     font-weight: bold;
     color: #000;
     margin-bottom: 20px;
