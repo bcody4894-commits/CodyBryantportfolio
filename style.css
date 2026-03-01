@@ -41,14 +41,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* keeps content centered on mobile by default */
+    align-items: center;
     padding: 40px;
     text-align: center;
 }
 
 /* NAME */
 .hero-name {
-    font-size: 3.5rem; /* mobile default size stays */
+    font-size: 3.5rem; /* mobile default size remains */
     font-weight: bold;
     color: #000;
     margin-bottom: 20px;
@@ -176,17 +176,17 @@ body {
     }
 }
 
-/* MOBILE STYLING */
+/* MOBILE STYLING (UNCHANGED) */
 @media (max-width: 480px) {
     .hero-name {
-        font-size: 3.5rem; /* unchanged for mobile */
+        font-size: 3.5rem;
     }
 
     .nav-bar {
         gap: 8px;
         flex-wrap: wrap;
         justify-content: center;
-        position: static; /* mobile nav normal */
+        position: static;
         transform: none;
     }
 
