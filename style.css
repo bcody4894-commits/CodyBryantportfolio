@@ -10,23 +10,21 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: #fff;
     color: #000;
+    position: relative;
 }
 
-/* HERO SECTION */
+/* HERO IMAGE - BACKGROUND LAYER */
 .hero-section {
-    height: 100vh; /* full viewport */
+    height: 100vh;
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    overflow: hidden;
+    z-index: 0; /* behind everything */
 }
 
-/* HERO CONTENT OVERLAY */
+/* HERO CONTENT - TEXT ON TOP */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -37,10 +35,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 2;
+    z-index: 1; /* on top of hero image */
 }
 
-/* HEADER + NAVIGATION */
+/* HEADER AND NAV */
 .hero-top {
     display: flex;
     justify-content: space-between;
@@ -67,28 +65,27 @@ body {
     border: 2px solid #000;
     border-radius: 6px;
     text-decoration: none;
-    transition: all 0.3s ease;
 }
 
-.nav-bar a:hover {
-    background: #eee;
-}
-
-/* PORTFOLIO TEXT CENTERED */
+/* PORTFOLIO LABEL */
 .hero-portfolio {
     text-align: center;
     margin-top: 20px;
     font-size: 1.5rem;
     font-weight: bold;
     color: #666;
+    z-index: 1;
 }
 
-/* WORK SECTION */
+/* WORK SECTION - ABOVE HERO IMAGE */
 .work-section {
     padding: 60px 20px;
-    background: #fff;
+    background: #fff; /* white background covers hero image */
+    position: relative;
+    z-index: 1; /* ensures content goes over hero image */
 }
 
+/* WORK GRID */
 .work-grid {
     display: grid;
     gap: 20px;
@@ -126,10 +123,9 @@ body {
     background: rgba(0,0,0,0.7);
     color: #fff;
     text-align: center;
-    font-size: 1rem;
 }
 
-/* BLACK BUTTONS (Games / Concept Art) */
+/* BLACK BUTTONS */
 .black-button {
     display: flex;
     justify-content: center;
@@ -151,38 +147,12 @@ body {
     padding: 40px 20px;
     text-align: center;
     background: #fff;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-section a {
-    text-decoration: none;
-    color: #000;
     font-weight: bold;
-}
-
-.contact-section a:hover {
-    text-decoration: underline;
-}
-
-/* RESPONSIVE DESIGN */
-@media (min-width: 768px) {
-    .hero-name {
-        font-size: 3.5rem;
-    }
-
-    .nav-bar a {
-        padding: 10px 18px;
-        font-size: 1rem;
-    }
-
-    .hero-portfolio p {
-        font-size: 1.8rem;
-    }
-
-    .work-button {
-        height: 240px;
-    }
-
-    .black-button {
-        height: 240px;
-    }
+    color: #000;
+    text-decoration: none;
 }
