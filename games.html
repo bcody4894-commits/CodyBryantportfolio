@@ -5,19 +5,76 @@
     <title>Games | Cody Bryant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+        body.art-page {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff;
+            color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .page-title {
+            margin: 20px 0 30px 0;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 12px;
+            border: 2px solid #000;
+            border-radius: 6px;
+            background-color: #ccc;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .back:hover {
+            background-color: #aaa;
+        }
+
+        .work-grid {
+            display: grid;
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .coming-soon {
+            width: 150px;
+            height: 120px;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid #000;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 480px) {
+            .coming-soon {
+                width: 100%;
+                max-width: 250px;
+                height: 100px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="art-page">
 
 <nav class="navbar">
     <a href="index.html" class="back">← Back</a>
 </nav>
 
 <section class="work-section">
-    <h1>Games</h1>
+    <h1 class="page-title">Games</h1>
 
     <div class="work-grid">
-        <!-- Add your concept art images here later -->
-        <p style="color:white;">Concept art coming soon.</p>
+        <div class="coming-soon">Coming Soon</div>
     </div>
 </section>
 
