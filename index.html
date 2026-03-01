@@ -8,22 +8,29 @@
 </head>
 <body>
 
+<!-- HERO IMAGE -->
 <section class="hero-section">
-    <div class="hero-content">
-        <h1 class="hero-name">Cody Bryant</h1>
-        <nav class="nav-bar">
-            <a href="3d.html">3D</a>
-            <a href="2d.html">Layout</a>
-            <a href="2d.html">Graphic Design</a>
-            <a href="games.html">Games</a>
-            <a href="concept.html">Concept Art</a>
-        </nav>
-        <p class="hero-portfolio">Portfolio</p>
+    <div class="hero-overlay">
+        <div class="hero-top">
+            <h1 class="hero-name">Cody Bryant</h1>
+            <nav class="nav-bar">
+                <a href="3d.html">3D</a>
+                <a href="2d.html">Layout</a>
+                <a href="2d.html">Graphic Design</a>
+                <a href="games.html">Games</a>
+                <a href="concept.html">Concept Art</a>
+            </nav>
+        </div>
+        <div class="hero-portfolio">
+            <p>Portfolio</p>
+        </div>
     </div>
 </section>
 
+<!-- WORK PREVIEW BUTTONS -->
 <section class="work-section">
     <div class="work-grid">
+
         <a href="3d.html" class="work-button">
             <img src="images/IMG_2686.jpeg" alt="3D Art Preview">
             <span>3D Art</span>
@@ -41,21 +48,15 @@
         <a href="concept.html" class="work-button black-button">
             <span>Concept Art</span>
         </a>
+
     </div>
 </section>
 
+<!-- CONTACT SECTION -->
 <section class="contact-section">
     <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
     <p>Social: <a href="#">Instagram</a> • <a href="#">LinkedIn</a> • <a href="#">Twitter</a></p>
 </section>
-
-<script>
-    // Optional: adds fade effect as you scroll
-    window.addEventListener('scroll', function() {
-        const hero = document.querySelector('.hero-section');
-        hero.style.opacity = 1 - window.scrollY / 500;
-    });
-</script>
 
 </body>
 </html>
