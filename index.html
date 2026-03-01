@@ -4,77 +4,44 @@
     <meta charset="UTF-8">
     <title>Cody Bryant | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="logo">Cody Bryant</div>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="3d.html">3D</a>
-        <a href="2d.html">Graphic Design</a>
-        <a href="games.html">Games</a>
-        <a href="concept.html">Concept Art</a>
-    </div>
-</nav>
+<header class="hero">
+    <h1>Cody Bryant</h1>
+    <p>Game Design • 3D Art • Graphic Design</p>
+</header>
 
-<section class="hero">
-    <h1>Portfolio</h1>
-    <p>Explore my work.</p>
-</section>
+<section class="work-section">
 
-<section class="category-section">
+    <div class="work-grid">
 
-    <!-- 3D Button -->
-    <div class="category-container">
-        <a href="3d.html" class="category-card">
-            <div class="category-img-wrapper">
-                <img src="images/IMG_2672.jpeg" alt="3D Preview">
-            </div>
-            <div class="overlay">
-                <h2>3D ART</h2>
-            </div>
+        <!-- 3D ART -->
+        <a href="3d.html" class="work-button">
+            <img src="images/model-preview.png" alt="3D Art Preview">
+            <span>3D Art</span>
         </a>
-    </div>
 
-    <!-- Graphic Design / Layout -->
-    <div class="category-container">
-        <a href="2d.html" class="category-card">
-            <div class="category-img-wrapper">
-                <img src="images/IMG_2569.png" alt="Graphic Design Preview">
-            </div>
-            <div class="overlay">
-                <h2>GRAPHIC DESIGN / LAYOUT</h2>
-            </div>
+        <!-- GRAPHIC DESIGN / LAYOUT -->
+        <a href="2d.html" class="work-button">
+            <img src="images/IMG_2569.png" alt="Graphic Design Preview">
+            <span>Graphic Design / Layout</span>
         </a>
-    </div>
 
-    <!-- Games Button (Black for now) -->
-    <div class="category-container">
-        <a href="games.html" class="category-card black-card">
-            <div class="overlay">
-                <h2>GAMES</h2>
-            </div>
+        <!-- GAMES -->
+        <a href="games.html" class="work-button black-button">
+            <span>Games</span>
         </a>
-    </div>
 
-    <!-- Concept Art Button (Black for now) -->
-    <div class="category-container">
-        <a href="concept.html" class="category-card black-card">
-            <div class="overlay">
-                <h2>CONCEPT ART</h2>
-            </div>
+        <!-- CONCEPT ART -->
+        <a href="concept.html" class="work-button black-button">
+            <span>Concept Art</span>
         </a>
+
     </div>
 
 </section>
-
-<footer>
-    <p>© 2026 Cody Bryant</p>
-</footer>
 
 </body>
 </html>
