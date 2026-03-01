@@ -83,15 +83,17 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+/* WORK BUTTONS */
 .work-button {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 3px solid #000;
     border-radius: 6px;
-    background-color: #000;
-    color: #fff;
-    font-weight: bold;
+    background-color: #000 !important;  /* force black background */
+    color: #fff !important;             /* force white text */
+    font-weight: 900;                    /* extra bold */
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
     height: 120px;
@@ -99,7 +101,7 @@ body {
 }
 
 .work-button:hover {
-    background-color: #222;
+    background-color: #222 !important;  /* darken on hover */
     transform: scale(1.05);
 }
 
