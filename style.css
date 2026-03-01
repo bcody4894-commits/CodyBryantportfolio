@@ -26,6 +26,26 @@ body {
     color: #aaa;
 }
 
+/* NAVBAR */
+.navbar {
+    padding: 20px;
+}
+
+/* BACK BUTTON FIX */
+.back {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back:visited {
+    color: white;
+}
+
+.back:hover {
+    opacity: 0.7;
+}
+
 /* WORK SECTION */
 .work-section {
     padding: 40px 20px 80px 20px;
@@ -39,7 +59,7 @@ body {
     margin: 0 auto;
 }
 
-/* BUTTON STYLE */
+/* PORTFOLIO BUTTON */
 .work-button {
     position: relative;
     display: block;
@@ -62,11 +82,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 65%; /* lowered preview */
+    object-position: center 65%; /* lowers preview */
     display: block;
 }
 
-/* TEXT OVERLAY */
+/* BUTTON TEXT */
 .work-button span {
     position: absolute;
     bottom: 0;
@@ -77,7 +97,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* BLACK BUTTON (Games + Concept) */
+/* BLACK BUTTONS (Games + Concept) */
 .black-button {
     display: flex;
     justify-content: center;
@@ -91,28 +111,27 @@ body {
     font-size: 1.3rem;
 }
 
+/* 3D PAGE LAYOUT */
+.threeD-grid {
+    display: grid;
+    gap: 40px;
+    justify-items: center;
+}
+
+.threeD-item img {
+    width: 100%;
+    max-width: 500px; /* good desktop size */
+    height: auto;
+}
+
 /* MOBILE FIX */
-/* 3D PAGE MOBILE IMAGE FIX */
 @media (max-width: 768px) {
-    .work-grid img {
-        max-width: 85%;
-        margin: 20px auto;
-        display: block;
+
+    .work-button {
+        height: 260px;
     }
-}
-/* BACK BUTTON FIX */
-.back {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
 
-.back:visited {
-    color: white;
-}
-
-.back:hover {
-    opacity: 0.7;
-}
-    
+    .threeD-item img {
+        max-width: 80%;
+    }
 }
