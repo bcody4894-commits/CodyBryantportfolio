@@ -15,7 +15,7 @@ body {
 .hero-bg-wrapper {
     position: relative;
     width: 100%;
-    height: 80vh; /* shorter hero to reduce white space */
+    height: 85vh; /* taller hero to reduce white space below */
     overflow: hidden;
 }
 
@@ -25,7 +25,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 130vh; /* taller so parallax is visible */
+    min-height: 140vh; /* taller so parallax is visible */
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
@@ -36,32 +36,32 @@ body {
 /* HERO CONTENT */
 .hero-section {
     position: relative;
-    height: 80vh; /* match wrapper height */
+    height: 85vh; /* match wrapper height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px; /* reduced padding */
+    padding: 20px; /* tighten padding */
     text-align: center;
     z-index: 1; /* content above background */
 }
 
 .hero-name {
     font-size: 4rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-/* NAVIGATION (FIXED TOP-RIGHT) */
+/* NAVIGATION (FIXED TOP-RIGHT, IN FRONT) */
 .nav-bar {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     justify-content: flex-end;
-    position: fixed; /* FIXED POSITION */
-    top: 20px;
-    right: 20px;
-    z-index: 10; /* always above content */
-    background: rgba(255,255,255,0.8); /* semi-transparent background */
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999; /* bring fully in front */
+    background: rgba(255,255,255,0.9); /* semi-transparent so image shows behind */
     padding: 5px 10px;
     border-radius: 8px;
 }
@@ -85,10 +85,10 @@ body {
 .work-section {
     position: relative;
     z-index: 2;
-    margin-top: -25px; /* scroll over hero */
+    margin-top: -20px; /* slightly less white space */
     background: #fff;
-    padding: 40px 20px; /* reduced padding */
-    min-height: 140vh; /* slightly shorter to reduce white space */
+    padding: 30px 20px; /* reduced padding */
+    min-height: 130vh; /* reduce extra white space */
 }
 
 /* WORK GRID BUTTONS */
@@ -110,8 +110,8 @@ body {
     color: #fff !important;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem; /* bigger font on buttons */
-    height: 180px; /* taller buttons */
+    font-size: 1.5rem;
+    height: 180px;
     text-decoration: none;
     transition: transform 0.2s, background-color 0.2s;
 }
@@ -124,7 +124,7 @@ body {
 /* BACK BUTTON */
 .back, .back-button {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 8px 12px;
     border: 2px solid #000;
     border-radius: 6px;
@@ -141,7 +141,7 @@ body {
 /* CONTACT */
 .contact-section {
     text-align: center;
-    padding: 50px 20px; /* reduced padding */
+    padding: 40px 20px; /* less white space */
 }
 
 /* MOBILE STYLES - UNCHANGED */
@@ -205,6 +205,6 @@ body {
     }
 
     .work-section {
-        margin-top: -25px; /* layered effect */
+        margin-top: -20px; /* slightly less white space */
     }
 }
