@@ -41,14 +41,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* keeps content centered on mobile by default */
     padding: 40px;
     text-align: center;
 }
 
 /* NAME */
 .hero-name {
-    font-size: 3.5rem; /* mobile default */
+    font-size: 3.5rem; /* mobile default size stays */
     font-weight: bold;
     color: #000;
     margin-bottom: 20px;
@@ -75,26 +75,6 @@ body {
 
 .nav-bar a:hover {
     background: #bbb;
-}
-
-/* FIXED NAV ON DESKTOP */
-@media (min-width: 768px) {
-    .hero-name {
-        font-size: 6rem; /* bigger on desktop */
-        text-shadow: 3px 3px 15px rgba(255,255,255,0.6); /* pops against image */
-    }
-
-    .nav-bar {
-        position: fixed;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #ccc;
-        padding: 8px 15px;
-        border: 2px solid #000;
-        border-radius: 6px;
-        z-index: 999;
-    }
 }
 
 /* PORTFOLIO LABEL */
@@ -168,17 +148,45 @@ body {
     background: #fff;
 }
 
+/* DESKTOP-ONLY CHANGES */
+@media (min-width: 768px) {
+    /* Name bigger with shadow on desktop */
+    .hero-name {
+        font-size: 6rem;
+        text-shadow: 3px 3px 15px rgba(255,255,255,0.6);
+    }
+
+    /* Nav fixed on desktop */
+    .nav-bar {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ccc;
+        padding: 8px 15px;
+        border: 2px solid #000;
+        border-radius: 6px;
+        z-index: 999;
+    }
+
+    /* Work buttons bigger on desktop */
+    .work-button,
+    .black-button {
+        height: 240px;
+    }
+}
+
 /* MOBILE STYLING */
 @media (max-width: 480px) {
     .hero-name {
-        font-size: 3.5rem; /* smaller on phones */
+        font-size: 3.5rem; /* unchanged for mobile */
     }
 
     .nav-bar {
         gap: 8px;
         flex-wrap: wrap;
         justify-content: center;
-        position: static;
+        position: static; /* mobile nav normal */
         transform: none;
     }
 
@@ -190,13 +198,5 @@ body {
     .work-button,
     .black-button {
         height: 160px;
-    }
-}
-
-/* DESKTOP WORK BUTTON HEIGHT */
-@media (min-width: 768px) {
-    .work-button,
-    .black-button {
-        height: 240px;
     }
 }
