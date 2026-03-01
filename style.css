@@ -5,9 +5,10 @@
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
-    background: #fff;
     font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
     color: #000;
 }
 
@@ -18,13 +19,14 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-/* OVERLAY TEXT */
+/* HERO CONTENT OVERLAY */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -35,15 +37,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: rgba(255,255,255,0.0);
-    z-index: 2; /* text above image */
+    z-index: 2;
 }
 
-/* HEADER AND NAV */
+/* HEADER + NAVIGATION */
 .hero-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .hero-name {
@@ -76,9 +78,6 @@ body {
 .hero-portfolio {
     text-align: center;
     margin-top: 20px;
-}
-
-.hero-portfolio p {
     font-size: 1.5rem;
     font-weight: bold;
     color: #666;
@@ -127,28 +126,31 @@ body {
     background: rgba(0,0,0,0.7);
     color: #fff;
     text-align: center;
+    font-size: 1rem;
 }
 
-/* BLACK BUTTONS */
+/* BLACK BUTTONS (Games / Concept Art) */
 .black-button {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #fff;
     border: 3px solid #000;
+    height: 200px;
 }
 
 .black-button span {
     position: static;
-    background: none;
     font-weight: bold;
     color: #000;
+    padding: 12px;
 }
 
-/* CONTACT */
+/* CONTACT SECTION */
 .contact-section {
-    text-align: center;
     padding: 40px 20px;
+    text-align: center;
+    background: #fff;
 }
 
 .contact-section a {
@@ -157,7 +159,11 @@ body {
     font-weight: bold;
 }
 
-/* DESKTOP RESPONSIVE */
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
 @media (min-width: 768px) {
     .hero-name {
         font-size: 3.5rem;
@@ -170,5 +176,13 @@ body {
 
     .hero-portfolio p {
         font-size: 1.8rem;
+    }
+
+    .work-button {
+        height: 240px;
+    }
+
+    .black-button {
+        height: 240px;
     }
 }
