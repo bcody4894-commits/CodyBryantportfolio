@@ -20,12 +20,12 @@ a:visited {
 }
 
 /* =========================
-   HOME HERO (CROPPED)
+   HERO BACKGROUND (CROPPED + EFFECT)
 ========================= */
 .hero-bg-wrapper {
     position: relative;
     width: 100%;
-    height: 70vh; /* cropped height */
+    height: 70vh; /* cropped */
     overflow: hidden;
 }
 
@@ -36,6 +36,8 @@ a:visited {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: brightness(0.8); /* keeps effect */
+    z-index: 1;
 }
 
 .hero-section {
@@ -57,13 +59,14 @@ a:visited {
 }
 
 /* =========================
-   NAVIGATION
+   NAV BAR
 ========================= */
 .nav-bar {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
+    z-index: 2;
 }
 
 .nav-bar a {
@@ -72,6 +75,7 @@ a:visited {
     border: 2px solid #000;
     background: #ccc;
     border-radius: 6px;
+    z-index: 2;
 }
 
 .nav-bar a:hover {
@@ -79,7 +83,7 @@ a:visited {
 }
 
 /* =========================
-   WORK GRID
+   WORK GRID / BUTTONS
 ========================= */
 .work-section {
     padding: 60px 20px;
@@ -98,12 +102,12 @@ a:visited {
     border: 3px solid #000;
     border-radius: 6px;
     overflow: hidden;
-    height: 200px; /* desktop size */
+    height: 200px; /* DESKTOP preview size unchanged */
 }
 
 .work-button img {
     width: 100%;
-    height: 200px; /* desktop size */
+    height: 200px; /* DESKTOP preview size */
     object-fit: cover;
 }
 
@@ -116,7 +120,7 @@ a:visited {
 }
 
 /* =========================
-   3D / ART PAGES
+   3D PAGE
 ========================= */
 .art-page {
     background: #fff;
@@ -171,9 +175,9 @@ a:visited {
         font-size: 2.5rem;
     }
 
-    /* MOBILE BUTTON FIX */
+    /* ONLY MOBILE BUTTON SIZE FIX */
     .work-button {
-        height: 130px; /* smaller height on mobile */
+        height: 130px; /* smaller mobile buttons */
     }
 
     .work-button img {
