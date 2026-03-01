@@ -16,7 +16,7 @@ a, a:visited {
     text-decoration: none;
 }
 
-/* HERO BACKGROUND (PARALLAX) */
+/* HERO / BACKGROUND */
 .hero-bg-wrapper {
     position: relative;
     height: 70vh;
@@ -32,7 +32,7 @@ a, a:visited {
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
-    transform: translateZ(-1px) scale(2); /* parallax effect */
+    transform: translateZ(-1px) scale(2); /* keep original parallax */
     z-index: 1;
     filter: brightness(0.6) saturate(1.2);
 }
@@ -106,7 +106,7 @@ a, a:visited {
 }
 
 .button-label {
-    color: #fff;          /* white text */
+    color: #fff; /* white text */
     font-size: 1.3rem;
     font-weight: bold;
     z-index: 10;
