@@ -11,8 +11,7 @@ body {
     color: #000;
 }
 
-a,
-a:visited {
+a, a:visited {
     color: #000;
     text-decoration: none;
 }
@@ -112,6 +111,7 @@ a:visited {
 
 .work-button::after {
     content: attr(data-label);
+    position: relative; /* ensure label inside flex box */
 }
 
 /* CONTACT */
