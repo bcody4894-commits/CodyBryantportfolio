@@ -15,21 +15,19 @@ body {
 .hero-bg-wrapper {
     position: relative;
     width: 100%;
-    height: 70vh;
     overflow: hidden;
 }
 
 /* HERO BACKGROUND */
 .hero-bg {
-    position: fixed;  /* allows parallax */
+    position: fixed;  /* parallax background */
     top: 0;
     left: 0;
     width: 100%;
-    height: 70vh;
+    height: 70vh;     /* visible hero area */
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     z-index: 0;
 }
 
@@ -71,6 +69,9 @@ body {
 
 /* WORK SECTION */
 .work-section {
+    position: relative;
+    z-index: 2;
+    margin-top: -20px; /* scroll over hero */
     background: #fff;
     padding: 60px 20px;
 }
@@ -127,7 +128,7 @@ body {
     padding: 40px 20px;
 }
 
-/* MOBILE STYLES (untouched) */
+/* MOBILE STYLES */
 @media (max-width: 480px) {
 
     .hero-bg {
@@ -153,37 +154,16 @@ body {
     }
 }
 
-/* DESKTOP HERO - works like mobile with scroll + parallax */
+/* DESKTOP HERO - scrollable with parallax */
 @media (min-width: 768px) {
 
     .hero-bg-wrapper {
-        position: relative;   /* scrollable */
-        height: auto;         /* content determines height */
+        height: auto;  /* wrapper height auto so page can scroll */
         overflow: visible;
-        z-index: 0;
-    }
-
-    .hero-bg {
-        position: fixed;      /* stays behind content */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 70vh;         /* visible hero area */
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        z-index: 0;
     }
 
     .hero-section {
-        position: relative;
-        z-index: 1;           /* content above background */
         height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 60px;
     }
 
     .hero-name {
@@ -198,5 +178,9 @@ body {
     .back, .back-button {
         padding: 10px 15px;
         font-size: 1.1rem;
+    }
+
+    .work-section {
+        margin-top: -20px;  /* layered scroll effect */
     }
 }
