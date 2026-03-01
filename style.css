@@ -6,17 +6,35 @@
 }
 
 body {
-    background: #fff; /* Entire page white */
-    color: #000; /* Default text black */
+    background: #fff;
+    color: #000;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HERO HEADER */
-.hero-header {
-    padding: 20px;
-    background: #fff; /* header white too */
+/* HERO FULL SCREEN WITH BACKGROUND IMAGE */
+.hero-section {
+    height: 100vh;
+    background-image: url('images/IMG_2672.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.0); /* transparent overlay for text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* HERO TEXT AND NAV */
 .hero-top {
     display: flex;
     justify-content: space-between;
@@ -24,11 +42,11 @@ body {
 }
 
 .hero-name {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
+    color: #000; /* text visible on image */
 }
 
-/* NAV/TAB BAR */
 .nav-bar {
     display: flex;
     gap: 10px;
@@ -37,33 +55,33 @@ body {
 .nav-bar a {
     font-weight: bold;
     color: #000;
-    background: #fff; /* white tabs */
-    padding: 8px 15px; /* smaller tabs */
-    border: 2px solid #000; /* black border */
+    background: #fff;
+    padding: 8px 15px;
+    border: 2px solid #000;
     border-radius: 6px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .nav-bar a:hover {
-    background: #eee; /* subtle hover effect */
+    background: #eee;
 }
 
-/* PORTFOLIO TEXT BELOW HEADER */
 .hero-portfolio {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .hero-portfolio p {
-    font-size: 1.2rem;
-    color: #666; /* slightly gray for contrast */
+    font-size: 1.5rem;
+    color: #666;
     font-weight: bold;
 }
 
 /* WORK SECTION */
 .work-section {
-    padding: 40px 20px;
+    padding: 60px 20px;
+    background: #fff;
 }
 
 /* GRID */
@@ -72,17 +90,17 @@ body {
     gap: 20px;
     max-width: 900px;
     margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 /* WORK BUTTONS */
 .work-button {
-    display: block;
     position: relative;
-    background: #fff; /* buttons white */
-    border: 3px solid #000; /* black ring */
+    background: #fff;
+    border: 3px solid #000;
     border-radius: 6px;
     overflow: hidden;
-    height: 180px;
+    height: 200px;
     transition: transform 0.2s ease;
 }
 
@@ -90,31 +108,29 @@ body {
     transform: scale(1.03);
 }
 
-/* IMAGE */
 .work-button img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* BUTTON TEXT */
 .work-button span {
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 8px;
     background: rgba(0,0,0,0.7);
-    text-align: center;
-    font-size: 0.9rem;
     color: #fff;
+    text-align: center;
+    font-size: 1rem;
 }
 
-/* BLACK BUTTONS (for text-only) */
+/* BLACK BUTTONS */
 .black-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff; /* text-only buttons white */
+    background: #fff;
     border: 3px solid #000;
 }
 
@@ -125,22 +141,35 @@ body {
     color: #000;
 }
 
+/* CONTACT */
+.contact-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.contact-section a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
 /* DESKTOP */
 @media (min-width: 768px) {
-    .work-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .hero-name {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     .nav-bar a {
-        padding: 10px 18px; /* slightly bigger on desktop but still small */
+        padding: 10px 18px;
         font-size: 1rem;
     }
 
     .hero-portfolio p {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 }
