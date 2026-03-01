@@ -59,5 +59,19 @@
     <p>Social: <a href="#">Instagram</a> • <a href="#">LinkedIn</a> • <a href="#">Twitter</a></p>
 </section>
 
+<!-- MOBILE PARALLAX SCRIPT -->
+<script>
+    // Enable simulated parallax on mobile
+    if (window.innerWidth <= 480) {
+        const heroBg = document.querySelector('.hero-bg');
+
+        window.addEventListener('scroll', () => {
+            // Move background slower than scroll
+            let offset = window.scrollY * 0.5; 
+            heroBg.style.transform = `translateY(${offset}px)`;
+        });
+    }
+</script>
+
 </body>
 </html>
