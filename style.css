@@ -5,28 +5,27 @@
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #fff;
     color: #000;
 }
 
-/* HERO BACKGROUND */
+/* HERO WRAPPER (CROPPED) */
 .hero-bg-wrapper {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 70vh;   /* CROPPED HERE */
     overflow: hidden;
-    z-index: 0;
 }
 
+/* HERO BACKGROUND */
 .hero-bg {
-    position: fixed; /* desktop parallax */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 70vh;   /* MATCH WRAPPER */
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
@@ -37,58 +36,42 @@ body {
 /* HERO CONTENT */
 .hero-section {
     position: relative;
-    z-index: 1;
-    height: 100vh;
+    height: 70vh;   /* MATCH WRAPPER */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px;
     text-align: center;
+    z-index: 1;
 }
 
 .hero-name {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #000;
+    font-size: 4rem;
     margin-bottom: 20px;
-    text-align: center;
 }
 
-/* NAVIGATION TABS */
+/* NAV */
 .nav-bar {
     display: flex;
-    justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-bar a {
     font-weight: bold;
-    color: #000;
     text-decoration: none;
     padding: 8px 15px;
-    border-radius: 6px;
     background: #ccc;
     border: 2px solid #000;
-}
-
-.nav-bar a:hover {
-    background: #bbb;
-}
-
-/* PORTFOLIO LABEL */
-.hero-portfolio {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: #666;
+    border-radius: 6px;
+    color: #000;
 }
 
 /* WORK SECTION */
 .work-section {
     background: #fff;
-    position: relative;
-    z-index: 1;
     padding: 60px 20px;
 }
 
@@ -100,105 +83,42 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-/* WORK BUTTONS */
-.work-button,
-.black-button {
+.work-button {
     border: 3px solid #000;
     border-radius: 6px;
     overflow: hidden;
+    height: 240px;
 }
 
-.work-button img,
-.black-button img {
+.work-button img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.work-button span,
-.black-button span {
-    display: none;
-}
-
-/* CONTACT SECTION */
+/* CONTACT */
 .contact-section {
     text-align: center;
     padding: 40px 20px;
-    background: #fff;
 }
 
-/* DESKTOP STYLING */
-@media (min-width: 768px) {
-    .hero-name {
-        font-size: 6rem;
-        text-shadow: 3px 3px 15px rgba(255,255,255,0.6);
-    }
-
-    .nav-bar {
-        position: fixed;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #ccc;
-        padding: 8px 15px;
-        border: 2px solid #000;
-        border-radius: 6px;
-        z-index: 999;
-    }
-
-    .work-button,
-    .black-button {
-        height: 240px;
-    }
-
-    /* Desktop-only: all images same size */
-    .work-button img,
-    .black-button img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-/* MOBILE STYLING */
+/* MOBILE */
 @media (max-width: 480px) {
-    .hero-bg {
-        position: absolute; /* allow transform for parallax */
-        width: 120%;          /* reduce zoomed-in effect */
-        height: 120%;
-        top: -10%;            /* center image vertically */
-        left: -10%;           /* center image horizontally */
-        background-size: cover;
-        background-position: center;
-        z-index: 0;
-        will-change: transform; /* smoother animation */
-    }
 
-    .hero-section {
-        height: 30vh;
-        padding: 20px;
-        overflow: hidden;
+    .hero-bg {
+        position: absolute;
+        height: 70vh;
+        width: 120%;
+        left: -10%;
+        top: 0;
+        will-change: transform;
     }
 
     .hero-name {
         font-size: 2.5rem;
     }
 
-    .nav-bar {
-        gap: 6px;
-        flex-wrap: wrap;
-        justify-content: center;
-        position: static;
-        transform: none;
-    }
-
-    .nav-bar a {
-        padding: 4px 8px;
-        font-size: 0.7rem;
-    }
-
-    .work-button,
-    .black-button {
+    .work-button {
         height: 140px;
     }
 }
