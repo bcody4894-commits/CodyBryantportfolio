@@ -7,14 +7,21 @@
 
 body {
     background-color: #000;
-    color: white;
+    color: #fff;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/* REMOVE DEFAULT PURPLE LINKS */
+a,
+a:visited {
+    color: white;
+    text-decoration: none;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 60px 20px;
+    padding: 60px 20px 40px;
 }
 
 .hero h1 {
@@ -32,10 +39,8 @@ body {
 }
 
 /* BACK BUTTON */
-.back,
-.back:visited {
-    color: white;
-    text-decoration: none;
+.back {
+    font-size: 1rem;
 }
 
 .back:hover {
@@ -44,12 +49,18 @@ body {
 
 /* WORK SECTION */
 .work-section {
-    padding: 40px 20px;
+    padding: 40px 20px 80px;
 }
 
+.work-section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* GRID */
 .work-grid {
     display: grid;
-    gap: 25px;
+    gap: 30px;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -62,8 +73,12 @@ body {
     border: 1px solid #333;
     border-radius: 6px;
     overflow: hidden;
-    text-decoration: none;
     height: 260px;
+    transition: 0.3s ease;
+}
+
+.work-button:hover {
+    transform: translateY(-4px);
 }
 
 /* PREVIEW IMAGES */
@@ -80,10 +95,9 @@ body {
     bottom: 0;
     width: 100%;
     padding: 12px;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     text-align: center;
     font-size: 1rem;
-    color: white;
 }
 
 /* BLACK BUTTONS */
@@ -121,5 +135,9 @@ body {
 
     .work-button {
         height: 300px;
+    }
+
+    .threeD-item img {
+        max-width: 500px;
     }
 }
