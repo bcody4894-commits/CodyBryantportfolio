@@ -1,66 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Cody Bryant | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cody Bryant Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- HERO -->
-<div class="hero-bg-wrapper">
-    <div class="hero-bg"></div>
+<header class="hero">
+    <div class="hero-overlay"></div>
+    <h1>Cody Bryant</h1>
+</header>
 
-    <section class="hero-section">
-        <h1 class="hero-name">Cody Bryant</h1>
+<nav class="nav-bar">
+    <a href="layout.html">Layout</a>
+    <a href="art.html">Art</a>
+    <a href="games.html">Games</a>
+</nav>
 
-        <nav class="nav-bar">
-            <a href="3d.html">3D</a>
-            <a href="2d.html">Graphic Design / Layout</a>
-            <a href="games.html">Games</a>
-            <a href="concept.html">Concept Art</a>
-        </nav>
-
-        <p class="hero-portfolio">Portfolio</p>
-    </section>
-</div>
-
-<!-- WORK SECTION -->
-<section class="work-section">
-    <div class="work-grid">
-        <a href="3d.html" class="work-button">
-            <img src="images/IMG_2686.jpeg" alt="3D Art Preview">
+<section class="content">
+    <div class="button-preview">
+        <a href="layout.html">
+            <img src="images/layout-preview.jpg" alt="Layout Preview">
         </a>
+    </div>
 
-        <a href="2d.html" class="work-button">
-            <img src="images/IMG_2569.png" alt="Graphic Design Preview">
+    <div class="button-preview">
+        <a href="art.html">
+            <img src="images/art-preview.jpg" alt="Art Preview">
         </a>
+    </div>
 
-        <a href="games.html" class="work-button">
-            <img src="images/IMG_2686.jpeg" alt="Games Preview">
-        </a>
-
-        <a href="concept.html" class="work-button">
-            <img src="images/IMG_2686.jpeg" alt="Concept Art Preview">
+    <div class="button-preview">
+        <a href="games.html">
+            <img src="images/games-preview.jpg" alt="Games Preview">
         </a>
     </div>
 </section>
 
-<section class="contact-section">
-    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-</section>
-
-<!-- MOBILE PARALLAX -->
-<script>
-if (window.innerWidth <= 480) {
-    const heroBg = document.querySelector('.hero-bg');
-    window.addEventListener('scroll', () => {
-        let offset = window.scrollY * 0.4;
-        heroBg.style.transform = `translateY(${offset}px)`;
-    });
-}
-</script>
+<footer class="white-bar"></footer>
 
 </body>
 </html>
