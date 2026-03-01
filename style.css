@@ -22,7 +22,7 @@ body {
 }
 
 .hero-bg {
-    position: fixed; /* parallax effect */
+    position: fixed; /* desktop parallax */
     top: 0;
     left: 0;
     width: 100%;
@@ -37,7 +37,7 @@ body {
 /* HERO CONTENT */
 .hero-section {
     position: relative;
-    z-index: 1; /* above background */
+    z-index: 1;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -151,7 +151,7 @@ body {
         height: 240px;
     }
 
-    /* Desktop-only fix: all images same size */
+    /* Desktop-only: all images same size */
     .work-button img,
     .black-button img {
         width: 100%;
@@ -162,9 +162,22 @@ body {
 
 /* MOBILE STYLING */
 @media (max-width: 480px) {
+    .hero-bg {
+        position: absolute; /* allow transform */
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+        will-change: transform; /* smoother animation */
+    }
+
     .hero-section {
         height: 30vh; /* shrink content area for small phones */
         padding: 20px;
+        overflow: hidden;
     }
 
     .hero-name {
@@ -187,11 +200,5 @@ body {
     .work-button,
     .black-button {
         height: 140px;
-    }
-
-    /* Keep parallax intact */
-    .work-button img,
-    .black-button img {
-        transform: none;
     }
 }
