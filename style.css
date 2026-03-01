@@ -165,4 +165,17 @@ body {
     .work-button, .black-button {
         height: 240px;
     }
+    /* MOBILE-FRIENDLY NAV TABS */
+@media (max-width: 480px) {
+    .nav-bar {
+        gap: 8px; /* smaller space between tabs */
+        flex-wrap: wrap; /* allow wrapping if needed */
+        justify-content: center;
+    }
+
+    .nav-bar a {
+        padding: 5px 10px; /* smaller buttons */
+        font-size: 0.8rem; /* smaller text */
+    }
+}
 }
