@@ -15,7 +15,7 @@ body {
 .hero-bg-wrapper {
     position: relative;
     width: 100%;
-    height: 90vh; /* taller hero so more image is visible */
+    height: 80vh; /* shorter hero to reduce white space */
     overflow: hidden;
 }
 
@@ -25,7 +25,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 150vh; /* taller for visible parallax */
+    min-height: 130vh; /* taller so parallax is visible */
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
@@ -36,27 +36,34 @@ body {
 /* HERO CONTENT */
 .hero-section {
     position: relative;
-    height: 90vh; /* match wrapper height */
+    height: 80vh; /* match wrapper height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 30px; /* reduced padding */
     text-align: center;
     z-index: 1; /* content above background */
 }
 
 .hero-name {
     font-size: 4rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-/* NAVIGATION */
+/* NAVIGATION (FIXED TOP-RIGHT) */
 .nav-bar {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
+    position: fixed; /* FIXED POSITION */
+    top: 20px;
+    right: 20px;
+    z-index: 10; /* always above content */
+    background: rgba(255,255,255,0.8); /* semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 8px;
 }
 
 .nav-bar a {
@@ -67,25 +74,30 @@ body {
     border: 2px solid #000;
     border-radius: 6px;
     color: #000;
+    transition: background-color 0.2s;
+}
+
+.nav-bar a:hover {
+    background-color: #aaa;
 }
 
 /* WORK SECTION */
 .work-section {
     position: relative;
     z-index: 2;
-    margin-top: -30px; /* scroll over hero */
+    margin-top: -25px; /* scroll over hero */
     background: #fff;
-    padding: 60px 20px;
-    min-height: 150vh; /* tall enough to scroll */
+    padding: 40px 20px; /* reduced padding */
+    min-height: 140vh; /* slightly shorter to reduce white space */
 }
 
 /* WORK GRID BUTTONS */
 .work-grid {
     display: grid;
-    gap: 25px;
+    gap: 20px;
     max-width: 900px;
     margin: auto;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* bigger buttons */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .work-button, .work-grid img, .coming-soon {
@@ -129,10 +141,10 @@ body {
 /* CONTACT */
 .contact-section {
     text-align: center;
-    padding: 60px 20px; /* extra padding to continue scroll */
+    padding: 50px 20px; /* reduced padding */
 }
 
-/* MOBILE STYLES */
+/* MOBILE STYLES - UNCHANGED */
 @media (max-width: 480px) {
 
     .hero-bg {
@@ -160,6 +172,20 @@ body {
     .work-grid {
         grid-template-columns: 1fr;
     }
+
+    .nav-bar {
+        top: 10px;
+        right: 10px;
+        gap: 10px;
+        padding: 3px 6px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .nav-bar a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
 }
 
 /* DESKTOP HERO */
@@ -179,6 +205,6 @@ body {
     }
 
     .work-section {
-        margin-top: -30px; /* layered effect */
+        margin-top: -25px; /* layered effect */
     }
 }
