@@ -165,7 +165,9 @@ body {
     .work-button, .black-button {
         height: 240px;
     }
-    /* MOBILE-FRIENDLY NAV TABS */
+}
+
+/* MOBILE-FRIENDLY NAV TABS */
 @media (max-width: 480px) {
     .nav-bar {
         gap: 8px; /* smaller space between tabs */
@@ -177,5 +179,4 @@ body {
         padding: 5px 10px; /* smaller buttons */
         font-size: 0.8rem; /* smaller text */
     }
-}
 }
