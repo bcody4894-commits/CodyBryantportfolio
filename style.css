@@ -19,7 +19,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: url('images/IMG_2672.jpeg');
+    background-image: url('images/IMG_2672.jpeg'); /* main image always used */
     background-size: cover;
     background-position: center;
     z-index: 0;
@@ -164,7 +164,7 @@ body {
     }
 }
 
-/* MOBILE-FRIENDLY NAV TABS & HERO IMAGE */
+/* MOBILE-FRIENDLY NAV TABS & WORK BUTTONS */
 @media (max-width: 480px) {
     .nav-bar {
         gap: 8px;
@@ -175,13 +175,6 @@ body {
     .nav-bar a {
         padding: 5px 10px;
         font-size: 0.8rem;
-    }
-
-    /* HERO IMAGE: use smaller file on mobile */
-    .hero-bg {
-        background-image: url('images/IMG_2672-small.jpeg'); /* smaller optimized version */
-        background-size: cover;
-        background-position: center;
     }
 
     /* WORK BUTTONS mobile adjustment */
