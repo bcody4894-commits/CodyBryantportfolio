@@ -8,67 +8,58 @@
 </head>
 <body>
 
-<!-- HERO BACKGROUND -->
+<!-- HERO -->
 <div class="hero-bg-wrapper">
     <div class="hero-bg"></div>
+
+    <section class="hero-section">
+        <h1 class="hero-name">Cody Bryant</h1>
+
+        <nav class="nav-bar">
+            <a href="3d.html">3D</a>
+            <a href="2d.html">Graphic Design / Layout</a>
+            <a href="games.html">Games</a>
+            <a href="concept.html">Concept Art</a>
+        </nav>
+
+        <p class="hero-portfolio">Portfolio</p>
+    </section>
 </div>
-
-<!-- HERO CONTENT -->
-<section class="hero-section">
-    <h1 class="hero-name">Cody Bryant</h1>
-
-    <!-- NAVIGATION TABS -->
-    <nav class="nav-bar">
-        <a href="3d.html">3D</a>
-        <a href="2d.html">Graphic Design / Layout</a>
-        <a href="games.html">Games</a>
-        <a href="concept.html">Concept Art</a>
-    </nav>
-
-    <p class="hero-portfolio">Portfolio</p>
-</section>
 
 <!-- WORK SECTION -->
 <section class="work-section">
     <div class="work-grid">
         <a href="3d.html" class="work-button">
             <img src="images/IMG_2686.jpeg" alt="3D Art Preview">
-            <span></span>
         </a>
 
         <a href="2d.html" class="work-button">
             <img src="images/IMG_2569.png" alt="Graphic Design Preview">
-            <span></span>
         </a>
 
-        <a href="games.html" class="work-button black-button">
+        <a href="games.html" class="work-button">
             <img src="images/IMG_2686.jpeg" alt="Games Preview">
-            <span></span>
         </a>
 
-        <a href="concept.html" class="work-button black-button">
+        <a href="concept.html" class="work-button">
             <img src="images/IMG_2686.jpeg" alt="Concept Art Preview">
-            <span></span>
         </a>
     </div>
 </section>
 
-<!-- CONTACT SECTION -->
 <section class="contact-section">
     <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>Social: <a href="#">Instagram</a> • <a href="#">LinkedIn</a> • <a href="#">Twitter</a></p>
 </section>
 
-<!-- MOBILE PARALLAX SCRIPT -->
+<!-- MOBILE PARALLAX -->
 <script>
-    if (window.innerWidth <= 480) {
-        const heroBg = document.querySelector('.hero-bg');
-
-        window.addEventListener('scroll', () => {
-            let offset = window.scrollY * 0.5;
-            heroBg.style.transform = `translateY(${offset}px)`;
-        });
-    }
+if (window.innerWidth <= 480) {
+    const heroBg = document.querySelector('.hero-bg');
+    window.addEventListener('scroll', () => {
+        let offset = window.scrollY * 0.4;
+        heroBg.style.transform = `translateY(${offset}px)`;
+    });
+}
 </script>
 
 </body>
