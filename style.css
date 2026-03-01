@@ -6,56 +6,58 @@
 }
 
 body {
-    background: #000;
-    color: #fff;
+    background: #fff; /* White background */
+    color: #000; /* Default text black */
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* REMOVE PURPLE LINKS */
-a,
-a:visited {
-    color: white;
-    text-decoration: none;
+/* HERO HEADER */
+.hero-header {
+    padding: 20px;
+    background: #f0f0f0; /* Light gray background for header area */
 }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 50px 20px;
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.hero h1 {
+.hero-name {
     font-size: 2rem;
-    margin-bottom: 8px;
-}
-
-.hero p {
-    font-size: 1rem;
-    color: #aaa;
+    font-weight: bold;
 }
 
 /* NAV/TAB BAR */
 .nav-bar {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    background: #111;
-    padding: 20px 0;
-    font-size: 1.2rem;
-    border-bottom: 2px solid #fff;
+    gap: 20px;
 }
 
 .nav-bar a {
-    color: #fff;
-    padding: 10px 20px;
+    font-weight: bold;
+    color: #000;
+    background: #ccc; /* Gray tab background */
+    padding: 12px 20px;
     border-radius: 8px;
+    text-decoration: none;
     transition: all 0.3s ease;
-    border: 2px solid #fff;
 }
 
 .nav-bar a:hover {
-    background: #fff;
-    color: #000;
+    background: #999;
+}
+
+/* PORTFOLIO TEXT BELOW HEADER */
+.hero-portfolio {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.hero-portfolio p {
+    font-size: 1.2rem;
+    color: #666; /* slightly darker gray for portfolio text */
+    font-weight: bold;
 }
 
 /* WORK SECTION */
@@ -75,7 +77,7 @@ a:visited {
 .work-button {
     display: block;
     position: relative;
-    background: #111;
+    background: #eee;
     border: 3px solid #000; /* black ring around buttons */
     border-radius: 6px;
     overflow: hidden;
@@ -103,6 +105,7 @@ a:visited {
     background: rgba(0,0,0,0.7);
     text-align: center;
     font-size: 0.9rem;
+    color: #fff;
 }
 
 /* BLACK BUTTONS (for text-only) */
@@ -125,21 +128,16 @@ a:visited {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .work-button {
-        height: 200px;
-    }
-
-    .hero h1 {
+    .hero-name {
         font-size: 2.5rem;
     }
 
-    .hero p {
-        font-size: 1.1rem;
+    .nav-bar a {
+        padding: 15px 25px;
+        font-size: 1.2rem;
     }
 
-    .nav-bar {
-        font-size: 1.5rem;
-        gap: 40px;
-        padding: 25px 0;
+    .hero-portfolio p {
+        font-size: 1.4rem;
     }
 }
