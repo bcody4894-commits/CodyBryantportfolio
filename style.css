@@ -30,7 +30,7 @@ body {
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* critical for scroll effect */
+    background-attachment: fixed;
     z-index: 0;
 }
 
@@ -96,7 +96,7 @@ body {
 .work-grid {
     display: grid;
     gap: 20px;
-    max-width: 900px;
+    max-width: 900px; /* mobile width default */
     margin: auto;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -175,17 +175,22 @@ body {
     .black-button {
         height: 240px;
     }
+
+    /* WORK GRID WIDER ON DESKTOP */
+    .work-grid {
+        max-width: 1400px; /* wider white bar for buttons */
+    }
 }
 
 /* MOBILE STYLING */
 @media (max-width: 480px) {
     /* SHRINK HERO IMAGE HEIGHT */
     .hero-bg-wrapper {
-        height: 60vh; /* smaller hero section on phone */
+        height: 60vh;
     }
 
     .hero-bg {
-        height: 60vh; /* matches wrapper */
+        height: 60vh;
     }
 
     /* Hero name unchanged */
