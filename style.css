@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-========================= */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -19,11 +17,9 @@ a:visited {
     text-decoration: none;
 }
 
-/* =========================
-   HERO BACKGROUND (CROPPED + PARALLAX EFFECT)
-========================= */
+/* HERO BACKGROUND (CROPPED + PARALLAX) */
 .hero-bg-wrapper {
-    perspective: 1px; /* parallax base */
+    perspective: 1px;
     height: 70vh;
     overflow-x: hidden;
     overflow-y: auto;
@@ -39,10 +35,9 @@ a:visited {
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
-    transform: translateZ(-1px) scale(2); /* parallax */
+    transform: translateZ(-1px) scale(2);
     z-index: 1;
-    filter: brightness(0.6) saturate(1.2); /* dim + effect */
-    transition: filter 0.5s ease;
+    filter: brightness(0.6) saturate(1.2);
 }
 
 .hero-section {
@@ -65,15 +60,12 @@ a:visited {
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
-/* =========================
-   NAV BAR
-========================= */
+/* NAV BAR */
 .nav-bar {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
-    z-index: 2;
 }
 
 .nav-bar a {
@@ -82,16 +74,13 @@ a:visited {
     border: 2px solid #000;
     background: rgba(255,255,255,0.8);
     border-radius: 6px;
-    z-index: 2;
 }
 
 .nav-bar a:hover {
     background: rgba(255,255,255,1);
 }
 
-/* =========================
-   WORK GRID / BUTTONS
-========================= */
+/* WORK GRID / BUTTONS */
 .work-section {
     padding: 60px 20px;
     background: #fff;
@@ -110,14 +99,25 @@ a:visited {
     border: 3px solid #000;
     border-radius: 6px;
     overflow: hidden;
-    height: 200px; /* desktop size */
+    height: 200px;
+    display: block;
 }
 
 .work-button img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0); /* black preview */
+    display: block;
+}
+
+.work-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8); /* black overlay */
+    z-index: 1;
 }
 
 .work-button::after {
@@ -133,17 +133,13 @@ a:visited {
     z-index: 2;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 .contact-section {
     text-align: center;
     padding: 40px 20px;
 }
 
-/* =========================
-   MOBILE FIX
-========================= */
+/* MOBILE FIX */
 @media (max-width: 768px) {
 
     .hero-bg-wrapper,
@@ -155,11 +151,12 @@ a:visited {
         font-size: 2.5rem;
     }
 
-    /* MOBILE BUTTON SIZE FIX */
     .work-button {
         height: 130px;
     }
-    .work-button img {
+
+    .work-button img,
+    .work-overlay {
         height: 130px;
     }
 }
