@@ -14,14 +14,12 @@
 
     <section class="hero-section">
         <h1 class="hero-name">Cody Bryant</h1>
-
         <nav class="nav-bar">
             <a href="3d.html">3D</a>
             <a href="2d.html">Layout</a>
             <a href="games.html">Games</a>
             <a href="concept.html">Concept Art</a>
         </nav>
-
         <p class="hero-portfolio">Portfolio</p>
     </section>
 </div>
@@ -45,7 +43,6 @@
 const heroBg = document.querySelector('.hero-bg');
 
 window.addEventListener('scroll', () => {
-    // Parallax speed: Mobile = fast, Desktop = subtle but noticeable
     let speed = window.innerWidth <= 480 ? 0.4 : 0.3;
     let offset = window.scrollY * speed;
     heroBg.style.transform = `translateY(${offset}px)`;
