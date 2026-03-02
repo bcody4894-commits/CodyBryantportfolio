@@ -221,7 +221,7 @@ body {
         margin-top: -20px; /* slightly less white space */
     }
 
-    /* DESKTOP ABOUT IMAGE - CENTERED & SLIGHTLY WIDER */
+    /* DESKTOP ABOUT IMAGE - CENTERED & WIDER */
     .about-image-wrapper {
         text-align: center; /* centers the image */
         margin-left: auto;
@@ -230,10 +230,10 @@ body {
     }
 
     .about-image {
-        width: 85%;       /* slightly wider */
-        max-width: 900px; /* slightly bigger max width */
-        height: auto;     /* keeps aspect ratio */
+        width: 95%;        /* almost full width */
+        max-width: 1600px; /* lets your 2200px image show fully */
+        height: auto;      /* keeps aspect ratio */
         display: block;
-        margin: 0 auto;   /* centers the image */
+        margin: 0 auto;    /* centers the image */
     }
 }
