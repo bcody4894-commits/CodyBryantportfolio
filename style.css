@@ -221,13 +221,19 @@ body {
         margin-top: -20px; /* slightly less white space */
     }
 
-    /* DESKTOP FULL-WIDTH ABOUT IMAGE */
+    /* DESKTOP ABOUT IMAGE - CENTERED & LIMITED WIDTH */
     .about-image-wrapper {
-        margin-left: -20px;  /* cancels section padding */
-        margin-right: -20px;
+        text-align: center; /* centers the image */
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
     }
 
     .about-image {
-        width: calc(100% + 40px); /* full width across screen */
+        width: 70%;      /* limits width */
+        max-width: 800px; /* prevents it from getting too big */
+        height: auto;     /* keeps aspect ratio */
+        display: block;
+        margin: 0 auto;   /* centers the image */
     }
 }
