@@ -15,17 +15,17 @@ body {
 .hero-bg-wrapper {
     position: relative;
     width: 100%;
-    height: 85vh; /* taller hero to reduce white space below */
+    height: 85vh;
     overflow: hidden;
 }
 
 /* HERO BACKGROUND */
 .hero-bg {
-    position: absolute; /* allows transform parallax */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 140vh; /* taller so parallax is visible */
+    min-height: 140vh;
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
@@ -36,14 +36,14 @@ body {
 /* HERO CONTENT */
 .hero-section {
     position: relative;
-    height: 85vh; /* match wrapper height */
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* tighten padding */
+    padding: 20px;
     text-align: center;
-    z-index: 1; /* content above background */
+    z-index: 1;
 }
 
 .hero-name {
@@ -51,7 +51,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* NAVIGATION (FIXED TOP-RIGHT, IN FRONT) */
+/* NAVIGATION */
 .nav-bar {
     display: flex;
     gap: 15px;
@@ -60,8 +60,8 @@ body {
     position: fixed;
     top: 15px;
     right: 15px;
-    z-index: 9999; /* bring fully in front */
-    background: rgba(255,255,255,0.9); /* semi-transparent so image shows behind */
+    z-index: 9999;
+    background: rgba(255,255,255,0.9);
     padding: 5px 10px;
     border-radius: 8px;
 }
@@ -85,10 +85,23 @@ body {
 .work-section {
     position: relative;
     z-index: 2;
-    margin-top: -20px; /* slightly less white space */
+    margin-top: -20px;
     background: #fff;
-    padding: 30px 20px; /* reduced padding */
-    min-height: 130vh; /* reduce extra white space */
+    padding: 30px 20px;
+    min-height: 130vh;
+}
+
+/* ✅ ADDED IMAGE STYLING (only addition) */
+.about-image-wrapper {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-image {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
 }
 
 /* WORK GRID BUTTONS */
@@ -141,10 +154,10 @@ body {
 /* CONTACT */
 .contact-section {
     text-align: center;
-    padding: 40px 20px; /* less white space */
+    padding: 40px 20px;
 }
 
-/* MOBILE STYLES - UNCHANGED */
+/* MOBILE */
 @media (max-width: 480px) {
 
     .hero-bg {
@@ -205,6 +218,6 @@ body {
     }
 
     .work-section {
-        margin-top: -20px; /* slightly less white space */
+        margin-top: -20px;
     }
 }
