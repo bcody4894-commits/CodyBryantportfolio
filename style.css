@@ -15,17 +15,17 @@ body {
 .hero-bg-wrapper {
     position: relative;
     width: 100%;
-    height: 85vh;
+    height: 85vh; /* taller hero to reduce white space below */
     overflow: hidden;
 }
 
 /* HERO BACKGROUND */
 .hero-bg {
-    position: absolute;
+    position: absolute; /* allows transform parallax */
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 140vh;
+    min-height: 140vh; /* taller so parallax is visible */
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
@@ -36,14 +36,14 @@ body {
 /* HERO CONTENT */
 .hero-section {
     position: relative;
-    height: 85vh;
+    height: 85vh; /* match wrapper height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px; /* tighten padding */
     text-align: center;
-    z-index: 1;
+    z-index: 1; /* content above background */
 }
 
 .hero-name {
@@ -51,7 +51,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* NAVIGATION */
+/* NAVIGATION (FIXED TOP-RIGHT, IN FRONT) */
 .nav-bar {
     display: flex;
     gap: 15px;
@@ -60,8 +60,8 @@ body {
     position: fixed;
     top: 15px;
     right: 15px;
-    z-index: 9999;
-    background: rgba(255,255,255,0.9);
+    z-index: 9999; /* bring fully in front */
+    background: rgba(255,255,255,0.9); /* semi-transparent so image shows behind */
     padding: 5px 10px;
     border-radius: 8px;
 }
@@ -85,13 +85,13 @@ body {
 .work-section {
     position: relative;
     z-index: 2;
-    margin-top: -20px;
+    margin-top: -20px; /* slightly less white space */
     background: #fff;
-    padding: 30px 20px;
-    min-height: 130vh;
+    padding: 30px 20px; /* reduced padding */
+    min-height: 130vh; /* reduce extra white space */
 }
 
-/* ✅ IMAGE — FULL WIDTH ON DESKTOP */
+/* ✅ ABOUT IMAGE */
 .about-image-wrapper {
     margin-bottom: 30px;
 }
@@ -153,10 +153,10 @@ body {
 /* CONTACT */
 .contact-section {
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 20px; /* less white space */
 }
 
-/* MOBILE */
+/* MOBILE STYLES */
 @media (max-width: 480px) {
 
     .hero-bg {
@@ -200,8 +200,9 @@ body {
     }
 }
 
-/* DESKTOP HERO */
+/* DESKTOP HERO AND BUTTONS */
 @media (min-width: 768px) {
+
     .hero-name {
         font-size: 5rem;
     }
@@ -217,6 +218,16 @@ body {
     }
 
     .work-section {
-        margin-top: -20px;
+        margin-top: -20px; /* slightly less white space */
+    }
+
+    /* DESKTOP FULL-WIDTH ABOUT IMAGE */
+    .about-image-wrapper {
+        margin-left: -20px;  /* cancels section padding */
+        margin-right: -20px;
+    }
+
+    .about-image {
+        width: calc(100% + 40px); /* full width across screen */
     }
 }
