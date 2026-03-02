@@ -91,17 +91,16 @@ body {
     min-height: 130vh;
 }
 
-/* ✅ ADDED IMAGE STYLING (only addition) */
+/* ✅ IMAGE — FULL WIDTH ON DESKTOP */
 .about-image-wrapper {
-    text-align: center;
     margin-bottom: 30px;
 }
 
 .about-image {
-    max-width: 900px;
     width: 100%;
     height: auto;
-    border-radius: 6px;
+    display: block;
+    border-radius: 0;
 }
 
 /* WORK GRID BUTTONS */
