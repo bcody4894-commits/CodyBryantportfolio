@@ -58,7 +58,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* NAVIGATION (UNCHANGED ORIGINAL) */
+/* RESTORED ORIGINAL NAVIGATION MOBILE & DESKTOP */
 .nav-bar {
     display: flex;
     gap: 15px;
@@ -68,7 +68,7 @@ body {
     top: 15px;
     right: 15px;
     z-index: 9999;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     padding: 5px 10px;
     border-radius: 8px;
 }
@@ -115,15 +115,20 @@ body {
         #1c232a;
 }
 
-/* ABOUT IMAGE (RESTORED ORIGINAL — NO DESKTOP RESIZE) */
+/* ABOUT IMAGE — RESTORED ORIGINAL FOR DESKTOP */
 .about-image-wrapper {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
 }
 
 .about-image {
-    width: 100%;
+    width: 70%;
+    max-width: 1200px;
     height: auto;
     display: block;
+    margin: 0 auto;
     border-radius: 0;
 }
 
@@ -178,4 +183,93 @@ body {
 .contact-section {
     text-align: center;
     padding: 40px 20px;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 480px) {
+
+    .hero-bg {
+        position: absolute;
+        height: 70vh;
+        width: 120%;
+        left: -10%;
+        top: 0;
+        will-change: transform;
+    }
+
+    .hero-section {
+        height: 70vh;
+    }
+
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .work-button, .work-grid img, .coming-soon {
+        height: 140px;
+        font-size: 1rem;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* RESTORE ORIGINAL MOBILE NAV BAR STYLES */
+    .nav-bar {
+        top: 10px;
+        right: 10px;
+        gap: 10px;
+        padding: 3px 6px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        background: rgba(255,255,255,0.9);
+    }
+
+    .nav-bar a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+        background: #ccc;
+        border: 2px solid #000;
+        border-radius: 6px;
+        color: #000;
+    }
+}
+
+/* DESKTOP STYLES */
+@media (min-width: 768px) {
+
+    .hero-name {
+        font-size: 5rem;
+    }
+
+    .nav-bar a {
+        padding: 15px 25px;
+        font-size: 1.2rem;
+    }
+
+    .back, .back-button {
+        padding: 12px 18px;
+        font-size: 1.1rem;
+    }
+
+    .work-section {
+        margin-top: -20px;
+    }
+
+    /* RESTORE ORIGINAL ABOUT IMAGE */
+    .about-image-wrapper {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+
+    .about-image {
+        width: 70%;
+        max-width: 1200px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 0;
+    }
 }
