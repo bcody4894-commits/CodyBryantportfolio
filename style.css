@@ -8,7 +8,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
-    background-color: #1c232a; /* updated base color */
+    background-color: #1c232a;
 }
 
 /* HERO WRAPPER */
@@ -58,7 +58,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* NAVIGATION */
+/* NAVIGATION (UNCHANGED ORIGINAL) */
 .nav-bar {
     display: flex;
     gap: 15px;
@@ -115,7 +115,7 @@ body {
         #1c232a;
 }
 
-/* ABOUT IMAGE */
+/* ABOUT IMAGE (RESTORED ORIGINAL — NO DESKTOP RESIZE) */
 .about-image-wrapper {
     margin-bottom: 30px;
 }
