@@ -18,10 +18,25 @@ body {
         radial-gradient(circle at 60% 85%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 30% 80%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 15% 70%, #0863a3 0%, #031421 40%, #031421 100%),
-        /* NEW gradient circle at bottom */
-        radial-gradient(circle at 50% 110%, #0863a3 0%, #031421 70%, #031421 100%),
-        #031421; /* fallback base */
+        #031421;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #000;
+    position: relative;
+}
+
+/* BOTTOM GLOW */
+body::after {
+    content: "";
+    position: fixed;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 200px;
+    background: radial-gradient(circle, #0863a3 0%, transparent 70%);
+    pointer-events: none; /* won’t interfere with clicks */
+    z-index: 0;
 }
 
 /* HERO WRAPPER */
@@ -109,8 +124,6 @@ body {
         radial-gradient(circle at 60% 85%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 25% 75%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 15% 65%, #0863a3 0%, #031421 40%, #031421 100%),
-        /* NEW bottom circle for work section */
-        radial-gradient(circle at 50% 110%, #0863a3 0%, #031421 70%, #031421 100%),
         #031421;
     padding: 30px 20px;
     min-height: 130vh;
