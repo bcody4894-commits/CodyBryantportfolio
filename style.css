@@ -7,32 +7,17 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /* very dark base with multiple small bright blue spots + soft bottom glow */
-    background: 
-        radial-gradient(circle at 10% 15%, #0863a3 0%, #031421 40%, #031421 100%),
-        radial-gradient(circle at 25% 40%, #0863a3 0%, #031421 40%, #031421 100%),
-        radial-gradient(circle at 50% 20%, #0863a3 0%, #031421 40%, #031421 100%),
-        radial-gradient(circle at 75% 35%, #0863a3 0%, #031421 40%, #031421 100%),
-        radial-gradient(circle at 85% 70%, #0863a3 0%, #031421 40%, #031421 100%),
-        radial-gradient(circle at 40% 65%, #0863a3 0%, #031421 40%, #031421 100%),
-        radial-gradient(circle at 60% 85%, #0863a3 0%, #031421 40%, #031421 100%),
-        radial-gradient(circle at 30% 80%, #0863a3 0%, #031421 40%, #031421 100%),
-        radial-gradient(circle at 15% 70%, #0863a3 0%, #031421 40%, #031421 100%),
-        /* soft bottom glow gradient */
-        radial-gradient(circle at 50% 110%, #0863a3 0%, rgba(8, 99, 163, 0.4) 30%, #031421 80%, #031421 100%),
-        #031421;
-    background-repeat: no-repeat;
-    background-size: cover;
     color: #000;
-    position: relative;
 }
 
 /* HERO WRAPPER */
 .hero-bg-wrapper {
     position: relative;
     width: 100%;
-    height: 85vh; 
+    height: 85vh;
     overflow: hidden;
+    /* soft bottom gradient */
+    background: radial-gradient(circle at 50% 110%, #0863a3 0%, rgba(8, 99, 163, 0.4) 30%, #031421 80%, #031421 100%);
 }
 
 /* HERO BACKGROUND */
@@ -102,6 +87,8 @@ body {
     position: relative;
     z-index: 2;
     margin-top: -20px;
+    padding: 30px 20px;
+    min-height: 130vh;
     background: 
         radial-gradient(circle at 10% 20%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 30% 35%, #0863a3 0%, #031421 40%, #031421 100%),
@@ -112,11 +99,9 @@ body {
         radial-gradient(circle at 60% 85%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 25% 75%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 15% 65%, #0863a3 0%, #031421 40%, #031421 100%),
-        /* soft bottom glow gradient for work section */
+        /* soft bottom gradient circle */
         radial-gradient(circle at 50% 110%, #0863a3 0%, rgba(8, 99, 163, 0.4) 30%, #031421 80%, #031421 100%),
         #031421;
-    padding: 30px 20px;
-    min-height: 130vh;
 }
 
 /* ✅ ABOUT IMAGE */
