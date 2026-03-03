@@ -18,6 +18,8 @@ body {
         radial-gradient(circle at 60% 85%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 30% 80%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 15% 70%, #0863a3 0%, #031421 40%, #031421 100%),
+        /* NEW gradient circle at bottom */
+        radial-gradient(circle at 50% 110%, #0863a3 0%, #031421 70%, #031421 100%),
         #031421; /* fallback base */
     color: #000;
 }
@@ -97,7 +99,6 @@ body {
     position: relative;
     z-index: 2;
     margin-top: -20px;
-    /* very dark base with multiple small bright spots */
     background: 
         radial-gradient(circle at 10% 20%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 30% 35%, #0863a3 0%, #031421 40%, #031421 100%),
@@ -108,6 +109,8 @@ body {
         radial-gradient(circle at 60% 85%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 25% 75%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 15% 65%, #0863a3 0%, #031421 40%, #031421 100%),
+        /* NEW bottom circle for work section */
+        radial-gradient(circle at 50% 110%, #0863a3 0%, #031421 70%, #031421 100%),
         #031421;
     padding: 30px 20px;
     min-height: 130vh;
