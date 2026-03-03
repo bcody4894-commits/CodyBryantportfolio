@@ -7,8 +7,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /* dark base with subtle bright blue spots */
-    background: radial-gradient(circle at 20% 30%, #2a4d8f 0%, #182841 60%, #182841 100%);
+    /* darker base with subtle bright blue spots */
+    background: radial-gradient(circle at 20% 30%, #2a4d8f 0%, #0f1a2a 60%, #0f1a2a 100%);
     color: #000;
 }
 
@@ -87,8 +87,8 @@ body {
     position: relative;
     z-index: 2;
     margin-top: -20px; /* slightly less white space */
-    /* same gradient to match body */
-    background: radial-gradient(circle at 80% 70%, #2a4d8f 0%, #182841 60%, #182841 100%);
+    /* darker base with subtle bright blue spots */
+    background: radial-gradient(circle at 80% 70%, #2a4d8f 0%, #0f1a2a 60%, #0f1a2a 100%);
     padding: 30px 20px; /* reduced padding */
     min-height: 130vh; /* reduce extra white space */
 }
