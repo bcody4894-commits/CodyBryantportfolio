@@ -130,17 +130,50 @@ body {
     display: block;
     margin: 0 auto;
     border-radius: 0;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* WORK GRID */
-.work-grid {
+.about-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px 8px rgba(91, 142, 178, 0.8);
+}
+
+/* WORK BACKGROUND WITH BUTTONS */
+.work-bg-wrapper {
+    position: relative;
+    margin-top: 50px; /* separation from about image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* MATCH ABOUT IMAGE WIDTH */
+.work-bg-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 1200px;
+    height: auto;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.4);
+    border-radius: 0;
+}
+
+.work-bg-wrapper .work-grid {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 900px;
     display: grid;
     gap: 20px;
-    max-width: 900px;
-    margin: auto;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+/* WORK GRID BUTTONS */
 .work-button, .work-grid img, .coming-soon {
     display: flex;
     justify-content: center;
@@ -154,12 +187,13 @@ body {
     font-size: 1.5rem;
     height: 180px;
     text-decoration: none;
-    transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.3s;
 }
 
 .work-button:hover, .work-grid img:hover, .coming-soon:hover {
     transform: scale(1.05);
     background-color: #222 !important;
+    box-shadow: 0 0 20px 5px rgba(91, 142, 178, 0.8);
 }
 
 /* BACK BUTTON */
@@ -233,10 +267,13 @@ body {
         color: #000;
     }
 
-    /* ONLY CHANGE: Bigger About Image on Mobile */
     .about-image {
         width: 90%;
         max-width: none;
+    }
+
+    .work-bg-image {
+        width: 90%;
     }
 }
 
@@ -265,14 +302,9 @@ body {
         width: 70%;
         max-width: 1200px;
     }
-}
 
-/* ABOUT IMAGE HOVER EFFECT */
-.about-image {
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.about-image:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 30px 8px rgba(91, 142, 178, 0.8); /* light blue glow */
+    .work-bg-image {
+        width: 70%;
+        max-width: 1200px;
+    }
 }
