@@ -274,15 +274,15 @@ body {
         width: 90%;
     }
 
-    /* BUTTON IMAGE wider, shorter, padding left/right */
+    /* BUTTON IMAGE wider, shorter, with side padding */
     .work-bg-image {
-        width: 95%;       /* wider */
-        height: 350px;    /* shorter */
+        width: 97%;       /* slightly wider */
+        height: 330px;    /* shorter */
         padding: 25px;
         box-sizing: border-box;
     }
 
-    /* 2x2 grid: all 4 buttons inside image, centered */
+    /* 2x2 grid: all 4 buttons inside image, perfectly centered */
     .work-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -292,7 +292,7 @@ body {
         gap: 15px;
         width: 100%;
         max-width: 100%;
-        padding: 0 15px; /* padding left and right */
+        padding: 0 20px; /* padding left and right */
         position: relative;
         z-index: 1;
     }
