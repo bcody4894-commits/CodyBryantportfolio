@@ -141,15 +141,16 @@ body {
 /* WORK BACKGROUND WITH BUTTONS */
 .work-bg-wrapper {
     position: relative;
-    margin-top: 50px;
+    margin-top: 50px; /* keeps spacing from about image */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 400px; /* shortened background height to fit buttons snugly */
+    min-height: 500px; /* increased height for bigger button image */
+    padding: 40px; /* adds space around inside the image */
 }
 
-/* MATCH ABOUT IMAGE WIDTH */
+/* BUTTON IMAGE MATCH WIDTH AND HEIGHT */
 .work-bg-image {
     position: absolute;
     top: 0;
@@ -157,11 +158,12 @@ body {
     transform: translateX(-50%);
     width: 70%;
     max-width: 1200px;
-    height: 400px; /* shortened to fit buttons snugly */
+    height: 500px; /* increased height for bigger buttons */
     object-fit: cover;
     z-index: 0;
     filter: brightness(0.4);
     border-radius: 0;
+    padding: 20px; /* adds space inside image around buttons */
 }
 
 /* CENTERED 2x2 BUTTONS ON BACKGROUND */
@@ -178,10 +180,10 @@ body {
     z-index: 1;
 }
 
-/* BIGGER, TALLER BUTTONS */
+/* BIGGER BUTTONS (unchanged size if already big) */
 .work-button {
-    width: 220px;   /* wider */
-    height: 220px;  /* taller */
+    width: 220px;
+    height: 220px;
     font-size: 2.2rem;
     display: flex;
     justify-content: center;
@@ -202,10 +204,10 @@ body {
     box-shadow: 0 0 20px 5px rgba(91, 142, 178, 0.8);
 }
 
-/* ADDITIONAL EMAIL SECTION AT BOTTOM */
+/* CONTACT SECTION AT BOTTOM */
 .contact-section {
     text-align: center;
-    padding: 60px 20px; /* larger padding for scrolling */
+    padding: 60px 20px;
 }
 
 .contact-section p {
@@ -269,7 +271,8 @@ body {
 
     .work-bg-image {
         width: 90%;
-        height: 300px;
+        height: 400px;
+        padding: 15px;
     }
 }
 
@@ -302,6 +305,7 @@ body {
     .work-bg-image {
         width: 70%;
         max-width: 1200px;
-        height: 400px;
+        height: 500px; /* bigger height on desktop */
+        padding: 20px;
     }
 }
