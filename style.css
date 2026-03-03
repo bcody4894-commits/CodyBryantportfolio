@@ -141,11 +141,12 @@ body {
 /* WORK BACKGROUND WITH BUTTONS */
 .work-bg-wrapper {
     position: relative;
-    margin-top: 50px; /* separation from about image */
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: 500px; /* allows scrolling to see gradient behind */
 }
 
 /* MATCH ABOUT IMAGE WIDTH */
@@ -163,18 +164,25 @@ body {
     border-radius: 0;
 }
 
+/* CENTERED 2x2 BUTTONS ON BACKGROUND */
 .work-bg-wrapper .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 70%;
     position: relative;
     z-index: 1;
-    width: 100%;
-    max-width: 900px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-/* WORK GRID BUTTONS */
-.work-button, .work-grid img, .coming-soon {
+/* MAKE BUTTONS BIGGER */
+.work-button {
+    width: 180px;
+    height: 180px;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,13 +192,11 @@ body {
     color: #fff !important;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    height: 180px;
     text-decoration: none;
     transition: transform 0.2s, background-color 0.2s, box-shadow 0.3s;
 }
 
-.work-button:hover, .work-grid img:hover, .coming-soon:hover {
+.work-button:hover {
     transform: scale(1.05);
     background-color: #222 !important;
     box-shadow: 0 0 20px 5px rgba(91, 142, 178, 0.8);
@@ -239,37 +245,21 @@ body {
         font-size: 2.5rem;
     }
 
-    .work-button, .work-grid img, .coming-soon {
+    .work-button {
+        width: 140px;
         height: 140px;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .work-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-bar {
-        top: 10px;
-        right: 10px;
-        gap: 10px;
-        padding: 3px 6px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        background: rgba(255,255,255,0.9);
-    }
-
-    .nav-bar a {
-        padding: 6px 10px;
-        font-size: 0.9rem;
-        background: #ccc;
-        border: 2px solid #000;
-        border-radius: 6px;
-        color: #000;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        width: 90%;
     }
 
     .about-image {
         width: 90%;
-        max-width: none;
     }
 
     .work-bg-image {
