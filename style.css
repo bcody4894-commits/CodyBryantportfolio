@@ -9,6 +9,20 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
     background-color: #031421; /* fallback dark base color */
+    position: relative; /* needed for the ::after gradient */
+}
+
+/* Bottom gradient glow */
+body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40vh; /* height of the bottom gradient */
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 100%, #0863a3 0%, rgba(8,99,163,0.4) 30%, #031421 80%, #031421 100%);
+    z-index: 0;
 }
 
 /* HERO WRAPPER */
@@ -100,7 +114,7 @@ body {
         radial-gradient(circle at 60% 85%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 25% 75%, #0863a3 0%, #031421 40%, #031421 100%),
         radial-gradient(circle at 15% 65%, #0863a3 0%, #031421 40%, #031421 100%),
-        /* soft bottom gradient circle */
+        /* soft bottom gradient circle for section itself */
         radial-gradient(circle at 50% 110%, #0863a3 0%, rgba(8, 99, 163, 0.4) 30%, #031421 80%, #031421 100%),
         #031421;
 }
