@@ -68,7 +68,7 @@ body {
     top: 15px;
     right: 15px;
     z-index: 9999;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9); /* desktop only, mobile will override */
     padding: 5px 10px;
     border-radius: 8px;
 }
@@ -158,18 +158,18 @@ body {
     transform: translateX(-50%);
     width: 70%;
     max-width: 1200px;
-    height: 600px; /* bigger height so bottom buttons fit */
+    height: 600px;
     object-fit: cover;
     z-index: 0;
     filter: brightness(0.4);
     border-radius: 0;
-    padding: 40px; /* top, side, bottom padding */
+    padding: 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work-bg-image:hover {
     transform: translateX(-50%) scale(1.03);
-    box-shadow: 0 0 30px 8px rgba(91, 142, 178, 0.8);
+    box-shadow: 0 0 50px 12px rgba(91, 142, 178, 0.9); /* stronger glow */
 }
 
 /* CENTERED 2x2 BUTTONS ON BACKGROUND */
@@ -241,6 +241,7 @@ body {
 /* MOBILE */
 @media (max-width: 480px) {
 
+    /* HERO */
     .hero-bg {
         position: absolute;
         height: 70vh;
@@ -258,27 +259,44 @@ body {
         font-size: 2.5rem;
     }
 
+    /* WORK BUTTONS smaller on mobile */
     .work-button {
-        width: 160px;
-        height: 160px;
-        font-size: 1.7rem;
+        width: 120px;
+        height: 120px;
+        font-size: 1.2rem;
     }
 
     .work-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
-        gap: 20px;
+        gap: 15px;
         width: 90%;
     }
 
+    /* ABOUT IMAGE bigger on mobile */
     .about-image {
         width: 90%;
     }
 
+    /* BUTTON IMAGE fits narrow mobile screens */
     .work-bg-image {
         width: 90%;
-        height: 500px;
-        padding: 30px;
+        height: 450px;
+        padding: 25px; /* top/side/bottom padding */
+    }
+
+    /* NAV BAR transparent on mobile */
+    .nav-bar {
+        background: transparent;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .nav-bar a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+        background: #ccc;
+        border: 2px solid #000;
     }
 }
 
