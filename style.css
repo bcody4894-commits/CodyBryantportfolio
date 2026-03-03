@@ -138,7 +138,7 @@ body {
     box-shadow: 0 0 30px 8px rgba(91, 142, 178, 0.8);
 }
 
-/* WORK BACKGROUND WITH BUTTONS */
+/* WORK BACKGROUND IMAGE */
 .work-bg-wrapper {
     position: relative;
     margin-top: 50px;
@@ -150,7 +150,6 @@ body {
     padding: 40px;
 }
 
-/* BUTTON IMAGE MATCH WIDTH AND HEIGHT WITH HOVER EFFECT */
 .work-bg-image {
     position: absolute;
     top: 0;
@@ -172,7 +171,7 @@ body {
     box-shadow: 0 0 50px 12px rgba(91, 142, 178, 0.9);
 }
 
-/* CENTERED 2x2 BUTTONS ON BACKGROUND */
+/* GRID OF BUTTONS CENTERED INSIDE BUTTON IMAGE */
 .work-bg-wrapper .work-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -186,7 +185,7 @@ body {
     z-index: 1;
 }
 
-/* BIGGER BUTTONS */
+/* BUTTON STYLE */
 .work-button {
     width: 220px;
     height: 220px;
@@ -238,7 +237,7 @@ body {
     background-color: #aaa;
 }
 
-/* MOBILE */
+/* MOBILE ONLY FIX */
 @media (max-width: 480px) {
 
     .hero-bg {
@@ -256,33 +255,6 @@ body {
 
     .hero-name {
         font-size: 2.5rem;
-    }
-
-    /* WORK BUTTONS smaller on mobile */
-    .work-button {
-        width: 120px;
-        height: 120px;
-        font-size: 1.2rem;
-    }
-
-    /* Only show left 2 buttons inside button image on mobile */
-    .work-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr; /* only one row for top 2 buttons */
-        justify-items: center;
-        align-items: center;
-        gap: 15px;
-        width: 90%; /* matches about image */
-        position: relative;
-        z-index: 1;
-    }
-
-    /* BUTTON IMAGE fits mobile screens, width same as about image */
-    .work-bg-image {
-        width: 90%; /* matches about image width */
-        height: 450px;
-        padding: 25px;
     }
 
     /* NAV BAR transparent on mobile */
@@ -303,9 +275,37 @@ body {
     .about-image {
         width: 90%;
     }
+
+    /* BUTTON IMAGE width matches about image */
+    .work-bg-image {
+        width: 90%;
+        height: 450px;
+        padding: 25px;
+    }
+
+    /* 2x2 grid: all 4 buttons inside button image */
+    .work-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Buttons shrink to fit inside mobile image */
+    .work-button {
+        width: 100px;
+        height: 100px;
+        font-size: 1rem;
+    }
 }
 
-/* DESKTOP */
+/* DESKTOP (unchanged) */
 @media (min-width: 768px) {
 
     .hero-name {
