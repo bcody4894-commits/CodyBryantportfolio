@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #fff;
+    background: #182841; /* updated background */
     color: #000;
 }
 
@@ -86,7 +86,7 @@ body {
     position: relative;
     z-index: 2;
     margin-top: -20px; /* slightly less white space */
-    background: #fff;
+    background: #182841; /* updated background */
     padding: 30px 20px; /* reduced padding */
     min-height: 130vh; /* reduce extra white space */
 }
