@@ -146,7 +146,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 500px; /* allows scrolling to see gradient behind */
+    min-height: 400px; /* shortened background height to fit buttons snugly */
 }
 
 /* MATCH ABOUT IMAGE WIDTH */
@@ -157,7 +157,7 @@ body {
     transform: translateX(-50%);
     width: 70%;
     max-width: 1200px;
-    height: auto;
+    height: 400px; /* shortened to fit buttons snugly */
     object-fit: cover;
     z-index: 0;
     filter: brightness(0.4);
@@ -178,11 +178,11 @@ body {
     z-index: 1;
 }
 
-/* MAKE BUTTONS BIGGER */
+/* BIGGER, TALLER BUTTONS */
 .work-button {
-    width: 180px;
-    height: 180px;
-    font-size: 2rem;
+    width: 220px;   /* wider */
+    height: 220px;  /* taller */
+    font-size: 2.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,6 +202,17 @@ body {
     box-shadow: 0 0 20px 5px rgba(91, 142, 178, 0.8);
 }
 
+/* ADDITIONAL EMAIL SECTION AT BOTTOM */
+.contact-section {
+    text-align: center;
+    padding: 60px 20px; /* larger padding for scrolling */
+}
+
+.contact-section p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
 /* BACK BUTTON */
 .back, .back-button {
     display: inline-block;
@@ -217,12 +228,6 @@ body {
 
 .back:hover, .back-button:hover {
     background-color: #aaa;
-}
-
-/* CONTACT */
-.contact-section {
-    text-align: center;
-    padding: 40px 20px;
 }
 
 /* MOBILE */
@@ -246,9 +251,9 @@ body {
     }
 
     .work-button {
-        width: 140px;
-        height: 140px;
-        font-size: 1.5rem;
+        width: 160px;
+        height: 160px;
+        font-size: 1.7rem;
     }
 
     .work-grid {
@@ -264,6 +269,7 @@ body {
 
     .work-bg-image {
         width: 90%;
+        height: 300px;
     }
 }
 
@@ -296,5 +302,6 @@ body {
     .work-bg-image {
         width: 70%;
         max-width: 1200px;
+        height: 400px;
     }
 }
