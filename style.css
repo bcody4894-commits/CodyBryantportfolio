@@ -8,6 +8,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
+    background-color: #031421; /* fallback dark base color */
 }
 
 /* HERO WRAPPER */
