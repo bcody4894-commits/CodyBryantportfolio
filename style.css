@@ -7,11 +7,17 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /* very dark base with multiple bright blue spots */
+    /* very dark base with multiple small bright blue spots */
     background: 
-        radial-gradient(circle at 15% 25%, #2a5dcf 0%, #031421 50%, #031421 100%),
-        radial-gradient(circle at 70% 20%, #1e73ff 0%, #031421 50%, #031421 100%),
-        radial-gradient(circle at 40% 75%, #3a6fff 0%, #031421 50%, #031421 100%),
+        radial-gradient(circle at 10% 15%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 25% 40%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 50% 20%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 75% 35%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 85% 70%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 40% 65%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 60% 85%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 30% 80%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 15% 70%, #0863a3 0%, #031421 40%, #031421 100%),
         #031421; /* fallback base */
     color: #000;
 }
@@ -20,17 +26,17 @@ body {
 .hero-bg-wrapper {
     position: relative;
     width: 100%;
-    height: 85vh; /* taller hero to reduce white space below */
+    height: 85vh; 
     overflow: hidden;
 }
 
 /* HERO BACKGROUND */
 .hero-bg {
-    position: absolute; /* allows transform parallax */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 140vh; /* taller so parallax is visible */
+    min-height: 140vh;
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
@@ -41,14 +47,14 @@ body {
 /* HERO CONTENT */
 .hero-section {
     position: relative;
-    height: 85vh; /* match wrapper height */
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* tighten padding */
+    padding: 20px;
     text-align: center;
-    z-index: 1; /* content above background */
+    z-index: 1;
 }
 
 .hero-name {
@@ -65,8 +71,8 @@ body {
     position: fixed;
     top: 15px;
     right: 15px;
-    z-index: 9999; /* bring fully in front */
-    background: rgba(255,255,255,0.9); /* semi-transparent so image shows behind */
+    z-index: 9999;
+    background: rgba(255,255,255,0.9);
     padding: 5px 10px;
     border-radius: 8px;
 }
@@ -90,15 +96,21 @@ body {
 .work-section {
     position: relative;
     z-index: 2;
-    margin-top: -20px; /* slightly less white space */
-    /* dark base with multiple bright spots */
+    margin-top: -20px;
+    /* very dark base with multiple small bright spots */
     background: 
-        radial-gradient(circle at 20% 60%, #2a5dcf 0%, #031421 50%, #031421 100%),
-        radial-gradient(circle at 75% 30%, #1e73ff 0%, #031421 50%, #031421 100%),
-        radial-gradient(circle at 50% 80%, #3a6fff 0%, #031421 50%, #031421 100%),
-        #031421; /* fallback base */
-    padding: 30px 20px; /* reduced padding */
-    min-height: 130vh; /* reduce extra white space */
+        radial-gradient(circle at 10% 20%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 30% 35%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 50% 10%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 70% 30%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 85% 60%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 45% 70%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 60% 85%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 25% 75%, #0863a3 0%, #031421 40%, #031421 100%),
+        radial-gradient(circle at 15% 65%, #0863a3 0%, #031421 40%, #031421 100%),
+        #031421;
+    padding: 30px 20px;
+    min-height: 130vh;
 }
 
 /* ✅ ABOUT IMAGE */
@@ -163,7 +175,7 @@ body {
 /* CONTACT */
 .contact-section {
     text-align: center;
-    padding: 40px 20px; /* less white space */
+    padding: 40px 20px;
 }
 
 /* MOBILE STYLES */
@@ -228,22 +240,22 @@ body {
     }
 
     .work-section {
-        margin-top: -20px; /* slightly less white space */
+        margin-top: -20px;
     }
 
     /* DESKTOP ABOUT IMAGE - CENTERED & SMALLER */
     .about-image-wrapper {
-        text-align: center; /* centers the image */
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
     }
 
     .about-image {
-        width: 70%;        /* smaller width */
-        max-width: 1200px; /* keeps it sharp using high-res image */
-        height: auto;      /* maintains aspect ratio */
+        width: 70%;
+        max-width: 1200px;
+        height: auto;
         display: block;
-        margin: 0 auto;    /* centers the image */
+        margin: 0 auto;
     }
 }
