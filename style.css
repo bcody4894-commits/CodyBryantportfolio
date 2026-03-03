@@ -68,7 +68,7 @@ body {
     top: 15px;
     right: 15px;
     z-index: 9999;
-    background: rgba(255, 255, 255, 0.9); /* desktop only, mobile will override */
+    background: rgba(255, 255, 255, 0.9);
     padding: 5px 10px;
     border-radius: 8px;
 }
@@ -141,13 +141,13 @@ body {
 /* WORK BACKGROUND WITH BUTTONS */
 .work-bg-wrapper {
     position: relative;
-    margin-top: 50px; /* keeps spacing from about image */
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 600px; /* increased height to fit bottom buttons */
-    padding: 40px; /* top, side, and bottom padding */
+    min-height: 600px;
+    padding: 40px;
 }
 
 /* BUTTON IMAGE MATCH WIDTH AND HEIGHT WITH HOVER EFFECT */
@@ -169,7 +169,7 @@ body {
 
 .work-bg-image:hover {
     transform: translateX(-50%) scale(1.03);
-    box-shadow: 0 0 50px 12px rgba(91, 142, 178, 0.9); /* stronger glow */
+    box-shadow: 0 0 50px 12px rgba(91, 142, 178, 0.9);
 }
 
 /* CENTERED 2x2 BUTTONS ON BACKGROUND */
@@ -241,7 +241,6 @@ body {
 /* MOBILE */
 @media (max-width: 480px) {
 
-    /* HERO */
     .hero-bg {
         position: absolute;
         height: 70vh;
@@ -266,23 +265,24 @@ body {
         font-size: 1.2rem;
     }
 
+    /* Only show left 2 buttons inside button image on mobile */
     .work-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr; /* only one row for top 2 buttons */
+        justify-items: center;
+        align-items: center;
         gap: 15px;
-        width: 90%;
+        width: 90%; /* matches about image */
+        position: relative;
+        z-index: 1;
     }
 
-    /* ABOUT IMAGE bigger on mobile */
-    .about-image {
-        width: 90%;
-    }
-
-    /* BUTTON IMAGE fits narrow mobile screens */
+    /* BUTTON IMAGE fits mobile screens, width same as about image */
     .work-bg-image {
-        width: 90%;
+        width: 90%; /* matches about image width */
         height: 450px;
-        padding: 25px; /* top/side/bottom padding */
+        padding: 25px;
     }
 
     /* NAV BAR transparent on mobile */
@@ -297,6 +297,11 @@ body {
         font-size: 0.9rem;
         background: #ccc;
         border: 2px solid #000;
+    }
+
+    /* ABOUT IMAGE bigger on mobile */
+    .about-image {
+        width: 90%;
     }
 }
 
