@@ -146,11 +146,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 500px; /* increased height for bigger button image */
-    padding: 40px; /* adds space around inside the image */
+    min-height: 600px; /* increased height to fit bottom buttons */
+    padding: 40px; /* top, side, and bottom padding */
 }
 
-/* BUTTON IMAGE MATCH WIDTH AND HEIGHT */
+/* BUTTON IMAGE MATCH WIDTH AND HEIGHT WITH HOVER EFFECT */
 .work-bg-image {
     position: absolute;
     top: 0;
@@ -158,12 +158,18 @@ body {
     transform: translateX(-50%);
     width: 70%;
     max-width: 1200px;
-    height: 500px; /* increased height for bigger buttons */
+    height: 600px; /* bigger height so bottom buttons fit */
     object-fit: cover;
     z-index: 0;
     filter: brightness(0.4);
     border-radius: 0;
-    padding: 20px; /* adds space inside image around buttons */
+    padding: 40px; /* top, side, bottom padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-bg-image:hover {
+    transform: translateX(-50%) scale(1.03);
+    box-shadow: 0 0 30px 8px rgba(91, 142, 178, 0.8);
 }
 
 /* CENTERED 2x2 BUTTONS ON BACKGROUND */
@@ -180,7 +186,7 @@ body {
     z-index: 1;
 }
 
-/* BIGGER BUTTONS (unchanged size if already big) */
+/* BIGGER BUTTONS */
 .work-button {
     width: 220px;
     height: 220px;
@@ -271,8 +277,8 @@ body {
 
     .work-bg-image {
         width: 90%;
-        height: 400px;
-        padding: 15px;
+        height: 500px;
+        padding: 30px;
     }
 }
 
@@ -305,7 +311,7 @@ body {
     .work-bg-image {
         width: 70%;
         max-width: 1200px;
-        height: 500px; /* bigger height on desktop */
-        padding: 20px;
+        height: 600px;
+        padding: 40px;
     }
 }
