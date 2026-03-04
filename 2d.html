@@ -33,7 +33,7 @@
         }
 
         /* WHITE BACKGROUND BLOCK */
-        body.art-page .work-section {
+        .work-section {
             position: relative;
         }
 
@@ -47,22 +47,50 @@
             z-index: 0;
         }
 
-        @media (min-width: 481px) {
+        /* ========================= */
+        /* MOBILE FIX ONLY */
+        /* ========================= */
+        @media (max-width: 480px) {
 
-            /* Shared container */
             .logo-container {
                 position: relative;
+                margin-bottom: 30px;
+            }
+
+            .logo-container.row {
+                display: block; /* stack instead of row */
+            }
+
+            .about-image {
+                width: 100%;
+                height: auto;
+                position: relative;
+                z-index: 2;
                 display: block;
+                margin-bottom: 20px;
+            }
+
+            .colored-box,
+            .colored-box-second {
+                display: none; /* hide colored boxes on mobile */
+            }
+        }
+
+        /* ========================= */
+        /* DESKTOP (UNCHANGED) */
+        /* ========================= */
+        @media (min-width: 481px) {
+
+            .logo-container {
+                position: relative;
                 margin-left: 20px;
                 margin-bottom: 40px;
             }
 
-            /* First section width */
             .logo-container.single {
                 max-width: 900px;
             }
 
-            /* Second section row layout */
             .logo-container.row {
                 display: flex;
                 align-items: flex-start;
@@ -70,7 +98,6 @@
                 max-width: 1800px;
             }
 
-            /* First beige box */
             .colored-box {
                 position: absolute;
                 top: 0;
@@ -85,7 +112,6 @@
                 box-sizing: border-box;
             }
 
-            /* Second blue box */
             .colored-box-second {
                 position: absolute;
                 top: 0;
@@ -100,7 +126,6 @@
                 box-sizing: border-box;
             }
 
-            /* All images */
             .about-image {
                 position: relative;
                 z-index: 2;
@@ -124,19 +149,18 @@
 
     <h1 class="page-title">Layout</h1>
 
-    <!-- First Image Section -->
+    <!-- First Image -->
     <div class="logo-container single">
         <div class="colored-box"></div>
         <img src="images/fatratlogo.jpg" alt="Layout Art" class="about-image">
     </div>
 
-    <!-- Second Image Section (Row Layout) -->
+    <!-- Second Section (Row on Desktop, Stack on Mobile) -->
     <div class="logo-container row">
         <div class="colored-box-second"></div>
 
         <img src="images/stag.jpg" alt="Stag Art" class="about-image">
         <img src="images/bugposter.jpg" alt="Bug Poster Art" class="about-image">
-
     </div>
 
 </section>
