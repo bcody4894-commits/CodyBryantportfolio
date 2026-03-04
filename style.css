@@ -11,10 +11,30 @@ body {
     background-color: #1c232a;
 }
 
-/* 2D PAGE BACKGROUND OVERRIDE ONLY */
+/* 2D PAGE SPECIFIC STYLES */
 body.art-page {
+    background-color: #ffffff !important;
+}
+
+/* WHITE BLOCK OVERLAY FOR 2D PAGE */
+body.art-page .work-section {
+    position: relative;
+}
+
+body.art-page .white-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: #ffffff;
-    color: #000;
+    z-index: 0; /* behind images/buttons */
+}
+
+body.art-page .about-image-wrapper,
+body.art-page .work-grid {
+    position: relative;
+    z-index: 1;
 }
 
 /* HERO WRAPPER */
