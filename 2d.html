@@ -80,7 +80,7 @@
         /* DESKTOP ONLY - bigger images with full-width colored box and shadow */
         @media (min-width: 481px) {
 
-            /* Wrapper that contains logo + colored box */
+            /* Wrapper that contains image + colored box */
             .logo-container {
                 position: relative;
                 display: block;      /* keep image left-aligned */
@@ -89,22 +89,37 @@
                 margin-bottom: 30px; /* spacing between images */
             }
 
-            /* Colored box behind the image */
+            /* First colored box behind the first image */
             .colored-box {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100vw;               /* full screen width */
-                height: 100%;               /* match image height */
+                width: 100vw;               
+                height: 100%;               
                 background-color: #f5efd7;
-                z-index: 1;                 /* behind image */
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* drop shadow */
-                padding-left: 20px;         /* visual left padding to match image */
-                padding-right: 20px;        /* same right padding */
-                box-sizing: border-box;     /* ensure padding doesn’t increase width */
+                z-index: 1;                 
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); 
+                padding-left: 20px;         
+                padding-right: 20px;        
+                box-sizing: border-box;     
             }
 
-            /* Image on top of colored box */
+            /* Second colored box behind the second image */
+            .colored-box-second {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;               
+                height: 100%;               
+                background-color: #bddfed;
+                z-index: 1;                 
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); 
+                padding-left: 20px;         
+                padding-right: 20px;        
+                box-sizing: border-box;     
+            }
+
+            /* Images on top of colored boxes */
             .about-image {
                 position: relative;
                 z-index: 2;
@@ -137,7 +152,7 @@
 
     <!-- Second image (stag) with colored box -->
     <div class="logo-container">
-        <div class="colored-box"></div>
+        <div class="colored-box-second"></div>
         <img src="images/stag.jpg" alt="Stag Art" class="about-image">
     </div>
 
