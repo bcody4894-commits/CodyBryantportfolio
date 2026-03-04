@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        /* Only for the 2D page */
         body.art-page {
             padding: 20px;
             text-align: center;
@@ -60,6 +61,28 @@
                 height: auto;
             }
         }
+
+        /* WHITE BLOCK OVERLAY FOR 2D PAGE */
+        body.art-page .work-section {
+            position: relative;
+        }
+
+        body.art-page .white-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 0; /* behind images/buttons */
+        }
+
+        /* Make images and grid appear in front */
+        body.art-page .about-image-wrapper,
+        body.art-page .work-grid {
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 
@@ -70,11 +93,21 @@
 </nav>
 
 <section class="work-section">
+
+    <!-- WHITE OVERLAY BLOCK -->
+    <div class="white-overlay"></div>
+
     <h1 class="page-title">Layout</h1>
 
-    <div class="work-grid">
-        <img src="images/fatratlogo.jpg" alt="Layout Art">
+    <div class="about-image-wrapper">
+        <img src="images/fatratlogo.jpg" alt="Layout Art" class="about-image">
     </div>
+
+    <div class="work-grid">
+        <!-- Example buttons (if you want them) -->
+        <a href="#" class="work-button">Example</a>
+    </div>
+
 </section>
 
 </body>
