@@ -1,177 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Layout | Cody Bryant</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<style>
+    body.art-page {
+        padding: 20px;
+        text-align: center;
+    }
 
-    <style>
-        body.art-page {
-            padding: 20px;
-            text-align: center;
+    .page-title {
+        margin: 20px 0 30px 0;
+    }
+
+    .back {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 8px 12px;
+        border: 2px solid #000;
+        border-radius: 6px;
+        background-color: #ccc;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .back:hover {
+        background-color: #aaa;
+    }
+
+    .work-section {
+        position: relative;
+    }
+
+    .white-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: #ffffff;
+        z-index: -1;
+    }
+
+    /* ========================= */
+    /* MOBILE FIX (REAL FIX) */
+    /* ========================= */
+    @media (max-width: 480px) {
+
+        .logo-container {
+            margin-bottom: 40px;
         }
 
-        .page-title {
-            margin: 20px 0 30px 0;
+        .logo-container.row {
+            display: block;
         }
 
-        .back {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 8px 12px;
-            border: 2px solid #000;
-            border-radius: 6px;
-            background-color: #ccc;
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
+        /* Make colored boxes normal blocks */
+        .colored-box {
+            background-color: #f5efd7;
+            padding: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
-        .back:hover {
-            background-color: #aaa;
+        .colored-box-second {
+            background-color: #bddfed;
+            padding: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
-        /* Establish stacking context */
-        .work-section {
+        /* Images fill their boxes */
+        .about-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    /* ========================= */
+    /* DESKTOP (UNCHANGED) */
+    /* ========================= */
+    @media (min-width: 481px) {
+
+        .logo-container {
             position: relative;
-            z-index: 0;
+            margin-left: 20px;
+            margin-bottom: 40px;
         }
 
-        /* WHITE BACKGROUND — SEND TO VERY BACK */
-        .white-overlay {
+        .logo-container.single {
+            max-width: 900px;
+        }
+
+        .logo-container.row {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            max-width: 1800px;
+        }
+
+        .colored-box {
             position: absolute;
-            inset: 0;
-            background-color: #ffffff;
-            z-index: -1; /* 🔥 FIX: now truly behind everything */
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background-color: #f5efd7;
+            z-index: 1;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
         }
 
-        /* ========================= */
-        /* MOBILE */
-        /* ========================= */
-        @media (max-width: 480px) {
-
-            .logo-container {
-                position: relative;
-                margin-bottom: 40px;
-            }
-
-            .logo-container.row {
-                display: block;
-            }
-
-            .colored-box,
-            .colored-box-second {
-                position: absolute;
-                inset: 0;
-                z-index: 1;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            }
-
-            .colored-box {
-                background-color: #f5efd7;
-            }
-
-            .colored-box-second {
-                background-color: #bddfed;
-            }
-
-            .about-image {
-                position: relative;
-                z-index: 2;
-                width: 100%;
-                height: auto;
-                display: block;
-            }
+        .colored-box-second {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background-color: #bddfed;
+            z-index: 1;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
         }
 
-        /* ========================= */
-        /* DESKTOP */
-        /* ========================= */
-        @media (min-width: 481px) {
-
-            .logo-container {
-                position: relative;
-                margin-left: 20px;
-                margin-bottom: 40px;
-            }
-
-            .logo-container.single {
-                max-width: 900px;
-            }
-
-            .logo-container.row {
-                display: flex;
-                align-items: flex-start;
-                gap: 40px;
-                max-width: 1800px;
-            }
-
-            .colored-box {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100%;
-                background-color: #f5efd7;
-                z-index: 1;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-                padding-left: 20px;
-                padding-right: 20px;
-                box-sizing: border-box;
-            }
-
-            .colored-box-second {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100%;
-                background-color: #bddfed;
-                z-index: 1;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-                padding-left: 20px;
-                padding-right: 20px;
-                box-sizing: border-box;
-            }
-
-            .about-image {
-                position: relative;
-                z-index: 2;
-                width: 900px;
-                height: auto;
-                display: block;
-            }
+        .about-image {
+            position: relative;
+            z-index: 2;
+            width: 900px;
+            height: auto;
+            display: block;
         }
-    </style>
-</head>
-
-<body class="art-page">
-
-<nav class="navbar">
-    <a href="index.html" class="back">← Back</a>
-</nav>
-
-<section class="work-section">
-
-    <div class="white-overlay"></div>
-
-    <h1 class="page-title">Layout</h1>
-
-    <!-- First Image -->
-    <div class="logo-container single">
-        <div class="colored-box"></div>
-        <img src="images/fatratlogo.jpg" class="about-image">
-    </div>
-
-    <!-- Second Section -->
-    <div class="logo-container row">
-        <div class="colored-box-second"></div>
-        <img src="images/stag.jpg" class="about-image">
-        <img src="images/bugposter.jpg" class="about-image">
-    </div>
-
-</section>
-
-</body>
-</html>
+    }
+</style>
