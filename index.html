@@ -2,66 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cody Bryant | Portfolio</title>
+    <title>Layout | Cody Bryant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Only for the 2D page */
+        body.art-page {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .page-title {
+            margin: 20px 0 30px 0;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 12px;
+            border: 2px solid #000;
+            border-radius: 6px;
+            background-color: #ccc;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .back:hover {
+            background-color: #aaa;
+        }
+
+        .work-grid img {
+            width: 60%;
+            height: auto;
+            border: 3px solid #000;
+            border-radius: 6px;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        .work-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 480px) {
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .work-grid img {
+                height: auto;
+            }
+        }
+
+        /* WHITE BLOCK OVERLAY FOR 2D PAGE */
+        body.art-page .work-section {
+            position: relative;
+        }
+
+        body.art-page .white-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 0; /* behind images/buttons */
+        }
+
+        body.art-page .about-image-wrapper,
+        body.art-page .work-grid {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
-<body>
 
-<!-- HERO -->
-<div class="hero-bg-wrapper">
-    <div class="hero-bg"></div>
+<body class="art-page">
 
-    <section class="hero-section">
-        <h1 class="hero-name">Cody Bryant</h1>
+<nav class="navbar">
+    <a href="index.html" class="back">← Back</a>
+</nav>
 
-        <!-- FIXED NAV -->
-        <nav class="nav-bar">
-            <a href="3d.html">3D</a>
-            <a href="2d.html">Layout</a>
-            <a href="games.html">Games</a>
-            <a href="concept.html">Concept Art</a>
-        </nav>
-    </section>
-</div>
-
-<!-- WORK SECTION -->
 <section class="work-section">
 
-    <!-- About Image -->
+    <!-- WHITE OVERLAY BLOCK -->
+    <div class="white-overlay"></div>
+
+    <h1 class="page-title">Layout</h1>
+
     <div class="about-image-wrapper">
-        <img src="images/about.jpg" alt="About Cody Bryant" class="about-image">
+        <img src="images/fatratlogo.jpg" alt="Layout Art" class="about-image">
     </div>
 
-    <!-- Buttons on background -->
-    <div class="work-bg-wrapper">
-        <img src="images/button.jpg" alt="Buttons Background" class="work-bg-image">
-
-        <div class="work-grid">
-            <a href="3d.html" class="work-button">3D</a>
-            <a href="2d.html" class="work-button">Layout</a>
-            <a href="games.html" class="work-button">Games</a>
-            <a href="concept.html" class="work-button">Concept Art</a>
-        </div>
+    <!-- Work grid removed completely; only the image remains -->
+    <div class="work-grid">
+        <!-- No buttons here -->
     </div>
 
 </section>
-
-<!-- CONTACT -->
-<section class="contact-section">
-    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-</section>
-
-<!-- PARALLAX SCRIPT -->
-<script>
-const heroBg = document.querySelector('.hero-bg');
-
-window.addEventListener('scroll', () => {
-    let speed = window.innerWidth <= 480 ? 0.4 : 0.3;
-    let offset = window.scrollY * speed;
-    heroBg.style.transform = `translateY(${offset}px)`;
-});
-</script>
 
 </body>
 </html>
