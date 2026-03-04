@@ -11,10 +11,9 @@ body {
     background-color: #1c232a;
 }
 
-/* 2D PAGE BACKGROUND OVERRIDE ONLY */
+/* FORCE WHITE BACKGROUND ONLY ON 2D PAGE */
 body.art-page {
-    background-color: #ffffff;
-    color: #000;
+    background-color: #ffffff !important;
 }
 
 /* HERO WRAPPER */
