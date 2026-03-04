@@ -33,12 +33,6 @@
             background-color: #aaa;
         }
 
-        .work-grid {
-            display: grid;
-            gap: 15px;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        }
-
         .work-grid img {
             width: 60%;
             height: auto;
@@ -77,7 +71,6 @@
             z-index: 0; /* behind images/buttons */
         }
 
-        /* Make images and grid appear in front */
         body.art-page .about-image-wrapper,
         body.art-page .work-grid {
             position: relative;
@@ -103,9 +96,9 @@
         <img src="images/fatratlogo.jpg" alt="Layout Art" class="about-image">
     </div>
 
+    <!-- Work grid removed completely; only the image remains -->
     <div class="work-grid">
-        <!-- Example buttons (if you want them) -->
-        <a href="#" class="work-button">Example</a>
+        <!-- No buttons here -->
     </div>
 
 </section>
