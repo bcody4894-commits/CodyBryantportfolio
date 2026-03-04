@@ -76,6 +76,22 @@
             position: relative;
             z-index: 1;
         }
+
+        /* DESKTOP ONLY - make fatratlogo smaller and aligned left */
+        @media (min-width: 481px) {
+            body.art-page .about-image-wrapper {
+                width: auto;
+                max-width: 400px;   /* smaller image */
+                text-align: left;   /* align left */
+                margin-left: 20px;  /* spacing from left edge */
+            }
+
+            body.art-page .about-image {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
     </style>
 </head>
 
