@@ -1,173 +1,241 @@
-/* ============================= */
-/* GLOBAL RESET */
-/* ============================= */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ============================= */
-/* BODY / BACKGROUND */
-/* ============================= */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #0a192f, #112240);
-    color: white;
-    overflow-x: hidden;
+    color: #000;
+    background-color: #1c232a;
 }
 
-/* ============================= */
-/* NAVBAR */
-/* ============================= */
-.navbar {
+/* HERO WRAPPER */
+.hero-bg-wrapper {
+    position: relative;
     width: 100%;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: center;
-    background: transparent;
+    height: 85vh;
+    overflow: hidden;
+    background: radial-gradient(
+        circle at 50% 110%,
+        #5b8eb2 0%,
+        rgba(91, 142, 178, 0.4) 30%,
+        #1c232a 80%,
+        #1c232a 100%
+    );
 }
 
-.navbar a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin: 0 15px;
-    transition: 0.3s;
+/* HERO BACKGROUND */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 140vh;
+    background-image: url('images/IMG_2672.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    will-change: transform;
 }
 
-.navbar a:hover {
-    color: #64ffda;
-}
-
-/* ============================= */
-/* HERO SECTION */
-/* ============================= */
+/* HERO CONTENT */
 .hero-section {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.hero-image {
-    width: 300px;
-    border-radius: 12px;
-}
-
-/* ============================= */
-/* ABOUT + BUTTON IMAGES WRAPPER */
-/* ============================= */
-.content-wrapper {
+    position: relative;
+    height: 85vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 60px;
-    margin-top: 60px;
-    padding-bottom: 40px;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
 }
 
-/* ============================= */
+.hero-name {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+/* NAVIGATION (RESTORED) */
+.nav-bar {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.nav-bar a {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 15px;
+    background: #ccc;
+    border: 2px solid #000;
+    border-radius: 6px;
+    color: #000;
+    transition: background-color 0.2s;
+}
+
+.nav-bar a:hover {
+    background-color: #aaa;
+}
+
+/* WORK SECTION */
+.work-section {
+    position: relative;
+    z-index: 2;
+    margin-top: -20px;
+    padding: 30px 20px;
+    min-height: 130vh;
+    background:
+        radial-gradient(circle at 10% 20%, #5b8eb2 0%, #1c232a 40%, #1c232a 100%),
+        radial-gradient(circle at 30% 35%, #5b8eb2 0%, #1c232a 40%, #1c232a 100%),
+        radial-gradient(circle at 50% 10%, #5b8eb2 0%, #1c232a 40%, #1c232a 100%),
+        radial-gradient(circle at 70% 30%, #5b8eb2 0%, #1c232a 40%, #1c232a 100%),
+        radial-gradient(circle at 85% 60%, #5b8eb2 0%, #1c232a 40%, #1c232a 100%),
+        radial-gradient(circle at 45% 70%, #5b8eb2 0%, #1c232a 40%, #1c232a 100%),
+        radial-gradient(circle at 60% 85%, #5b8eb2 0%, #1c232a 40%, #1c232a 100%),
+        radial-gradient(circle at 25% 75%, #5b8eb2 0%, #1c232a 40%, #1c232a 100%),
+        radial-gradient(circle at 15% 65%, #5b8eb2 0%, #1c232a 40%, #1c232a 100%),
+        radial-gradient(
+            circle at 50% 110%,
+            #5b8eb2 0%,
+            rgba(91, 142, 178, 0.4) 30%,
+            #1c232a 80%,
+            #1c232a 100%
+        ),
+        #1c232a;
+}
+
 /* ABOUT IMAGE */
-/* ============================= */
+.about-image-wrapper {
+    text-align: center;
+    margin: 0 auto 30px auto;
+}
+
 .about-image {
-    width: 350px;
-    border-radius: 12px;
-    transition: 0.3s;
+    width: 70%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .about-image:hover {
-    box-shadow: 0 0 25px rgba(100, 255, 218, 0.8);
+    transform: scale(1.03);
+    box-shadow: 0 0 30px 8px rgba(91, 142, 178, 0.8);
 }
 
-/* ============================= */
-/* BUTTON IMAGE CONTAINER */
-/* ============================= */
-.button-image-wrapper {
-    width: 350px;
-    height: 500px;
-    padding: 40px 20px 40px 20px;
-    border-radius: 12px;
+/* WORK BUTTON IMAGE WRAPPER */
+.work-bg-wrapper {
     position: relative;
-    transition: 0.3s;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
 }
 
-.button-image-wrapper:hover {
-    box-shadow: 0 0 35px rgba(100, 255, 218, 1);
-}
-
-/* ============================= */
-/* BUTTON GRID */
-/* ============================= */
-.button-grid {
+.work-bg-image {
     position: absolute;
-    top: 45%;
-    left: 48%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 1200px;
+    height: 600px;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-bg-image:hover {
+    transform: translateX(-50%) scale(1.03);
+    box-shadow: 0 0 50px 12px rgba(91, 142, 178, 0.9);
+}
+
+/* DESKTOP GRID */
+.work-bg-wrapper .work-grid {
+    position: relative;
+    z-index: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    width: 85%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 70%;
+    max-width: 1200px;
+    justify-items: center;
+    align-items: center;
 }
 
-.button-grid a {
-    display: block;
-    padding: 18px 0;
-    background: #64ffda;
-    color: #0a192f;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 8px;
+/* BUTTON STYLE */
+.work-button {
+    width: 220px;
+    height: 220px;
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #000;
+    background-color: #000;
+    color: #fff;
+    font-weight: 900;
     text-decoration: none;
-    transition: 0.3s;
+    transition: transform 0.2s, box-shadow 0.3s;
 }
 
-.button-grid a:hover {
-    background: white;
+.work-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 5px rgba(91, 142, 178, 0.8);
 }
 
-/* ============================= */
-/* EMAIL SECTION */
-/* ============================= */
-.email-section {
-    text-align: center;
-    margin-top: 80px;
-    padding-bottom: 60px;
-}
+/* MOBILE ONLY — BUTTON POSITION ADJUSTED */
+@media (max-width: 480px) {
 
-/* ============================= */
-/* MOBILE VERSION */
-/* ============================= */
-@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+    }
 
-    .content-wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
+    .hero-name {
+        font-size: 2.5rem;
     }
 
     .about-image {
         width: 90%;
     }
 
-    .button-image-wrapper {
-        width: 90%;
-        height: 420px;
+    .work-bg-image {
+        width: 97%;
+        height: 330px;
     }
 
-    .button-grid {
-        top: 42%;
-        left: 47%;
-        width: 90%;
+    /* Slightly higher + slightly left */
+    .work-grid {
+        position: absolute;
+        top: 47%;
+        left: 32%;
+        transform: translate(-50%, -50%);
+        width: 97%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        justify-items: center;
+        align-items: center;
+        z-index: 2;
     }
 
-    .button-grid a {
-        padding: 14px 0;
+    .work-button {
+        width: 110px;
+        height: 110px;
+        font-size: 1rem;
     }
-}
-
-/* ===================================== */
-/* WHITE BACKGROUND FOR INNER TABS ONLY */
-/* ===================================== */
-
-body.art-page {
-    background: #ffffff !important;
 }
