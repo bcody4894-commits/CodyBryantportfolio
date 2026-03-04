@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Only for the 2D page */
         body.art-page {
             padding: 20px;
             text-align: center;
@@ -33,99 +32,81 @@
             background-color: #aaa;
         }
 
-        .work-grid img {
-            width: 60%;
-            height: auto;
-            border: 3px solid #000;
-            border-radius: 6px;
-            object-fit: cover;
-            transition: transform 0.2s;
-        }
-
-        .work-grid img:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 480px) {
-            .work-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .work-grid img {
-                height: auto;
-            }
-        }
-
-        /* WHITE BLOCK OVERLAY FOR 2D PAGE */
+        /* WHITE BACKGROUND BLOCK */
         body.art-page .work-section {
             position: relative;
         }
 
-        body.art-page .white-overlay {
+        .white-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-color: #ffffff;
-            z-index: 0; /* behind everything */
+            z-index: 0;
         }
 
-        body.art-page .about-image-wrapper,
-        body.art-page .work-grid {
-            position: relative;
-            z-index: 2; /* logo on top */
-        }
-
-        /* DESKTOP ONLY - bigger images with full-width colored box and shadow */
         @media (min-width: 481px) {
 
-            /* Wrapper that contains image + colored box */
+            /* Shared container */
             .logo-container {
                 position: relative;
-                display: block;      /* keep image left-aligned */
-                max-width: 900px;    /* image size */
-                margin-left: 20px;   /* space from left edge */
-                margin-bottom: 30px; /* spacing between images */
+                display: block;
+                margin-left: 20px;
+                margin-bottom: 40px;
             }
 
-            /* First colored box behind the first image */
+            /* First section width */
+            .logo-container.single {
+                max-width: 900px;
+            }
+
+            /* Second section row layout */
+            .logo-container.row {
+                display: flex;
+                align-items: flex-start;
+                gap: 40px;
+                max-width: 1800px;
+            }
+
+            /* First beige box */
             .colored-box {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100vw;               
-                height: 100%;               
+                width: 100vw;
+                height: 100%;
                 background-color: #f5efd7;
-                z-index: 1;                 
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); 
-                padding-left: 20px;         
-                padding-right: 20px;        
-                box-sizing: border-box;     
+                z-index: 1;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+                padding-left: 20px;
+                padding-right: 20px;
+                box-sizing: border-box;
             }
 
-            /* Second colored box behind the second image */
+            /* Second blue box */
             .colored-box-second {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100vw;               
-                height: 100%;               
+                width: 100vw;
+                height: 100%;
                 background-color: #bddfed;
-                z-index: 1;                 
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); 
-                padding-left: 20px;         
-                padding-right: 20px;        
-                box-sizing: border-box;     
+                z-index: 1;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+                padding-left: 20px;
+                padding-right: 20px;
+                box-sizing: border-box;
             }
 
-            /* Images on top of colored boxes */
+            /* All images */
             .about-image {
                 position: relative;
                 z-index: 2;
-                display: block;
-                width: 100%;
+                width: 900px;
                 height: auto;
+                display: block;
             }
         }
     </style>
@@ -139,26 +120,23 @@
 
 <section class="work-section">
 
-    <!-- WHITE OVERLAY BLOCK -->
     <div class="white-overlay"></div>
 
     <h1 class="page-title">Layout</h1>
 
-    <!-- First image with colored box -->
-    <div class="logo-container">
+    <!-- First Image Section -->
+    <div class="logo-container single">
         <div class="colored-box"></div>
         <img src="images/fatratlogo.jpg" alt="Layout Art" class="about-image">
     </div>
 
-    <!-- Second image (stag) with colored box -->
-    <div class="logo-container">
+    <!-- Second Image Section (Row Layout) -->
+    <div class="logo-container row">
         <div class="colored-box-second"></div>
-        <img src="images/stag.jpg" alt="Stag Art" class="about-image">
-    </div>
 
-    <!-- Work grid removed completely; only the images remain -->
-    <div class="work-grid">
-        <!-- No buttons here -->
+        <img src="images/stag.jpg" alt="Stag Art" class="about-image">
+        <img src="images/bugposter.jpg" alt="Bug Poster Art" class="about-image">
+
     </div>
 
 </section>
