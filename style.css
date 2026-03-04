@@ -84,7 +84,7 @@ body {
 .button-image-wrapper {
     width: 350px;
     height: 500px;
-    padding: 40px 20px 40px 20px; /* top & bottom padding equal */
+    padding: 40px 20px 40px 20px;
     border-radius: 12px;
     position: relative;
     transition: 0.3s;
@@ -165,15 +165,9 @@ body {
 }
 
 /* ===================================== */
-/* FORCE WHITE BACKGROUND ON INNER TABS  */
+/* WHITE BACKGROUND FOR INNER TABS ONLY */
 /* ===================================== */
 
 body.art-page {
-    background: #ffffff !important;
-}
-
-body.art-page .work-section,
-body.art-page .hero-section,
-body.art-page .content-wrapper {
     background: #ffffff !important;
 }
