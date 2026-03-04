@@ -222,7 +222,7 @@ body {
     .work-grid {
         position: absolute;
         top: 42%;              /* higher */
-        left: 52%;             /* more left */
+        left: 32%;             /* more left */
         transform: translate(-50%, -50%);
         width: 97%;
         display: grid;
