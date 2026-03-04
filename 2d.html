@@ -77,7 +77,7 @@
             z-index: 2; /* logo on top */
         }
 
-        /* DESKTOP ONLY - bigger fatratlogo, full-width colored box with shadow */
+        /* DESKTOP ONLY - bigger fatratlogo, full-width colored box with shadow and side padding */
         @media (min-width: 481px) {
 
             /* Wrapper that contains logo + colored box */
@@ -88,15 +88,15 @@
                 margin-left: 20px;   /* space from left edge */
             }
 
-            /* Colored box behind the logo with drop shadow */
+            /* Colored box behind the logo with padding on both sides */
             .colored-box {
                 position: absolute;
                 top: 0;
-                left: 0;
-                width: 100vw;         /* full screen width */
-                height: 100%;         /* match logo height */
+                left: 20px;         /* match logo left margin */
+                right: 20px;        /* same padding on right */
+                height: 100%;       /* match logo height */
                 background-color: #f5efd7;
-                z-index: 1;           /* behind logo, in front of white overlay */
+                z-index: 1;         /* behind logo, in front of white overlay */
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* drop shadow */
             }
 
