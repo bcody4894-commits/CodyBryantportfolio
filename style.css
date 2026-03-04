@@ -198,7 +198,7 @@ body {
     box-shadow: 0 0 20px 5px rgba(91, 142, 178, 0.8);
 }
 
-/* MOBILE ONLY — BUTTON POSITION + NAV UPDATE */
+/* MOBILE ONLY — FINAL BUTTON + NAV FIX */
 @media (max-width: 480px) {
 
     .hero-section {
@@ -218,11 +218,11 @@ body {
         height: 330px;
     }
 
-    /* Buttons slightly higher and more left */
+    /* 🔥 Move buttons higher and more left */
     .work-grid {
         position: absolute;
-        top: 44%;              /* higher */
-        left: 45%;             /* more left */
+        top: 42%;              /* higher */
+        left: 42%;             /* more left */
         transform: translate(-50%, -50%);
         width: 97%;
         display: grid;
@@ -239,10 +239,9 @@ body {
         font-size: 1rem;
     }
 
-    /* NAV BAR transparent + one line */
+    /* NAV BAR — transparent and single line */
     .nav-bar {
         background: transparent;
-        padding: 5px 10px;
-        flex-wrap: nowrap;        /* forces one line */
+        flex-wrap: nowrap;
     }
 }
