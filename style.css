@@ -11,6 +11,12 @@ body {
     background-color: #1c232a;
 }
 
+/* 2D PAGE BACKGROUND OVERRIDE ONLY */
+body.art-page {
+    background-color: #ffffff;
+    color: #000;
+}
+
 /* HERO WRAPPER */
 .hero-bg-wrapper {
     position: relative;
@@ -58,7 +64,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* NAVIGATION (RESTORED) */
+/* NAVIGATION */
 .nav-bar {
     display: flex;
     gap: 15px;
@@ -198,7 +204,7 @@ body {
     box-shadow: 0 0 20px 5px rgba(91, 142, 178, 0.8);
 }
 
-/* MOBILE ONLY — BUTTON POSITION ADJUSTED */
+/* MOBILE ONLY */
 @media (max-width: 480px) {
 
     .hero-section {
@@ -218,7 +224,6 @@ body {
         height: 330px;
     }
 
-    /* Slightly higher + slightly left */
     .work-grid {
         position: absolute;
         top: 47%;
