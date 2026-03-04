@@ -77,30 +77,34 @@
             z-index: 2; /* logo on top */
         }
 
-        /* DESKTOP ONLY - bigger fatratlogo, full-width colored box with shadow */
+        /* DESKTOP ONLY - bigger images with full-width colored box and shadow */
         @media (min-width: 481px) {
 
             /* Wrapper that contains logo + colored box */
             .logo-container {
                 position: relative;
-                display: block;      /* keep logo left-aligned */
-                max-width: 900px;    /* logo size */
+                display: block;      /* keep image left-aligned */
+                max-width: 900px;    /* image size */
                 margin-left: 20px;   /* space from left edge */
+                margin-bottom: 30px; /* spacing between images */
             }
 
-            /* Colored box behind the logo with drop shadow */
+            /* Colored box behind the image */
             .colored-box {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100vw;         /* full screen width */
-                height: 100%;         /* match logo height */
+                width: 100vw;               /* full screen width */
+                height: 100%;               /* match image height */
                 background-color: #f5efd7;
-                z-index: 1;           /* behind logo, in front of white overlay */
+                z-index: 1;                 /* behind image */
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* drop shadow */
+                padding-left: 20px;         /* visual left padding to match image */
+                padding-right: 20px;        /* same right padding */
+                box-sizing: border-box;     /* ensure padding doesn’t increase width */
             }
 
-            /* Logo on top of colored box */
+            /* Image on top of colored box */
             .about-image {
                 position: relative;
                 z-index: 2;
@@ -125,13 +129,19 @@
 
     <h1 class="page-title">Layout</h1>
 
-    <!-- Logo with full-width colored box behind -->
+    <!-- First image with colored box -->
     <div class="logo-container">
         <div class="colored-box"></div>
         <img src="images/fatratlogo.jpg" alt="Layout Art" class="about-image">
     </div>
 
-    <!-- Work grid removed completely; only the image remains -->
+    <!-- Second image (stag) with colored box -->
+    <div class="logo-container">
+        <div class="colored-box"></div>
+        <img src="images/stag.jpg" alt="Stag Art" class="about-image">
+    </div>
+
+    <!-- Work grid removed completely; only the images remain -->
     <div class="work-grid">
         <!-- No buttons here -->
     </div>
