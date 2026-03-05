@@ -56,8 +56,8 @@
 
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            // Original parallax effect restored
-            heroBg.style.transform = `translateY(${scrollY * 0.3}px)`;
+            // Original parallax effect preserved
+            heroBg.style.transform = `translate(-50%, calc(-50% + ${scrollY * 0.3}px))`;
         });
     </script>
 
