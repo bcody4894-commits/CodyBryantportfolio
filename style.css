@@ -52,24 +52,16 @@ body.art-page .work-grid {
     );
 }
 
-/* HERO BACKGROUND (video) */
+/* HERO BACKGROUND (VIDEO) */
 .hero-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     width: 100%;
     min-height: 140vh;
-    object-fit: cover;
+    object-fit: cover; /* fills container, same size as original image */
     z-index: 0;
     will-change: transform;
-    transform: translate(-50%, -50%) scale(1);
-    animation: heroZoom 30s ease-out infinite alternate;
-}
-
-/* Zoom animation for subtle Ken Burns effect */
-@keyframes heroZoom {
-    0% { transform: translate(-50%, -50%) scale(1); }
-    100% { transform: translate(-50%, -50%) scale(1.1); }
 }
 
 /* HERO CONTENT */
