@@ -39,5 +39,17 @@
 </div>
 </div>
 </section>
+
+<!-- HERO IMAGE EFFECT JS -->
+<script>
+  const heroBg = document.querySelector('.hero-bg');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    // subtle parallax effect on hero image
+    heroBg.style.transform = `translateY(${scrollY * 0.3}px)`;
+  });
+</script>
+
 </body>
 </html>
