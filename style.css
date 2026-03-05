@@ -28,7 +28,7 @@ body.art-page .white-overlay {
     width: 100%;
     height: 100%;
     background-color: #ffffff;
-    z-index: 0; /* behind images/buttons */
+    z-index: 0;
 }
 
 body.art-page .about-image-wrapper,
@@ -58,26 +58,11 @@ body.art-page .work-grid {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 140vh;
-
-    /* Fill and center like original image */
+    height: 100%;
     object-fit: cover;
     object-position: center;
-
-    /* Restore original effect */
-    transform: scale(1.05); 
-    will-change: transform;
     z-index: 0;
-
-    /* Optional subtle zoom animation for dynamic effect */
-    animation: heroZoom 20s ease-in-out infinite;
-}
-
-/* Animation keyframes for subtle hero zoom */
-@keyframes heroZoom {
-    0% { transform: scale(1.05); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1.05); }
+    will-change: transform;
 }
 
 /* HERO CONTENT */
