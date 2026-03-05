@@ -19,7 +19,7 @@
 
     <!-- HERO SECTION -->
     <div class="hero-bg-wrapper">
-        <!-- VIDEO BACKGROUND -->
+        <!-- VIDEO HERO BACKGROUND -->
         <video class="hero-bg" autoplay muted loop playsinline>
             <source src="images/amime0001-0012.mp4" type="video/mp4">
         </video>
@@ -50,14 +50,14 @@
 
     </section>
 
-    <!-- HERO VIDEO SCROLL EFFECT JS -->
+    <!-- HERO SCROLL EFFECT SCRIPT -->
     <script>
         const heroBg = document.querySelector('.hero-bg');
 
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            // subtle parallax effect while zoom animation continues
-            heroBg.style.transform = `translate(-50%, calc(-50% + ${scrollY * 0.3}px)) scale(1.05)`;
+            // Original parallax effect restored
+            heroBg.style.transform = `translateY(${scrollY * 0.3}px)`;
         });
     </script>
 
