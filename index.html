@@ -50,14 +50,14 @@
 
     </section>
 
-    <!-- HERO VIDEO EFFECT JS -->
+    <!-- HERO VIDEO SCROLL EFFECT JS -->
     <script>
         const heroBg = document.querySelector('.hero-bg');
 
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            // subtle parallax effect applied to video
-            heroBg.style.transform = `translateY(${scrollY * 0.3}px)`;
+            // subtle parallax effect while zoom animation continues
+            heroBg.style.transform = `translate(-50%, calc(-50% + ${scrollY * 0.3}px)) scale(1.05)`;
         });
     </script>
 
