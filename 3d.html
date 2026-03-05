@@ -44,66 +44,55 @@ body.art-page {
     z-index: -1;
 }
 
-/* MOBILE */
-@media (max-width: 480px) {
-
-    .logo-container {
-        position: relative;
-        margin-bottom: 40px;
-    }
-
-    .colored-box {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #f5efd7;
-        z-index: 1;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    .about-image {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        height: auto;
-        display: block;
-        margin-top: 10px;
-    }
+/* container */
+.logo-container {
+    position: relative;
+    margin: auto;
+    max-width: 1000px;
 }
 
-/* DESKTOP */
-@media (min-width: 481px) {
+/* colored background */
+.colored-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f5efd7;
+    z-index: 1;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
 
-    .logo-container {
-        position: relative;
-        margin-left: 20px;
-        margin-bottom: 40px;
-        max-width: 900px;
-    }
+/* images row */
+.image-row {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
 
-    .colored-box {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100%;
-        background-color: #f5efd7;
-        z-index: 1;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        padding-left: 20px;
-        padding-right: 20px;
-        box-sizing: border-box;
-    }
+/* image styling */
+.image-row img {
+    width: 220px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .about-image {
-        position: relative;
-        z-index: 2;
-        width: 900px;
-        height: auto;
-        display: block;
-    }
+.image-row img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+/* mobile */
+@media (max-width: 480px) {
+
+.image-row img {
+    width: 140px;
+}
+
 }
 </style>
 </head>
@@ -121,8 +110,15 @@ body.art-page {
 <h1 class="page-title">3D Art</h1>
 
 <div class="logo-container">
-    <div class="colored-box"></div>
-    <img src="images/matgril.png" class="about-image" alt="3D Art">
+
+<div class="colored-box"></div>
+
+<div class="image-row">
+<img src="images/matgril.png" alt="Mat Girl">
+<img src="images/bust.png" alt="Bust">
+<img src="images/bussidet.png" alt="Bust Side">
+</div>
+
 </div>
 
 </section>
