@@ -57,7 +57,7 @@ body.art-page .work-grid {
     position: absolute;
     top: 60%; /* center vertically */
     left: 35%; /* center horizontally */
-    width: 80%; /* adjust to make video smaller */
+    width: 100%; /* adjust to make video smaller */
     height: auto; /* maintain aspect ratio */
     transform: translate(-50%, -50%); /* truly center */
     object-fit: cover; /* fills container nicely */
