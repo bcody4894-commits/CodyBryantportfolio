@@ -52,7 +52,7 @@ body.art-page .work-grid {
     );
 }
 
-/* HERO BACKGROUND (VIDEO) */
+/* HERO BACKGROUND VIDEO */
 .hero-bg {
     position: absolute;
     top: 0;
@@ -60,12 +60,24 @@ body.art-page .work-grid {
     width: 100%;
     min-height: 140vh;
 
-    /* Effect restored for video like the original image */
-    object-fit: cover;       /* like background-size: cover */
-    object-position: center; /* like background-position: center */
+    /* Fill and center like original image */
+    object-fit: cover;
+    object-position: center;
 
-    z-index: 0;
+    /* Restore original effect */
+    transform: scale(1.05); 
     will-change: transform;
+    z-index: 0;
+
+    /* Optional subtle zoom animation for dynamic effect */
+    animation: heroZoom 20s ease-in-out infinite;
+}
+
+/* Animation keyframes for subtle hero zoom */
+@keyframes heroZoom {
+    0% { transform: scale(1.05); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1.05); }
 }
 
 /* HERO CONTENT */
