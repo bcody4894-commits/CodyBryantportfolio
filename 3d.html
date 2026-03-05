@@ -95,7 +95,7 @@ body.art-page {
     }
 
     .image-pair img {
-        width: 200px; /* bigger mobile size */
+        width: 200px;
         height: auto;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -122,7 +122,7 @@ body.art-page {
     .logo-container.row {
         display: flex;
         flex-direction: column;
-        align-items: center; /* center column content */
+        align-items: center;
         gap: 20px;
         max-width: 1800px;
         position: relative;
@@ -173,13 +173,13 @@ body.art-page {
 
     .image-pair {
         display: flex;
-        justify-content: center; /* center the two images horizontally */
+        justify-content: center;
         gap: 20px;
         margin-top: 10px;
     }
 
     .image-pair img {
-        width: 650px; /* original/bigger desktop size */
+        width: 650px;
         height: auto;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -202,15 +202,17 @@ body.art-page {
 
     <div class="white-overlay"></div>
 
-    <h1 class="page-title">3D Art</h1>
-
-    <!-- First 3D Image -->
-    <div class="logo-container single">
+    <!-- First Section with Mat Girl and ZBrush -->
+    <div class="logo-container row">
         <div class="colored-box"></div>
-        <img src="images/matgril.png" class="about-image" alt="Mat Girl">
+
+        <div class="image-pair">
+            <img src="images/matgril.png" class="about-image" alt="Mat Girl">
+            <img src="images/zbrush.png" class="about-image" alt="ZBrush">
+        </div>
     </div>
 
-    <!-- Second Section with Bust and Side Bust centered -->
+    <!-- Second Section with Bust and Side Bust -->
     <div class="logo-container row">
         <div class="colored-box-second"></div>
 
