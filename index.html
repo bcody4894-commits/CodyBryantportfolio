@@ -19,7 +19,11 @@
 
     <!-- HERO SECTION -->
     <div class="hero-bg-wrapper">
-        <div class="hero-bg"></div>
+        <!-- VIDEO BACKGROUND -->
+        <video class="hero-bg" autoplay muted loop playsinline>
+            <source src="images/amime0001-0012.mp4" type="video/mp4">
+        </video>
+
         <section class="hero-section">
             <h1 class="hero-name">Cody Bryant</h1>
         </section>
@@ -46,13 +50,13 @@
 
     </section>
 
-    <!-- HERO IMAGE EFFECT JS -->
+    <!-- HERO VIDEO EFFECT JS -->
     <script>
         const heroBg = document.querySelector('.hero-bg');
 
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            // subtle parallax effect on hero image
+            // subtle parallax effect applied to video
             heroBg.style.transform = `translateY(${scrollY * 0.3}px)`;
         });
     </script>
