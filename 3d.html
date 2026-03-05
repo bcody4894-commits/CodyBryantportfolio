@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>3D Art | Cody Bryant</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>3D Art | Cody Bryant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body.art-page {
     padding: 20px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .page-title {
@@ -43,52 +42,149 @@ body.art-page {
     z-index: -1;
 }
 
-/* container */
-.logo-container {
-    position: relative;
-    margin: auto;
-    max-width: 1000px;
-}
-
-/* colored background */
-.colored-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f5efd7;
-    z-index: 1;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-/* images row */
-.image-row {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 40px 20px;
-    flex-wrap: wrap;
-}
-
-/* image styling */
-.image-row img {
-    width: 300px; /* made bigger from 220px */
-    height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-row img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px rgba(0,0,0,0.4);
-}
-
-/* mobile */
+/* MOBILE ONLY FIX */
 @media (max-width: 480px) {
-    .image-row img {
-        width: 200px; /* made bigger from 140px */
+
+    .logo-container {
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    .logo-container.row {
+        display: block;
+    }
+
+    .colored-box,
+    .colored-box-second {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .colored-box {
+        background-color: #f5efd7;
+    }
+
+    .colored-box-second {
+        background-color: #bddfed;
+    }
+
+    .about-image {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .poster-container {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .poster-container img {
+        width: 140px;
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .poster-container img:hover {
+        transform: scale(1.35);
+        box-shadow: 0 0 35px rgba(91, 142, 178, 0.8);
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 481px) {
+
+    .logo-container {
+        position: relative;
+        margin-left: 20px;
+        margin-bottom: 40px;
+    }
+
+    .logo-container.single {
+        max-width: 900px;
+    }
+
+    .logo-container.row {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        max-width: 1800px;
+        position: relative;
+    }
+
+    .colored-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: #f5efd7;
+        z-index: 1;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    .colored-box-second {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: #bddfed;
+        z-index: 1;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    .about-image {
+        position: relative;
+        z-index: 2;
+        width: 900px;
+        height: auto;
+        display: block;
+    }
+
+    .bugposter-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        z-index: 2;
+    }
+
+    .poster-container {
+        display: flex;
+        gap: 20px;
+        margin-top: 10px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .poster-container img {
+        width: 300px;
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .poster-container img:hover {
+        transform: scale(1.3);
+        box-shadow: 0 0 50px rgba(91, 142, 178, 0.8);
     }
 }
 </style>
@@ -96,27 +192,38 @@ body.art-page {
 
 <body class="art-page">
 
-<nav>
-<a href="index.html" class="back">← Back</a>
+<nav class="navbar">
+    <a href="index.html" class="back">← Back</a>
 </nav>
 
 <section class="work-section">
 
-<div class="white-overlay"></div>
+    <div class="white-overlay"></div>
 
-<h1 class="page-title">3D Art</h1>
+    <h1 class="page-title">3D Art</h1>
 
-<div class="logo-container">
+    <!-- First 3D Image -->
+    <div class="logo-container single">
+        <div class="colored-box"></div>
+        <img src="images/matgril.png" class="about-image" alt="Mat Girl">
+    </div>
 
-<div class="colored-box"></div>
+    <!-- Second Section with multiple 3D images -->
+    <div class="logo-container row">
+        <div class="colored-box-second"></div>
+        <img src="images/bust.png" class="about-image" alt="Bust">
 
-<div class="image-row">
-<img src="images/matgril.png" alt="Mat Girl">
-<img src="images/bust.png" alt="Bust">
-<img src="images/bussidet.png" alt="Bust Side">
-</div>
+        <div class="bugposter-column">
+            <img src="images/bussidet.png" class="about-image" alt="Bust Side">
 
-</div>
+            <div class="poster-container">
+                <img src="images/3dmodel1.png" alt="3D Model 1">
+                <img src="images/3dmodel2.png" alt="3D Model 2">
+                <img src="images/3dmodel3.png" alt="3D Model 3">
+            </div>
+        </div>
+
+    </div>
 
 </section>
 
