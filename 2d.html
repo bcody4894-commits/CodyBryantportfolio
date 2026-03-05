@@ -93,14 +93,14 @@ body.art-page {
     }
 
     .poster-container img {
-        width: 100px; /* slightly bigger than before */
+        width: 100px;
         height: auto;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .poster-container img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 20px rgba(91, 142, 178, 0.7);
+        transform: scale(1.2); /* bigger hover */
+        box-shadow: 0 0 25px rgba(91, 142, 178, 0.8);
     }
 }
 
@@ -163,11 +163,10 @@ body.art-page {
         display: block;
     }
 
-    /* Posters below bugposter only */
     .bugposter-column {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* keep original left alignment */
+        align-items: flex-start;
         position: relative;
         z-index: 2;
     }
@@ -179,14 +178,14 @@ body.art-page {
     }
 
     .poster-container img {
-        width: 200px; /* slightly bigger than before */
+        width: 200px;
         height: auto;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .poster-container img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px rgba(91, 142, 178, 0.7);
+        transform: scale(1.2); /* bigger hover */
+        box-shadow: 0 0 35px rgba(91, 142, 178, 0.8);
     }
 }
 </style>
@@ -215,11 +214,9 @@ body.art-page {
         <div class="colored-box-second"></div>
         <img src="images/stag.jpg" class="about-image">
 
-        <!-- Wrap bugposter and posters in a column to keep layout -->
         <div class="bugposter-column">
             <img src="images/bugposter.jpg" class="about-image">
 
-            <!-- Posters below bugposter -->
             <div class="poster-container">
                 <img src="images/acorn.png">
                 <img src="images/frog.png">
