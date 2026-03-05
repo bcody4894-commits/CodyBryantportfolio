@@ -52,14 +52,15 @@ body.art-page .work-grid {
     );
 }
 
-/* HERO BACKGROUND (VIDEO) */
+/* HERO BACKGROUND (VIDEO) - smaller and centered */
 .hero-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 140vh;
-    object-fit: cover; /* fills container, same size as original image */
+    top: 50%; /* center vertically */
+    left: 50%; /* center horizontally */
+    width: 80%; /* adjust to make video smaller */
+    height: auto; /* maintain aspect ratio */
+    transform: translate(-50%, -50%); /* truly center */
+    object-fit: cover; /* fills container nicely */
     z-index: 0;
     will-change: transform;
 }
