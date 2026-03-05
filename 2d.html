@@ -76,12 +76,14 @@ body.art-page {
         background-color: #bddfed;
     }
 
-    .about-image {
+    .about-image,
+    .additional-images img {
         position: relative;
         z-index: 2;
         width: 100%;
         height: auto;
         display: block;
+        margin-top: 10px;
     }
 }
 
@@ -105,6 +107,7 @@ body.art-page {
         align-items: flex-start;
         gap: 40px;
         max-width: 1800px;
+        flex-wrap: wrap;
     }
 
     .colored-box {
@@ -142,6 +145,20 @@ body.art-page {
         height: auto;
         display: block;
     }
+
+    .additional-images {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+        z-index: 2;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .additional-images img {
+        width: 200px; /* adjust size as needed */
+        height: auto;
+    }
 }
 </style>
 </head>
@@ -169,6 +186,13 @@ body.art-page {
         <div class="colored-box-second"></div>
         <img src="images/stag.jpg" class="about-image">
         <img src="images/bugposter.jpg" class="about-image">
+
+        <!-- NEW IMAGES BELOW BUGPOSTER -->
+        <div class="additional-images">
+            <img src="images/acorn.png" alt="Acorn">
+            <img src="images/frog.png" alt="Frog">
+            <img src="images/bug cover.png" alt="Bug Cover">
+        </div>
     </div>
 
 </section>
