@@ -55,7 +55,7 @@ body.art-page .work-grid {
 /* HERO BACKGROUND (VIDEO) - smaller and centered */
 .hero-bg {
     position: absolute;
-    top: 50%; /* center vertically */
+    top: 40%; /* center vertically */
     left: 40%; /* center horizontally */
     width: 80%; /* adjust to make video smaller */
     height: auto; /* maintain aspect ratio */
