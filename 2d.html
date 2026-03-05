@@ -43,9 +43,7 @@ body.art-page {
     z-index: -1;
 }
 
-/* ================================================= */
 /* MOBILE ONLY FIX */
-/* ================================================= */
 @media (max-width: 480px) {
 
     .logo-container {
@@ -54,7 +52,7 @@ body.art-page {
     }
 
     .logo-container.row {
-        display: block; /* stack images */
+        display: block;
     }
 
     .colored-box,
@@ -90,23 +88,23 @@ body.art-page {
         display: flex;
         justify-content: center;
         gap: 5px;
+        position: relative;
+        z-index: 5;
     }
 
     .poster-container img {
-        width: 100px;
+        width: 140px; /* bigger mobile size */
         height: auto;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .poster-container img:hover {
-        transform: scale(1.2); /* bigger hover */
-        box-shadow: 0 0 25px rgba(91, 142, 178, 0.8);
+        transform: scale(1.35); /* stronger hover */
+        box-shadow: 0 0 35px rgba(91, 142, 178, 0.8);
     }
 }
 
-/* ================================================= */
-/* DESKTOP — UNCHANGED */
-/* ================================================= */
+/* DESKTOP */
 @media (min-width: 481px) {
 
     .logo-container {
@@ -175,17 +173,19 @@ body.art-page {
         display: flex;
         gap: 20px;
         margin-top: 10px;
+        position: relative;
+        z-index: 5;
     }
 
     .poster-container img {
-        width: 200px;
+        width: 300px; /* bigger desktop size */
         height: auto;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .poster-container img:hover {
-        transform: scale(1.2); /* bigger hover */
-        box-shadow: 0 0 35px rgba(91, 142, 178, 0.8);
+        transform: scale(1.3); /* stronger hover */
+        box-shadow: 0 0 50px rgba(91, 142, 178, 0.8);
     }
 }
 </style>
