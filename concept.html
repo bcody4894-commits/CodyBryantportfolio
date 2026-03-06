@@ -1,81 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Concept Art | Cody Bryant</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body.art-page {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #fff;
-            color: #000;
-            padding: 20px;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<title>Concept Art | Cody Bryant</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .page-title {
-            margin: 20px 0 30px 0;
-        }
+<!-- Ekamai Font -->
+<link href="https://fonts.cdnfonts.com/css/ekamai" rel="stylesheet">
 
-        .back {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 8px 12px;
-            border: 2px solid #000;
-            border-radius: 6px;
-            background-color: #ccc;
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
-        }
+<style>
 
-        .back:hover {
-            background-color: #aaa;
-        }
+body.art-page {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffed;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
 
-        .work-grid {
-            display: grid;
-            gap: 15px;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        }
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 12px;
+    border: 2px solid #000;
+    border-radius: 6px;
+    background-color: #ccc;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
 
-        .work-grid img {
-            width: 100%;
-            height: auto;
-            border: 3px solid #000;
-            border-radius: 6px;
-            object-fit: cover;
-            transition: transform 0.2s;
-        }
+.back:hover {
+    background-color: #aaa;
+}
 
-        .work-grid img:hover {
-            transform: scale(1.05);
-        }
+/* MAIN IMAGE AREA */
 
-        @media (max-width: 480px) {
-            .work-grid {
-                grid-template-columns: 1fr; /* stack image vertically on mobile */
-            }
+.concept-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
 
-            .work-grid img {
-                height: auto;
-            }
-        }
-    </style>
+.concept-container img {
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.concept-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+.concept-container img {
+    width: 95%;
+}
+
+}
+
+</style>
 </head>
+
 <body class="art-page">
 
 <nav class="navbar">
-    <a href="index.html" class="back">← Back</a>
+<a href="index.html" class="back">← Back</a>
 </nav>
 
 <section class="work-section">
-    <h1 class="page-title">Concept Art</h1>
 
-    <div class="work-grid">
-        <img src="images/F373F6E8-7EA6-4206-B221-BE1672934DD1.png" alt="Frog Samurai Concept Art">
-    </div>
+<div class="concept-container">
+<img src="images/goob.png" alt="Goob Concept Art">
+</div>
+
 </section>
 
 </body>
