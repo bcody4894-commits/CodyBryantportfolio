@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <title>Games | Cody Bryant</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Ekamai Font -->
+<link href="https://fonts.cdnfonts.com/css/ekamai" rel="stylesheet">
+
 <style>
 
 body.art-page {
@@ -12,10 +16,6 @@ body.art-page {
     background-color: #ffffed;
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
-}
-
-.page-title {
-    margin: 20px 0 30px 0;
 }
 
 .back {
@@ -34,11 +34,8 @@ body.art-page {
     background-color: #aaa;
 }
 
-.work-section {
-    position: relative;
-}
-
 /* TOP MAIN MENU IMAGE */
+
 .main-menu-top {
     padding: 30px;
 }
@@ -51,7 +48,8 @@ body.art-page {
     margin: 0 auto;
 }
 
-/* MAIN SCENE IMAGE AND VIDEO SIDE BY SIDE */
+/* MAIN SCENE + VIDEO */
+
 .scene-video-container {
     display: flex;
     justify-content: flex-start;
@@ -62,7 +60,7 @@ body.art-page {
 }
 
 .main-scene img {
-    width: 60%;       /* slightly smaller */
+    width: 60%;
     max-width: 850px;
     height: auto;
 }
@@ -74,43 +72,33 @@ body.art-page {
 }
 
 .scene-video-container video {
-    width: 60%;       /* bigger */
+    width: 60%;
     max-width: 600px;
     height: auto;
     object-fit: cover;
-    transform: scale(1.5); /* more zoomed in */
+    transform: scale(1.5);
     display: block;
 }
+
+/* PLAYER WALK CYCLE TEXT */
+
+.walk-text {
+    font-family: 'Ekamai', sans-serif;
+    font-size: 28px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+/* RATING IMAGE */
 
 .rating-image {
-    width: 90%;       /* bigger */
-    max-width: 750px; /* bigger max */
-    margin-top: 50px; /* spacing from video */
+    width: 90%;
+    max-width: 750px;
     display: block;
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-    .scene-video-container {
-        flex-direction: column;
-        align-items: center;
-    }
+/* GAME IMAGE SECTION */
 
-    .main-scene img,
-    .scene-video-container video,
-    .rating-image {
-        width: 90%;
-        max-width: 500px;
-        margin-bottom: 20px;
-        transform: scale(1.2);
-    }
-
-    .rating-image {
-        margin-top: 35px;
-    }
-}
-
-/* GAME IMAGE PAIRS */
 .logo-container.row {
     display: flex;
     flex-direction: column;
@@ -140,16 +128,41 @@ body.art-page {
     margin-top: 10px;
 }
 
-/* MOBILE ADJUSTMENTS */
-@media (max-width: 480px) {
-    .about-image {
-        width: 240px;
-    }
+/* MOBILE */
 
-    .image-pair {
-        flex-direction: column;
-        gap: 15px;
-    }
+@media (max-width: 768px) {
+
+.scene-video-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-scene img,
+.scene-video-container video,
+.rating-image {
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    transform: scale(1.2);
+}
+
+.walk-text {
+    font-size: 22px;
+}
+
+}
+
+@media (max-width: 480px) {
+
+.about-image {
+    width: 240px;
+}
+
+.image-pair {
+    flex-direction: column;
+    gap: 15px;
+}
+
 }
 
 </style>
@@ -163,26 +176,36 @@ body.art-page {
 
 <section class="work-section">
 
-<!-- TOP MAIN MENU IMAGE -->
+<!-- TOP IMAGE -->
 <div class="main-menu-top">
 <img src="images/main menu.png" alt="Main Menu">
 </div>
 
-<!-- MAIN SCENE IMAGE AND VIDEO SIDE BY SIDE -->
+<!-- MAIN SCENE + VIDEO -->
 <div class="scene-video-container">
-    <img src="images/mainscene.png" alt="Main Scene" class="main-scene">
-    <div class="video-rating-container">
-        <video src="images/player.mp4" autoplay muted loop></video>
-        <img src="images/rating.png" alt="Rating" class="rating-image">
-    </div>
+
+<img src="images/mainscene.png" alt="Main Scene" class="main-scene">
+
+<div class="video-rating-container">
+
+<video src="images/player.mp4" autoplay muted loop></video>
+
+<div class="walk-text">
+Player Walk Cycle
 </div>
 
-<!-- Game images -->
+<img src="images/rating.png" alt="Rating" class="rating-image">
+
+</div>
+</div>
+
+<!-- GAME IMAGES -->
+
 <div class="logo-container row">
-    <div class="image-pair">
-        <img src="images/game2.png" class="about-image" alt="Game 2">
-        <img src="images/game3.png" class="about-image" alt="Game 3">
-    </div>
+<div class="image-pair">
+<img src="images/game2.png" class="about-image" alt="Game 2">
+<img src="images/game3.png" class="about-image" alt="Game 3">
+</div>
 </div>
 
 </section>
