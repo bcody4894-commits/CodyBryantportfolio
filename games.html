@@ -9,9 +9,9 @@
 body.art-page {
     padding: 20px;
     text-align: center;
-    background-color: #020c15; /* dark background like 3D index */
+    background-color: #ffffed; /* updated background */
     font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+    color: #000;
 }
 
 .page-title {
@@ -36,6 +36,19 @@ body.art-page {
 
 .work-section {
     position: relative;
+}
+
+/* TOP MAIN MENU IMAGE */
+.main-menu-top {
+    padding: 30px; /* same padding as bug3d */
+}
+
+.main-menu-top img {
+    width: 80%; /* big, but smaller than bug3d full width */
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* MOBILE */
@@ -72,7 +85,7 @@ body.art-page {
     }
 
     .image-pair img {
-        width: 240px; /* same size as 3D page mobile */
+        width: 240px;
         height: auto;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -122,7 +135,7 @@ body.art-page {
     }
 
     .image-pair img {
-        width: 750px; /* same size as 3D page desktop */
+        width: 750px;
         height: auto;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -143,20 +156,24 @@ body.art-page {
 </nav>
 
 <section class="work-section">
-<h1 class="page-title">Games</h1>
 
-<!-- Example Game Section -->
+<!-- TOP MAIN MENU IMAGE -->
+<div class="main-menu-top">
+<img src="images/main menu.png" alt="Main Menu">
+</div>
+
+<!-- Game Sections (example 3D-style pairs) -->
 <div class="logo-container row">
     <div class="image-pair">
-        <img src="images/game1.png" class="about-image" alt="Game 1">
         <img src="images/game2.png" class="about-image" alt="Game 2">
+        <img src="images/game3.png" class="about-image" alt="Game 3">
     </div>
 </div>
 
 <div class="logo-container row">
     <div class="image-pair">
-        <img src="images/game3.png" class="about-image" alt="Game 3">
         <img src="images/game4.png" class="about-image" alt="Game 4">
+        <img src="images/game5.png" class="about-image" alt="Game 5">
     </div>
 </div>
 
