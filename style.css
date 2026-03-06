@@ -1,3 +1,11 @@
+/* EKAMAI FONT */
+@font-face {
+    font-family: 'Ekamai';
+    src: url('fonts/Ekamai-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* RESET */
 * {
     margin: 0;
