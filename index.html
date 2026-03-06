@@ -1,65 +1,77 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Cody Bryant | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+```
+<style>
+    .hero-name {
+        color: white;
+    }
+</style>
+```
+
 </head>
 <body>
 
-    <!-- NAVIGATION -->
-    <nav class="nav-bar">
-        <a href="index.html">Home</a>
-        <a href="2d.html">Layout</a>
-        <a href="3d.html">3D</a>
-        <a href="games.html">Game</a>
-        <a href="concept.html">Art</a>
-    </nav>
+```
+<!-- NAVIGATION -->
+<nav class="nav-bar">
+    <a href="index.html">Home</a>
+    <a href="2d.html">Layout</a>
+    <a href="3d.html">3D</a>
+    <a href="games.html">Game</a>
+    <a href="concept.html">Art</a>
+</nav>
 
-    <!-- HERO SECTION -->
-    <div class="hero-bg-wrapper">
-        <!-- VIDEO HERO BACKGROUND -->
-        <video class="hero-bg" autoplay muted loop playsinline>
-            <source src="images/amime0001-0012.mp4" type="video/mp4">
-        </video>
+<!-- HERO SECTION -->
+<div class="hero-bg-wrapper">
+    <!-- VIDEO HERO BACKGROUND -->
+    <video class="hero-bg" autoplay muted loop playsinline>
+        <source src="images/amime0001-0012.mp4" type="video/mp4">
+    </video>
 
-        <section class="hero-section">
-            <h1 class="hero-name">PORTFOLIO</h1>
-        </section>
+    <section class="hero-section">
+        <h1 class="hero-name">PORTFOLIO</h1>
+    </section>
+</div>
+
+<!-- WORK SECTION -->
+<section class="work-section">
+
+    <!-- ABOUT IMAGE -->
+    <div class="about-image-wrapper">
+        <img src="images/about.jpg" alt="About Image" class="about-image">
     </div>
 
-    <!-- WORK SECTION -->
-    <section class="work-section">
-
-        <!-- ABOUT IMAGE -->
-        <div class="about-image-wrapper">
-            <img src="images/about.jpg" alt="About Image" class="about-image">
+    <!-- WORK BUTTON AREA -->
+    <div class="work-bg-wrapper">
+        <img src="images/button.jpg" alt="Work Background" class="work-bg-image">
+        <div class="work-grid">
+            <a href="2d.html" class="work-button">Layout</a>
+            <a href="3d.html" class="work-button">3D</a>
+            <a href="games.html" class="work-button">Games</a>
+            <a href="concept.html" class="work-button">Concept art</a>
         </div>
+    </div>
 
-        <!-- WORK BUTTON AREA -->
-        <div class="work-bg-wrapper">
-            <img src="images/button.jpg" alt="Work Background" class="work-bg-image">
-            <div class="work-grid">
-                <a href="2d.html" class="work-button">Layout</a>
-                <a href="3d.html" class="work-button">3D</a>
-                <a href="games.html" class="work-button">Games</a>
-                <a href="concept.html" class="work-button">Concept art</a>
-            </div>
-        </div>
+</section>
 
-    </section>
+<!-- HERO SCROLL EFFECT SCRIPT -->
+<script>
+    const heroBg = document.querySelector('.hero-bg');
 
-    <!-- HERO SCROLL EFFECT SCRIPT -->
-    <script>
-        const heroBg = document.querySelector('.hero-bg');
-
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            // Original parallax effect preserved
-            heroBg.style.transform = `translate(-50%, calc(-50% + ${scrollY * 0.3}px))`;
-        });
-    </script>
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        // Original parallax effect preserved
+        heroBg.style.transform = `translate(-50%, calc(-50% + ${scrollY * 0.3}px))`;
+    });
+</script>
+```
 
 </body>
 </html>
