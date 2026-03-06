@@ -68,8 +68,14 @@ body.art-page {
     height: auto;
 }
 
+.video-rating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .scene-video-container video {
-    width: 45%;
+    width: 50%; /* slightly bigger */
     max-width: 500px;
     height: auto;
     object-fit: cover;
@@ -77,11 +83,10 @@ body.art-page {
     display: block;
 }
 
-/* RATING IMAGE UNDER VIDEO */
 .rating-image {
-    width: 45%;
-    max-width: 500px;
-    margin-top: 15px;
+    width: 60%; /* bigger than before */
+    max-width: 550px;
+    margin-top: 40px; /* more spacing from video */
     display: block;
 }
 
@@ -98,7 +103,11 @@ body.art-page {
         width: 90%;
         max-width: 500px;
         margin-bottom: 20px;
-        transform: scale(1.2); /* mobile zoom */
+        transform: scale(1.2);
+    }
+
+    .rating-image {
+        margin-top: 25px; /* adjusted for mobile */
     }
 }
 
@@ -215,7 +224,7 @@ body.art-page {
 <!-- MAIN SCENE IMAGE AND VIDEO SIDE BY SIDE -->
 <div class="scene-video-container">
     <img src="images/mainscene.png" alt="Main Scene" class="main-scene">
-    <div>
+    <div class="video-rating-container">
         <video src="images/player.mp4" autoplay muted loop></video>
         <img src="images/rating.png" alt="Rating" class="rating-image">
     </div>
