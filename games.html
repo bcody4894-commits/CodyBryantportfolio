@@ -59,20 +59,30 @@ body.art-page {
     padding: 30px;
     gap: 20px;
     flex-wrap: wrap; /* stack on mobile */
+    position: relative;
 }
 
 .main-scene img {
-    width: 70%; /* slightly smaller than main menu */
+    width: 70%;
     max-width: 1000px;
     height: auto;
 }
 
 .scene-video-container video {
-    width: 45%; /* bigger than before */
+    width: 45%;
     max-width: 500px;
     height: auto;
     object-fit: cover;
-    transform: scale(1.4); /* more zoomed in */
+    transform: scale(1.4); /* zoomed in */
+    display: block;
+}
+
+/* RATING IMAGE UNDER VIDEO */
+.rating-image {
+    width: 45%;
+    max-width: 500px;
+    margin-top: 15px;
+    display: block;
 }
 
 /* MOBILE RESPONSIVE */
@@ -83,11 +93,12 @@ body.art-page {
     }
 
     .main-scene img,
-    .scene-video-container video {
+    .scene-video-container video,
+    .rating-image {
         width: 90%;
         max-width: 500px;
         margin-bottom: 20px;
-        transform: scale(1.2); /* slightly zoomed on mobile */
+        transform: scale(1.2); /* mobile zoom */
     }
 }
 
@@ -204,21 +215,17 @@ body.art-page {
 <!-- MAIN SCENE IMAGE AND VIDEO SIDE BY SIDE -->
 <div class="scene-video-container">
     <img src="images/mainscene.png" alt="Main Scene" class="main-scene">
-    <video src="images/player.mp4" autoplay muted loop></video>
+    <div>
+        <video src="images/player.mp4" autoplay muted loop></video>
+        <img src="images/rating.png" alt="Rating" class="rating-image">
+    </div>
 </div>
 
-<!-- Game Sections (3D-style image pairs) -->
+<!-- Only one game section remains -->
 <div class="logo-container row">
     <div class="image-pair">
         <img src="images/game2.png" class="about-image" alt="Game 2">
         <img src="images/game3.png" class="about-image" alt="Game 3">
-    </div>
-</div>
-
-<div class="logo-container row">
-    <div class="image-pair">
-        <img src="images/game4.png" class="about-image" alt="Game 4">
-        <img src="images/game5.png" class="about-image" alt="Game 5">
     </div>
 </div>
 
